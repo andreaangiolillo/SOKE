@@ -4,8 +4,6 @@ from lightning.ranking import PRank
 import Preprocessing
 #from lightning.ranking import KernelPRank
 
-# TODO: Add more datasets.
-bunch = load_diabetes()
 associations, evaluations = Preprocessing.extract_association_score(), Preprocessing.extract_user_evaluated_association()
 print "X: " + str(associations)
 print "y: "+str(evaluations)
@@ -34,12 +32,15 @@ for evaluation in evaluations: #we learn from each user independently
                 pass #exits this for loop without having to check all the associations
     
     else:
-        data = np.array(data)
-        targets = np.array(targets)
-        for ranker in rankers:
-            print ranker.__class__.__name__
-            ranker.fit(data, targets)
-            print ranker.score(data, targets)
+        if data: #means: if data is not empty
+            data = np.array(data)
+            targets = np.array(targets)
+            for ranker in rankers:
+                print data
+                print targets
+                print ranker.__class__.__name__
+                ranker.fit(data, targets)
+                print ranker.score(data, targets)
         current_user_id = evaluation[0]
         data = []
         targets = []
