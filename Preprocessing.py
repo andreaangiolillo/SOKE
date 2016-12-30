@@ -29,7 +29,7 @@ def extract_association_score():
         kpi = np.zeros((len(data)-1,11))
 
         i = 0
-        print "printing kpi"
+        #print "printing kpi"
         for row in data[1:]: #skip first line
             #print row
             kpi[i, 0] = float(row[0])
@@ -46,7 +46,7 @@ def extract_association_score():
             #print kpi[i]
             i = i + 1
 
-    return kpi, data
+    return kpi
 
 #@param
 #@output user: numpy array con le righe del file .csv
@@ -57,7 +57,7 @@ def extract_user_evaluated_association():
         user = np.zeros((len(data)-1,4))
         
         i = 0
-        print "printing users"
+        #print "printing users"
         for row in data[1:]:
             #print row
             user[i, 0] = float(row[0])
@@ -66,10 +66,10 @@ def extract_user_evaluated_association():
             user[i, 3] = float(row[3])
             #print user[i]
             i = i + 1
-
-
-
+            
     return user
+
+
 if __name__ == '__main__':
     kpi, data = extract_association_score()
     evaluated = extract_user_evaluated_association()
