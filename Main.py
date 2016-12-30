@@ -1,8 +1,5 @@
 import numpy as np
-
-from sklearn.datasets import load_diabetes
 from sklearn.utils.testing import assert_almost_equal
-
 from lightning.ranking import PRank
 import Preprocessing
 #from lightning.ranking import KernelPRank
