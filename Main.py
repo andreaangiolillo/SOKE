@@ -21,9 +21,10 @@ def linear_model() :
             for association in associations:
                 if association[0] == evaluation[1]: #the two IDs are the same: we found the right row
                     temp = []
-                    temp.append(associations[1:])
+                    temp.append(association[2:])
                     temp.append(evaluation[2])
                     assoc_evals[int(association[0])] = temp
+                    continue
                     
         else:
             assoc_evals = {}
@@ -37,26 +38,6 @@ def linear_model() :
             
          
     print assoc_evals
-#         
-#         
-#         
-#         if evaluation[0] == current_user_id:
-#             targets.append(evaluation[2])
-#             for association in associations: #we want to find the right row among the associations
-#                 if association[0] == evaluation[1]: #the two IDs are the same: we found the right row
-#                     data.append(association)
-#                     continue #exits this for loop without having to check all the associations
-#          
-#         else:
-#             print "user" + str(evaluation[0])
-#             if data: #means: if data is not empty
-#                 data = np.array(data)
-#                 targets = np.array(targets)
-#                 print data
-#                 print "data"
-#                 print data
-#                 print "target"
-#                 print targets
 
 
 
@@ -67,20 +48,7 @@ def linear_model() :
 #         for prediction in predictions:
 #             pass
                     
-                #test    
-
-         
-                 
-#             current_user_id = evaluation[0]
-#             data = []
-#             targets = []
-#             targets.append(evaluation[2])
-#             for association in associations: 
-#                 if association[0] == evaluation[1]: 
-#                     data.append(association)
-#                     pass
-    
-    
+                #test
 
 
 
