@@ -71,5 +71,7 @@ def extract_user_evaluated_association():
 
 
 if __name__ == '__main__':
-    kpi, data = extract_association_score()
+    kpi = extract_association_score()
     evaluated = extract_user_evaluated_association()
+    
+    print evaluated
