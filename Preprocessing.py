@@ -66,7 +66,7 @@ def extract_user_evaluated_association():
             user[i, 3] = float(row[3])
             #print user[i]
             i = i + 1
-            
+    print user
     return user
 
 

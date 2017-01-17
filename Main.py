@@ -1,12 +1,13 @@
 import numpy as np
 from sklearn.utils.testing import assert_almost_equal
 import Preprocessing
+import Clustering_dirichlet
 from sklearn.linear_model import SGDClassifier
-from dataset_creation import DataSetCreator
+#from dataset_creation import DataSetCreator
 #from lightning.ranking import KernelPRank
 
-from svmlight import *
-from active_global_local_uncertainty import *
+#from svmlight import *
+#from active_global_local_uncertainty import *
 import logging
 import time
 
@@ -56,7 +57,32 @@ def linear_model() :
                 #test
 
 
+def clustering(user, article):
+        
+        all_score_eval = Preprocessing.extract_user_evaluated_association() 
+        associations_score_eval = []
+        [associations_score_eval.append(row) for row in all_score_eval if ((int(row[0]) == int(user)) and (int(row[3]) == int(article))) ]
+        associations_score_eval = np.array(associations_score_eval)# list to numpy array
 
+                     
+        #associations_score = s.query(AssociationScore).filter(AssociationScore.article_id == article)
+        all_score = Preprocessing.extract_association_score()
+        associations_score = []
+        [associations_score.append(row) for row in all_score if int(row[1]) == int(article)]
+        associations_score = np.array(associations_score) #list to numpy array
+        
+        
+        
+        df = data_frame(associations_score,
+                            [c for c in ["association_id",
+                                         "localPageRankMean",
+                                         "path_informativeness",
+                                         "path_pattern_informativeness",
+                                         "localHubMean",
+                                         "relevance_score",
+                                         "rarity_score"]])
+        df = df.set_index("association_id")
+    
 
 
 def ranking(article, user):
@@ -82,9 +108,7 @@ def ranking(article, user):
         [associations_score_eval.append(row) for row in all_score_eval if ((int(row[0]) == int(user)) and (int(row[3]) == int(article))) ]
         associations_score_eval = np.array(associations_score_eval)# list to numpy array
 
-                
-                 
-        
+                     
         #associations_score = s.query(AssociationScore).filter(AssociationScore.article_id == article)
         all_score = Preprocessing.extract_association_score()
         associations_score = []
@@ -125,7 +149,7 @@ if __name__ == '__main__':
     
    # linear_model()
 
-    ranking(130, 1)
+    clustering(130, 1)
 
 
  
