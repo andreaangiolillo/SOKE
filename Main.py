@@ -71,8 +71,8 @@ def clustering(user, article):
         [associations_score.append(row) for row in all_score if int(row[1]) == int(article)]
         associations_score = np.array(associations_score) #list to numpy array
         
-        
-        
+        #TODO
+        ##http://stackoverflow.com/questions/20763012/creating-a-pandas-dataframe-from-a-numpy-array-how-do-i-specify-the-index-colum
         df = data_frame(associations_score,
                             [c for c in ["association_id",
                                          "localPageRankMean",
