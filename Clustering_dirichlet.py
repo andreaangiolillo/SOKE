@@ -19,11 +19,11 @@ class DirichletClustering():
         df_scaled = pd.DataFrame(StandardScaler().fit_transform(df), columns=df.columns, index=df.index)
         dpgmm = mixture.DPGMM(n_iter=10000, verbose=False, n_components=10, alpha=1000, covariance_type ='diag', tol=1e-20)
         dpgmm.fit(df_scaled)
-        joblib.dump(dpgmm, self.location + 'diri_user_' + user + '_article_' + article + '.pkl')
+        joblib.dump(dpgmm, self.location + 'diri_user_' + str(user) + '_article_' + str(article) + '.pkl')
 
     def predict(self, df, user, article):
         df_scaled = pd.DataFrame(StandardScaler().fit_transform(df), columns=df.columns, index=df.index)
-        dpgmm = joblib.load(self.location + 'diri_user_' + user + '_article_' + article + '.pkl')
+        dpgmm = joblib.load(self.location + 'diri_user_' + str(user) + '_article_' + str(article) + '.pkl')
         predict = dpgmm.predict(df_scaled)
 
         cluster_number = set(predict)

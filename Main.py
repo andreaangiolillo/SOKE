@@ -3,6 +3,7 @@ from sklearn.utils.testing import assert_almost_equal
 import Preprocessing
 import Clustering_dirichlet
 from sklearn.linear_model import SGDClassifier
+import pandas as pd
 #from dataset_creation import DataSetCreator
 #from lightning.ranking import KernelPRank
 
@@ -57,7 +58,7 @@ def linear_model() :
                 #test
 
 
-def clustering(user, article):
+def ranking(user, article):
         
         all_score_eval = Preprocessing.extract_user_evaluated_association() 
         associations_score_eval = []
@@ -70,77 +71,53 @@ def clustering(user, article):
         associations_score = []
         [associations_score.append(row) for row in all_score if int(row[1]) == int(article)]
         associations_score = np.array(associations_score) #list to numpy array
-        
+        associations_score = associations_score[:, [0, 3, 4, 5, 6, 8, 9]]
+        print associations_score
         #TODO
         ##http://stackoverflow.com/questions/20763012/creating-a-pandas-dataframe-from-a-numpy-array-how-do-i-specify-the-index-colum
-        df = data_frame(associations_score,
-                            [c for c in ["association_id",
+#         df = data_frame(associations_score,
+#                             [c for c in ["association_id",
+#                                          "localPageRankMean",
+#                                          "path_informativeness",
+#                                          "path_pattern_informativeness",
+#                                          "localHubMean",
+#                                          "relevance_score",
+#                                          "rarity_score"]])
+#         df = df.set_index("association_id")
+    
+
+
+def clustering(article, user):
+        all_score_eval = Preprocessing.extract_user_evaluated_association() 
+        associations_score_eval = []
+        [associations_score_eval.append(row) for row in all_score_eval if ((int(row[0]) == int(user)) and (int(row[3]) == int(article))) ]
+        associations_score_eval = np.array(associations_score_eval)# list to numpy array
+
+                     
+        #associations_score = s.query(AssociationScore).filter(AssociationScore.article_id == article)
+        all_score = Preprocessing.extract_association_score()
+        associations_score = []
+        [associations_score.append(row) for row in all_score if int(row[1]) == int(article)]
+        associations_score = np.array(associations_score) #list to numpy array
+        associations_score = associations_score[:, [0, 5, 8, 9, 6, 3, 4]]
+        #print associations_score
+        
+        df = pd.DataFrame(data = associations_score[0:, 0:],
+                        index = associations_score[0:, 0],
+                        columns = ["association_id",
                                          "localPageRankMean",
                                          "path_informativeness",
                                          "path_pattern_informativeness",
                                          "localHubMean",
                                          "relevance_score",
-                                         "rarity_score"]])
+                                         "rarity_score"])
         df = df.set_index("association_id")
-    
-
-
-def ranking(article, user):
-        """
-        This method expose the functionality for ranking data. It assumes that some associations have already been
-        evaluated
-        :param article: article to rank
-        :param user: user that is asking for ranked data
-        :return: json result with the best ordered associations, the associations to rank
-        """
-       # db = create_engine('mysql+mysqlconnector://root:federico92@localhost/dacena')
-       # db.echo = False  # false beacuse I don't need logging (now)
-       # session = sessionmaker()
-       # session.configure(bind=db)
-       # Base.metadata.create_all(db)
-        #s = session()
-
-        #associations_score_eval = s.query(UserEvaluatedAssociation).filter(UserEvaluatedAssociation.article_id == article and
-                                                                  #UserEvaluatedAssociation.user_id == user)
-                                                                  
-        all_score_eval = Preprocessing.extract_user_evaluated_association() 
-        associations_score_eval = []
-        [associations_score_eval.append(row) for row in all_score_eval if ((int(row[0]) == int(user)) and (int(row[3]) == int(article))) ]
-        associations_score_eval = np.array(associations_score_eval)# list to numpy array
-
-                     
-        #associations_score = s.query(AssociationScore).filter(AssociationScore.article_id == article)
-        all_score = Preprocessing.extract_association_score()
-        associations_score = []
-        [associations_score.append(row) for row in all_score if int(row[1]) == int(article)]
-        associations_score = np.array(associations_score) #list to numpy array
-        
-#         for row in all_score_eval:
-#             if ((int(row[1]) == int(article))):
-#                 associations_score.append(row)
-                
-        # features to use for the prediction. TODO: make global
-        features =["association_id",
-                   "localPageRankMean",
-                   "path_informativeness",
-                   "path_pattern_informativeness",
-                   "localHubMean",
-                   "relevance_score",
-                   "rarity_score"]
-
-        dc = DataSetCreator()
-        training, training_y, predi = dc.create_dataset(associations_score_eval, associations_score, features)
-
-        model = SvmLight()
-        rs = RankSVMActiveLearnerUncertainty(model)
-
-        to_rank, best_scored, _ = rs.get_rank_and_active(training, training_y, predi)
-
-        return {'to_rank': to_rank.tolist(),
-                'best_scored': best_scored.tolist(),
-                'prediction_complete': 0}
-
-
+        print df
+        diri = Clustering_dirichlet.DirichletClustering()
+        diri.dirichlet(df, user, article)
+        ids = diri.predict(df, user, article)
+        print ids
+        return {"ids": ids }
 
 
 
@@ -150,6 +127,7 @@ if __name__ == '__main__':
    # linear_model()
 
     clustering(130, 1)
+    #ranking(130, 1)
 
 
  
