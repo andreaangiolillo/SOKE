@@ -23,6 +23,7 @@ class DataSetCreator():
         #temp_data_frame = self.data_frame(associations_score, [c for c in features])
         #print associations_score
         associations_score = associations_score[:, [0, 3, 4, 5, 6, 8, 9]]
+        #print associations_score
         #print len(associations_score), " ", len(associations_score_eval)
 
 #                         
@@ -44,7 +45,7 @@ class DataSetCreator():
 # 
         return associations_score, associations_score_eval, [1,2,3,4,5,6]
    
-   
-   
+ 
+       
    
    

@@ -45,7 +45,7 @@ def extract_association_score():
             kpi[i, 10] = float(row[16])
             #print kpi[i]
             i = i + 1
-
+    #print kpi
     return kpi
 
 #@param
@@ -66,12 +66,13 @@ def extract_user_evaluated_association():
             user[i, 3] = float(row[3])
             #print user[i]
             i = i + 1
-    print user
+    #print user
+    
     return user
 
 
-if __name__ == '__main__':
-    kpi = extract_association_score()
-    evaluated = extract_user_evaluated_association()
-    
-    print evaluated
+#if __name__ == '__main__':
+    #print extract_association_score()
+#     evaluated = extract_user_evaluated_association()
+#     
+#     print evaluated
