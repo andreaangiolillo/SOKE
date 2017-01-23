@@ -17,7 +17,7 @@ class DirichletClustering():
 
     def dirichlet(self, df, user, article):
         df_scaled = pd.DataFrame(StandardScaler().fit_transform(df), columns=df.columns, index=df.index)
-        dpgmm = mixture.DPGMM(n_iter=10000, verbose=False, n_components=10, alpha=1000, covariance_type ='diag', tol=1e-20)
+        dpgmm = mixture.BayesianGaussianMixture(max_iter=10000, verbose=0, n_components=6, covariance_type ='diag', tol=1e-20)
         dpgmm.fit(df_scaled)
         joblib.dump(dpgmm, self.location + 'diri_user_' + str(user) + '_article_' + str(article) + '.pkl')
 
