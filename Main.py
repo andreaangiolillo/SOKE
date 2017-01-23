@@ -21,8 +21,9 @@ def learning() :
     user = 1
     score_eval = Preprocessing.extract_user_evaluated_association()
     #print score_eval
-    ids= clustering(article, user)
+    ids= np.sort(clustering(article, user))
     #print ids, "ids"
+    print "ciao ", ids
     
     
     score = []
@@ -99,11 +100,12 @@ def clustering(article, user):
                                          "relevance_score",
                                          "rarity_score"])
         df = df.set_index("association_id")
-        print df
+        print df.head(10)
         diri = Clustering_dirichlet.DirichletClustering()
+        print "\n", user, ": ", article
         diri.dirichlet(df, user, article)
         ids = diri.predict(df, user, article)
-        #print ids
+        print ids
         return ids
 
 
