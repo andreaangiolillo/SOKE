@@ -14,67 +14,112 @@ import time
 from theano.scalar.basic import InRange
 
 
+
+
+
+
+
+
+def get_score_from_ids(user, ids, score_eval):
+    score = []
+    for id in ids:
+        for row in score_eval:
+            if row[1] == id:
+                score.append(row[2])
+                mask = score_eval[:, 1] != id
+                score_eval = score_eval[mask]
+                #print score, "score"
+                break
+
+
+    return {
+            "score_eval": score_eval,
+            "score": score 
+            }
+
+def get_features_from_ids(article, ids, assoc):
+    
+    data = []
+    for id in ids:
+        for row in assoc:
+            if row[0] == id:
+                data.append(row)
+                mask = assoc[:, 0] != id
+                assoc = assoc[mask]
+                #print row, "data"
+                break
+         
+    return {
+            "assoc": assoc,
+            "data": data 
+            }
         
 #http://stackoverflow.com/questions/23056460/does-the-svm-in-sklearn-support-incremental-online-learning
 def learning() :
     article = 130
     user = 1
-    score_eval = Preprocessing.extract_user_evaluated_association()
-    #print score_eval
-    ids= np.sort(clustering(article, user))
-    #print ids, "ids"
-    print "ciao ", ids
+    assoc = Preprocessing.extract_association_score(article)
+     
+    score_eval = Preprocessing.extract_user_evaluated_association(user)
     
-    
-    score = []
-    for id in ids:
-        for row in score_eval:
-            if row[0] == user and row[1] == id and row[3] == article:
-                score.append(row[2])
-                #print score, "score"
-                break
-                
-    data = []
-    assoc = Preprocessing.extract_association_score()
-    for id in ids:
-        for row in assoc:
-            if row[0] == id and row[1] == article:
-                data.append(row)
-                np.delete(assoc, row, 0)
-                #print row, "data"
-                break
-            
-            
-
+     
+    ids= clustering(article, user)
+    print ids, "ids"
+    t = 11
+    k = 2
     clf = SGDClassifier(loss="log", penalty="l2")
     
-    
+     
+     
+    for i in range (0, t):
+        score_eval = get_score_from_ids(user, ids, score_eval)
+        score = score_eval["score"]
+        score_eval = score_eval["score_eval"]
+         
+        assoc = get_features_from_ids(article, ids, assoc) 
+        data = assoc["data"]
+        assoc = assoc["assoc"]
+         
+        print data, "data"
+        print score, "score" 
+     
     #training
-    for row in range(0, len(score)):
-        x = np.array(data[row])
-        y = np.array([score[row]])
-        #print np.array([score[row]])
-        #print y 
-        #print x
-        clf.partial_fit(x, y, classes=np.unique(score_eval))
+        for row in range(0, len(score)):
+            x = np.array(data[row])
+            y = np.array([score[row]])
+            #print np.array([score[row]])
+            print y, " _y"
+            print x, " x"           
+            clf.partial_fit(x, y, [1, 2, 3, 4, 5, 6])
+            
+        print len(assoc)
+        print "t: ", i
+        prediction = clf.predict(assoc)    
+        print prediction
+      
+     
+        name_assoc = assoc[:,0]
+        print name_assoc 
+         
+     
+         
+        id_score = []
+        len_p = len(prediction)
+        if len_p == len(name_assoc):
+            for i in range (0, len_p):
+                id_score.append((prediction[i], name_assoc[i]))
+                    
+        id_score_sort = np.sort(np.array(id_score), axis = 0)
+        print id_score_sort, " id_score sort"
+         
+        id_score_sort = id_score_sort[:k,:]
+        print id_score_sort, " prendo solo i k"
+        ids_ = []
         
-    
-    
-    
-    predictions = clf.predict(assoc)    
-    
-    print predictions  
+        ids = id_score_sort[:, 1].tolist()
+        print ids 
         
-        
-        
-#     d = {}
-#     for prediction in predictions:
-#         pass
-#                     
-#                 #test
-
-
-
+         
 def clustering(article, user):
         all_score_eval = Preprocessing.extract_user_evaluated_association() 
         associations_score_eval = []
@@ -105,7 +150,7 @@ def clustering(article, user):
         print "\n", user, ": ", article
         diri.dirichlet(df, user, article)
         ids = diri.predict(df, user, article)
-        print ids
+        #print ids
         return ids
 
 

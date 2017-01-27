@@ -1,5 +1,6 @@
 import csv
 import numpy as np
+from openpyxl.styles.builtins import accent_1_20
 
 
 #@param
@@ -21,7 +22,7 @@ import numpy as np
 #            e' una lista di liste, dove ogni lista e' una riga del csv
 #            (lo usiamo per prendere poi i nomi delle associazioni da mostrare)
 #
-def extract_association_score():
+def extract_association_score(article = -1):
 
     with open('Data/association_score.csv', 'r') as csvfile:
         reader = csv.reader(csvfile)
@@ -45,12 +46,15 @@ def extract_association_score():
             kpi[i, 10] = float(row[16])
             #print kpi[i]
             i = i + 1
-
+            
+    if article != -1:
+        mask = kpi[:, 1] == article
+        kpi = kpi[mask]
     return kpi
 
 #@param
 #@output user: numpy array con le righe del file .csv
-def extract_user_evaluated_association():
+def extract_user_evaluated_association(user_ = -1):
     with open('Data/user_evaluated_association.csv', 'rb') as csvfile:
         reader = csv.reader(csvfile)
         data = list(reader)
@@ -66,11 +70,14 @@ def extract_user_evaluated_association():
             user[i, 3] = float(row[3])
             #print user[i]
             i = i + 1
+    if user_ != -1:
+        mask = user[:,0] == user_
+        user = user[mask]
     return user
 
 
 # if __name__ == '__main__':
-#     kpi = extract_association_score()
-#     evaluated = extract_user_evaluated_association()
-#              
+#     print extract_association_score(130)
+#     evaluated = extract_user_evaluated_association(1)
+#               
 #     print evaluated
