@@ -5,6 +5,7 @@ import Clustering_dirichlet
 from sklearn.linear_model import SGDClassifier
 import pandas as pd
 
+
 #from dataset_creation import DataSetCreator
 #from lightning.ranking import KernelPRank
 
@@ -88,7 +89,7 @@ def learning() :
      
     ids= np.sort(clustering(article, user))
     print ids, "ids"
-    t = 1
+    t = 5
     k = 2
     clf = SGDClassifier(loss="log", penalty="l2")
     
@@ -148,9 +149,16 @@ def learning() :
          
         #print id_score, " id_score "
         entropies = entropy(id_score)
-                
-        print max(entropies, key=entropies.get)
-
+        #print entropies        
+        entropies = sorted(entropies.items(), key=lambda x: x[1], reverse=True)
+        
+        to_be_evalueted = entropies[:k]
+        ids = []
+        for item in to_be_evalueted:
+            ids.append(item[0])
+        
+        print ids 
+        
         
            
 def clustering(article, user):
