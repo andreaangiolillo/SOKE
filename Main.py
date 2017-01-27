@@ -4,14 +4,14 @@ import Preprocessing
 import Clustering_dirichlet
 from sklearn.linear_model import SGDClassifier
 import pandas as pd
+
 #from dataset_creation import DataSetCreator
 #from lightning.ranking import KernelPRank
 
 #from svmlight import *
 #from active_global_local_uncertainty import *
-import logging
-import time
-from theano.scalar.basic import InRange
+from lightning.ranking import PRank
+
 
 
 
@@ -53,7 +53,24 @@ def get_features_from_ids(article, ids, assoc):
             "assoc": assoc,
             "data": data 
             }
+
+
+def entropy(x):
+    entropy_list = []
+    for row in x:
+        id = row[0]
+        prob = row[1]
+        entropy = 0
+        for i in range(0, len(prob)):
+            if prob[i] != 0:
+                entropy += -(prob[i] * np.log2(prob[i]))
+                #print entropy, " entropy ", "prob[i]", prob[i] , " log ",  np.log2(prob[i])
+
+        entropy_list.append((id, entropy))
         
+    return entropy_list
+
+
 #http://stackoverflow.com/questions/23056460/does-the-svm-in-sklearn-support-incremental-online-learning
 def learning() :
     article = 130
@@ -63,9 +80,9 @@ def learning() :
     score_eval = Preprocessing.extract_user_evaluated_association(user)
     
      
-    ids= clustering(article, user)
+    ids= np.sort(clustering(article, user))
     print ids, "ids"
-    t = 11
+    t = 1
     k = 2
     clf = SGDClassifier(loss="log", penalty="l2")
     
@@ -86,6 +103,7 @@ def learning() :
     #training
         for row in range(0, len(score)):
             x = np.array(data[row])
+            x = x[3:] # remove ID, article and length 
             y = np.array([score[row]])
             #print np.array([score[row]])
             print y, " _y"
@@ -93,33 +111,45 @@ def learning() :
             clf.partial_fit(x, y, [1, 2, 3, 4, 5, 6])
             
         print len(assoc)
+        print score
+        
+        p = []#remove ID, article and length from data for the prediction
+        [p.append(row[3:]) for row in assoc ]
+        p = np.array(p)
+        
         print "t: ", i
-        prediction = clf.predict(assoc)    
+        prediction = clf.predict(p)    
         print prediction
+        prob = clf._predict_proba(p)
+       
+        print prob
       
-     
+               
         name_assoc = assoc[:,0]
         print name_assoc 
-         
-     
-         
+           
+       
+           
         id_score = []
         len_p = len(prediction)
         if len_p == len(name_assoc):
             for i in range (0, len_p):
-                id_score.append((prediction[i], name_assoc[i]))
-                    
-        id_score_sort = np.sort(np.array(id_score), axis = 0)
-        print id_score_sort, " id_score sort"
-         
-        id_score_sort = id_score_sort[:k,:]
-        print id_score_sort, " prendo solo i k"
-        ids_ = []
+                #id_score.append((prediction[i], name_assoc[i], prob[i]))
+                id_score.append((name_assoc[i], prob[i]))
+            
+                 
         
-        ids = id_score_sort[:, 1].tolist()
-        print ids 
-        
-         
+        print id_score, " id_score "
+        entropy(id_score)
+#           
+#         id_score_sort = id_score_sort[:k,:]
+#         print id_score_sort, " prendo solo i k"
+#         ids_ = []
+#          
+#         ids = id_score_sort[:, 1].tolist()
+#         print ids 
+#          
+          
 def clustering(article, user):
         all_score_eval = Preprocessing.extract_user_evaluated_association() 
         associations_score_eval = []
