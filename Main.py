@@ -63,6 +63,7 @@ def entropy(x):
         entropy = 0
         for i in range(0, len(prob)):
             if prob[i] != 0:
+                print prob[i], "prob"
                 entropy += -(prob[i] * np.log2(prob[i]))
                 #print entropy, " entropy ", "prob[i]", prob[i] , " log ",  np.log2(prob[i])
 
@@ -82,7 +83,7 @@ def learning() :
      
     ids= np.sort(clustering(article, user))
     print ids, "ids"
-    t = 1
+    t = 3
     k = 2
     clf = SGDClassifier(loss="log", penalty="l2")
     
@@ -140,15 +141,19 @@ def learning() :
                  
         
         print id_score, " id_score "
-        entropy(id_score)
-#           
-#         id_score_sort = id_score_sort[:k,:]
-#         print id_score_sort, " prendo solo i k"
-#         ids_ = []
-#          
-#         ids = id_score_sort[:, 1].tolist()
-#         print ids 
-#          
+        entropies = np.array(entropy(id_score))
+        print entropies
+        
+        id = entropies[0,0]
+        max = entropies[0,1]
+        for row in entropies:
+            if row[1] > max:
+                max = row[1]
+                id = row[0]
+            
+        print "id: ", id, " entropy: ", max     
+        
+        ids = [id]          
           
 def clustering(article, user):
         all_score_eval = Preprocessing.extract_user_evaluated_association() 
