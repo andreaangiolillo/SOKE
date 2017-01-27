@@ -147,11 +147,9 @@ def learning() :
                   
          
         #print id_score, " id_score "
-        entropies = np.array(entropy(id_score))
-        
-        
-        print sorted(entropies, key=lambda x: x[1])
-
+        entropies = entropy(id_score)
+                
+        print max(entropies, key=entropies.get)
 
         
            
