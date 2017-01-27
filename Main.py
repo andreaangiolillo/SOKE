@@ -56,19 +56,25 @@ def get_features_from_ids(article, ids, assoc):
 
 
 def entropy(x):
-    entropy_list = []
+    entropy_list = {}
+    print x, "x"
+     
     for row in x:
         id = row[0]
         prob = row[1]
         entropy = 0
+        #print "id: ", id ,"prob:",prob 
         for i in range(0, len(prob)):
             if prob[i] != 0:
                 print prob[i], "prob"
-                entropy += -(prob[i] * np.log2(prob[i]))
+                entropy += -prob[i] * np.log2(prob[i])
                 #print entropy, " entropy ", "prob[i]", prob[i] , " log ",  np.log2(prob[i])
-
-        entropy_list.append((id, entropy))
         
+#         if entropy > 1:
+#             print prob, "id ", id    
+#                 
+        entropy_list[id] = entropy
+         
     return entropy_list
 
 
@@ -76,14 +82,13 @@ def entropy(x):
 def learning() :
     article = 130
     user = 1
-    assoc = Preprocessing.extract_association_score(article)
-     
+    assoc = Preprocessing.extract_association_score(article)  
     score_eval = Preprocessing.extract_user_evaluated_association(user)
     
      
     ids= np.sort(clustering(article, user))
     print ids, "ids"
-    t = 3
+    t = 1
     k = 2
     clf = SGDClassifier(loss="log", penalty="l2")
     
@@ -100,61 +105,56 @@ def learning() :
          
         print data, "data"
         print score, "score" 
-     
+      
     #training
         for row in range(0, len(score)):
             x = np.array(data[row])
-            x = x[3:] # remove ID, article and length 
+            x = x[2:] # remove ID, article and length 
             y = np.array([score[row]])
             #print np.array([score[row]])
             print y, " _y"
             print x, " x"           
             clf.partial_fit(x, y, [1, 2, 3, 4, 5, 6])
-            
+             
         print len(assoc)
-        print score
-        
-        p = []#remove ID, article and length from data for the prediction
-        [p.append(row[3:]) for row in assoc ]
-        p = np.array(p)
-        
+                 
+        assoc_ = []#remove ID, article and length from data for the prediction
+        [assoc_.append(row[2:]) for row in assoc ]
+        assoc_ = np.array(assoc_)
+         
         print "t: ", i
-        prediction = clf.predict(p)    
+        prediction = clf.predict(assoc_)    
         print prediction
-        prob = clf._predict_proba(p)
-       
+         
+         
+        prob = clf._predict_proba(assoc_)
+        
         print prob
-      
-               
+       
+                
         name_assoc = assoc[:,0]
         print name_assoc 
-           
-       
-           
+            
+        
+            
         id_score = []
         len_p = len(prediction)
         if len_p == len(name_assoc):
             for i in range (0, len_p):
                 #id_score.append((prediction[i], name_assoc[i], prob[i]))
                 id_score.append((name_assoc[i], prob[i]))
-            
-                 
-        
-        print id_score, " id_score "
+             
+                  
+         
+        #print id_score, " id_score "
         entropies = np.array(entropy(id_score))
-        print entropies
         
-        id = entropies[0,0]
-        max = entropies[0,1]
-        for row in entropies:
-            if row[1] > max:
-                max = row[1]
-                id = row[0]
-            
-        print "id: ", id, " entropy: ", max     
         
-        ids = [id]          
-          
+        print sorted(entropies, key=lambda x: x[1])
+
+
+        
+           
 def clustering(article, user):
         all_score_eval = Preprocessing.extract_user_evaluated_association() 
         associations_score_eval = []
