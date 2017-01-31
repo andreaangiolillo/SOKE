@@ -1,23 +1,20 @@
+# encoding=utf8
 import numpy as np
 from sklearn.utils.testing import assert_almost_equal
 import Preprocessing
 import Clustering_dirichlet
 from sklearn.linear_model import SGDClassifier
 import pandas as pd
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.linear_model import Perceptron
 
+from sklearn.naive_bayes import BernoulliNB
 
 #from dataset_creation import DataSetCreator
 #from lightning.ranking import KernelPRank
 
 #from svmlight import *
 #from active_global_local_uncertainty import *
-from lightning.ranking import PRank
-
-
-
-
-
-
 
 
 
@@ -79,8 +76,17 @@ def entropy(x):
     return entropy_list
 
 
+
+
+
+
+
 #http://stackoverflow.com/questions/23056460/does-the-svm-in-sklearn-support-incremental-online-learning
 def learning() :
+    
+    
+    
+    
     article = 130
     user = 1
     assoc = Preprocessing.extract_association_score(article)  
@@ -91,10 +97,10 @@ def learning() :
     print ids, "ids"
     t = 5
     k = 2
-    clf = SGDClassifier(loss="log", penalty="l2")
-    
-     
-     
+    #clf = SGDClassifier(loss="perceptron", penalty="l2")
+    clf = MultinomialNB()
+    #clf = Perceptron(penalty="l2", warm_start=True) 
+    #clf = BernoulliNB(alpha=1.0, binarize=0.0, class_prior=None, fit_prior=True)
     for i in range (0, t):
         score_eval = get_score_from_ids(user, ids, score_eval)
         score = score_eval["score"]
@@ -114,51 +120,54 @@ def learning() :
             y = np.array([score[row]])
             #print np.array([score[row]])
             print y, " _y"
-            print x, " x"           
-            clf.partial_fit(x, y, [1, 2, 3, 4, 5, 6])
-             
+            print x, " x"
+            if row == 0:           
+                clf.partial_fit(x, y, [1, 2, 3, 4, 5, 6])
+            else:
+               clf.partial_fit(x, y) 
         print len(assoc)
-                 
+#                  
         assoc_ = []#remove ID, article and length from data for the prediction
         [assoc_.append(row[2:]) for row in assoc ]
         assoc_ = np.array(assoc_)
-         
+          
         print "t: ", i
         prediction = clf.predict(assoc_)    
         print prediction
-         
-         
-        prob = clf._predict_proba(assoc_)
         
+        #print clf.decision_function(assoc_)
+            
+        prob = clf.predict_proba(assoc_)
+        #prob = clf.decision_function(assoc_)  
         print prob
-       
-                
+         
+                  
         name_assoc = assoc[:,0]
         print name_assoc 
-            
-        
-            
+              
+           
+              
         id_score = []
         len_p = len(prediction)
         if len_p == len(name_assoc):
             for i in range (0, len_p):
                 #id_score.append((prediction[i], name_assoc[i], prob[i]))
                 id_score.append((name_assoc[i], prob[i]))
-             
-                  
-         
-        #print id_score, " id_score "
+               
+                    
+           
+        print id_score, " id_score "
         entropies = entropy(id_score)
-        #print entropies        
+        print entropies, "entropy"        
         entropies = sorted(entropies.items(), key=lambda x: x[1], reverse=True)
-        
+          
         to_be_evalueted = entropies[:k]
         ids = []
         for item in to_be_evalueted:
             ids.append(item[0])
-        
+          
         print ids 
-        
+          
         
            
 def clustering(article, user):
@@ -200,7 +209,7 @@ def clustering(article, user):
 if __name__ == '__main__':
     
     learning()
-
+    #prova()
 
  
         
