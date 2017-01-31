@@ -74,8 +74,6 @@ def learning() :
         ids_feature_vector = feature_vector["ids_feature_vector"]
         feature_vector = feature_vector["feature_vector"]
         
-        print feature_vector, "feature vector for all associations"
-         
         print ids_feature_vector, "feature vector for centroids"
         print ids_user_evaluations, "ids_user_evaluations" 
      
