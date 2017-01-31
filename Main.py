@@ -118,7 +118,7 @@ def learning() :
         
         #print clf.decision_function(assoc_)
             
-        prob = clf.predict_proba(assoc_)
+        prob = clf.predict_proba(assoc_)#quiiiii hai le prob
         #prob = clf.decision_function(assoc_)  
         print prob
          
@@ -135,8 +135,9 @@ def learning() :
                 #id_score.append((prediction[i], name_assoc[i], prob[i]))
                 id_score.append((name_assoc[i], prob[i]))
                
-                    
-           
+        #parte adam#####
+        #ordinamento#            
+        ##############################  
         print id_score, " id_score "
         entropies = entropy(id_score)
         print entropies, "entropy"        
@@ -149,6 +150,12 @@ def learning() :
           
         print ids 
           
+    #NDCG fuori dal for 
+    
+    
+    
+    
+    
         
            
 def clustering(article, user):
