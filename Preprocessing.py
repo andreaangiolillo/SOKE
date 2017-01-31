@@ -22,11 +22,13 @@ from openpyxl.styles.builtins import accent_1_20
 #            e' una lista di liste, dove ogni lista e' una riga del csv
 #            (lo usiamo per prendere poi i nomi delle associazioni da mostrare)
 #
-def extract_association_score(article = -1):
+def extract_association_score(article = -1, graph = False):
 
     with open('Data/association_score.csv', 'r') as csvfile:
         reader = csv.reader(csvfile)
         data = list(reader)
+        
+    if graph == False:
         kpi = np.zeros((len(data)-1,11))
 
         i = 0
@@ -46,10 +48,19 @@ def extract_association_score(article = -1):
             kpi[i, 10] = float(row[16])
             #print kpi[i]
             i = i + 1
-            
-    if article != -1:
-        mask = kpi[:, 1] == article
-        kpi = kpi[mask]
+                
+        if article != -1:
+            mask = kpi[:, 1] == article
+            kpi = kpi[mask]
+        
+    elif article != -1:#take only columns for to create graph
+        graph = []
+        for row in data[1:]:
+            #print int(row[1]) == article
+            if int(row[1]) == article:
+                graph.append((row[2],row[3], row[4],row[6], row[7]))
+        kpi = graph
+        #print len(kpi)
     return kpi
 
 #@param
@@ -77,7 +88,7 @@ def extract_user_evaluated_association(user_ = -1):
 
 
 # if __name__ == '__main__':
-#     print extract_association_score(130)
+#     print extract_association_score(130, True)
 #     evaluated = extract_user_evaluated_association(1)
 #               
 #     print evaluated

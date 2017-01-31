@@ -3,20 +3,8 @@ import numpy as np
 from sklearn.utils.testing import assert_almost_equal
 import Preprocessing
 import Clustering_dirichlet
-from sklearn.linear_model import SGDClassifier
 import pandas as pd
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.linear_model import Perceptron
-
-from sklearn.naive_bayes import BernoulliNB
-
-#from dataset_creation import DataSetCreator
-#from lightning.ranking import KernelPRank
-
-#from svmlight import *
-#from active_global_local_uncertainty import *
-
-
 
 def get_score_from_ids(user, ids, score_eval):
     score = []
@@ -52,7 +40,6 @@ def get_features_from_ids(article, ids, assoc):
             "data": data 
             }
 
-
 def entropy(x):
     entropy_list = {}
     print x, "x"
@@ -74,12 +61,6 @@ def entropy(x):
         entropy_list[id] = entropy
          
     return entropy_list
-
-
-
-
-
-
 
 #http://stackoverflow.com/questions/23056460/does-the-svm-in-sklearn-support-incremental-online-learning
 def learning() :
@@ -203,13 +184,9 @@ def clustering(article, user):
         #print ids
         return ids
 
-
-
-
 if __name__ == '__main__':
     
     learning()
-    #prova()
 
  
         
