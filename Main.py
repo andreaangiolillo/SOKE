@@ -14,12 +14,6 @@ import time
 from theano.scalar.basic import InRange
 
 
-
-
-
-
-
-
 def get_score_from_ids(user, ids, score_eval):
     score = []
     for id in ids:
@@ -33,8 +27,8 @@ def get_score_from_ids(user, ids, score_eval):
 
 
     return {
-            "score_eval": score_eval,
-            "score": score 
+            "user_evaluations": score_eval,
+            "ids_user_evaluations": score 
             }
 
 def get_features_from_ids(article, ids, assoc):
@@ -50,17 +44,17 @@ def get_features_from_ids(article, ids, assoc):
                 break
          
     return {
-            "assoc": assoc,
-            "data": data 
+            "feature_vector": assoc,
+            "ids_feature_vector": data 
             }
         
 #http://stackoverflow.com/questions/23056460/does-the-svm-in-sklearn-support-incremental-online-learning
 def learning() :
     article = 130
     user = 1
-    assoc = Preprocessing.extract_association_score(article)
+    feature_vector = Preprocessing.extract_association_score(article)
      
-    score_eval = Preprocessing.extract_user_evaluated_association(user)
+    user_evaluations = Preprocessing.extract_user_evaluated_association(user)
     
      
     ids= clustering(article, user)
@@ -72,43 +66,45 @@ def learning() :
      
      
     for i in range (0, t):
-        score_eval = get_score_from_ids(user, ids, score_eval)
-        score = score_eval["score"]
-        score_eval = score_eval["score_eval"]
+        user_evaluations = get_score_from_ids(user, ids, user_evaluations)
+        ids_user_evaluations = user_evaluations["ids_user_evaluations"]
+        user_evaluations = user_evaluations["user_evaluations"]
          
-        assoc = get_features_from_ids(article, ids, assoc) 
-        data = assoc["data"]
-        assoc = assoc["assoc"]
+        feature_vector = get_features_from_ids(article, ids, feature_vector) 
+        ids_feature_vector = feature_vector["ids_feature_vector"]
+        feature_vector = feature_vector["feature_vector"]
+        
+        print feature_vector, "feature vector for all associations"
          
-        print data, "data"
-        print score, "score" 
+        print ids_feature_vector, "feature vector for centroids"
+        print ids_user_evaluations, "ids_user_evaluations" 
      
     #training
-        for row in range(0, len(score)):
-            x = np.array(data[row])
-            y = np.array([score[row]])
-            #print np.array([score[row]])
+        for row in range(0, len(ids_user_evaluations)):
+            x = np.array(ids_feature_vector[row])
+            y = np.array([ids_user_evaluations[row]])
+            #print np.array([ids_user_evaluations[row]])
             print y, " _y"
             print x, " x"           
             clf.partial_fit(x, y, [1, 2, 3, 4, 5, 6])
             
-        print len(assoc)
+        print len(feature_vector)
         print "t: ", i
-        prediction = clf.predict(assoc)    
+        prediction = clf.predict(feature_vector)    
         print prediction, "prediction"
-        print clf.predict_proba(assoc), "prob"
+        print clf.predict_proba(feature_vector), "prob"
      
-        name_assoc = assoc[:,0]
-        print name_assoc 
+        assocation_name = feature_vector[:,0]
+        print assocation_name 
          
 
         id_score = []
         len_p = len(prediction)
-        if len_p == len(name_assoc):
+        if len_p == len(assocation_name):
             for i in range (0, len_p):
-                id_score.append((prediction[i], name_assoc[i]))
+                id_score.append((prediction[i], assocation_name[i]))
                     
-        #id_score_sort = np.sort(np.array(id_score), axis = 0)
+        
         id_score_sort = np.array(sorted(id_score,key=lambda x: x[0]))
         print id_score_sort, " id_score sort"
          
