@@ -96,13 +96,12 @@ def learning() :
         print "t: ", i
         prediction = clf.predict(assoc)    
         print prediction, "prediction"
-        print clf.predict_proba(assoc)
+        print clf.predict_proba(assoc), "prob"
      
         name_assoc = assoc[:,0]
         print name_assoc 
          
-     
-         
+
         id_score = []
         len_p = len(prediction)
         if len_p == len(name_assoc):
