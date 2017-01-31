@@ -2,7 +2,7 @@ import numpy as np
 from sklearn.utils.testing import assert_almost_equal
 import Preprocessing
 import Clustering_dirichlet
-from sklearn.linear_model import SGDClassifier
+from sklearn.naive_bayes import MultinomialNB
 import pandas as pd
 #from dataset_creation import DataSetCreator
 #from lightning.ranking import KernelPRank
@@ -67,7 +67,7 @@ def learning() :
     print ids, "ids"
     t = 11
     k = 2
-    clf = SGDClassifier(loss="log", penalty="l2")
+    clf = MultinomialNB(alpha=1.0, fit_prior=True, class_prior=None)
     
      
      
@@ -109,7 +109,8 @@ def learning() :
             for i in range (0, len_p):
                 id_score.append((prediction[i], name_assoc[i]))
                     
-        id_score_sort = np.sort(np.array(id_score), axis = 0)
+        #id_score_sort = np.sort(np.array(id_score), axis = 0)
+        id_score_sort = np.array(sorted(id_score,key=lambda x: x[0]))
         print id_score_sort, " id_score sort"
          
         id_score_sort = id_score_sort[:k,:]
