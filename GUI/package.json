@@ -1,0 +1,11 @@
+{
+  "name": "dacena",
+  "version": "1.0.0",
+  "description": "gui dacena",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "andrew",
+  "license": "ISC"
+}
