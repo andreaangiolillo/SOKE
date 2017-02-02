@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="font.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-sidenav a {padding:20px}
+</style>
+<body>
+
+
+ 
+ 
+	 
+	<!-- Sidenav (hidden by default) -->
+	<nav class="w3-sidenav w3-card-2 w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidenav">
+	  <a href="javascript:void(0)" onclick="w3_close()"
+	  class="w3-closenav">Close Menu</a>
+	  <a href="text.html" onclick="w3_close()">Articles</a>
+	  <a href="article130.html" onclick="w3_close()">Bernie Sanders Endorsment</a>
+	  <a href="article133.html" onclick="w3_close()">Pushes for a Place at Europe’s Power Table</a>
+	  <a href="article139.html" onclick="w3_close()">I will work with Hillary to stop Trump</a>
+	  <a href="article143.html" onclick="w3_close()">Greece set to win €1.75bn from EU climate</a>
+	  <a href="article143.html" onclick="w3_close()">Hundreds dead as boats sink off Libya</a>
+	  <a href="#aboutl" onclick="w3_close()">About</a>
+	</nav>
+ 
+ 	<!-- Top menu -->
+	<div class="w3-top" style = "opacity: 0.8;">
+	  <div class="w3-white w3-xlarge w3-padding-xlarge" style="max-width:1200px;margin:auto">
+	    <div class="w3-opennav w3-left w3-hover-text-grey" onclick="w3_open()">☰</div>
+	    <!-- <div class="w3-right">Mail</div> -->
+	    <div class="w3-center">DaCENA</div>
+	  </div>
+	</div>
+ 
+ <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+	    <h2>About DaCena</h2><br>
+	   
+	    <div class="w3-padding-32">
+	      <p style="text-align:justify">DaCENA (Data Context for News Articles) is a web application conceived, designed and developed by the Department of Informatics,
+		    Systems and Communication (DISCO) of the University of Milano – Biccoca and DensityDesign Research Lab.<br>
+			The web application showcases a new approach to reading online news articles with the support of a data context built from interlinked 
+			facts available in the Web of Data. Given a source article, a set of facts that are estimated to be more interesting for the readers
+			 are extracted from the Web and presented using tailored information visualization methods and an interactive user interface.<br> 
+			 By looking at these facts, the reader access background factual knowledge with the advantage of being supported in the interpretation 
+			 of the news content and being suggested connections to related topics to further explore.<br>
+			 DaCENA uses a novel interactive user interface to presents to the reader a set of interlinked facts that describe semantic associations 
+			 between the main topic of an article, represented by an entity, and several other entities that are mentioned in the article.<br>
+			 The interlinked associations represent context data that readers can navigate through, thus exploring additional background knowledge 
+			 relevant to the article. DaCENA makes this exploration interactive and strives to show only those semantic associations that are expected
+			  to be more interesting for the readers. To this end DaCENA order the associations by serendipity, which is estimated as a combination of 
+			  two different factors: relevance, which captures how related an association is to the content of the article, and unexpectedness, 
+			  which captures how an association is likely to be unknown to the reader.
+			 
+	 	</p>
+	  </div>
+  </div>
+  
+  <hr>
+    <!-- Footer -->
+  
+  
+  <div class="w3-row-padding w3-padding-16 w3-center">
+  
+    <div class="w3-third" >
+      <h3>People</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          
+          <span class="w3-large">Andrea Angiolillo</span><br>
+          <span>a.angiolillo@campus.unimib.it</span>
+        </li>
+        <li class="w3-padding-16">
+          <span class="w3-large">Omar Belingheri</span><br>
+          <span>o.belingheri@campus.unimib.it</span>
+          
+        </li>
+        <li class="w3-padding-16">
+          <span class="w3-large">Adam Khayam</span><br>
+          <span>a.khayan@campus.unimib.it</span>
+      
+        </li>  
+      </ul>
+    </div>
+    
+    <div class="w3-half w3-hover" style="cursor:pointer">
+      <a  target="_blank" href="http://www.densitydesign.org/research/dacena/" ><img src="images/dc.png" alt="Salmon" style="width:80%"></a>
+      <h3>Web Site</h3>
+     
+    </div>
+  
+  </div>
+</div>
+
+
+<script>
+// Script to open and close sidenav
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+}
+</script>
+
+
+
+</body>
+</html>
