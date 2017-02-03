@@ -104,7 +104,7 @@ def learning() :
                 
         #parte adam#####
         #ordinamento#            
-        ##############################
+        ######################################################################################
         id_score_name = []
         id_score_prob = []
         
@@ -115,7 +115,7 @@ def learning() :
         
         id_score_prob = np.asarray(id_score_prob)
         ndcg_data = np.asarray(np.column_stack([id_score_name, prediction, id_score_prob]))
-        ########## copialo nel branch master andre!!           
+        ########## copialo nel branch master andre!!##########################################          
         
         id_score_sort = np.array(sorted(id_score,key=lambda x: x[0]))
         print id_score_sort, " id_score sort"
