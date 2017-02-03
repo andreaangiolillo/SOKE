@@ -101,7 +101,21 @@ def learning() :
         if len_p == len(assocation_name):
             for i in range (0, len_p):
                 id_score.append((prediction[i], assocation_name[i]))
-                    
+                
+        #parte adam#####
+        #ordinamento#            
+        ##############################
+        id_score_name = []
+        id_score_prob = []
+        
+        for i in range(0, len(id_score)):
+            id_score_name.append(id_score[i][0]) 
+            id_score_prob.append(id_score[i][1])
+        
+        
+        id_score_prob = np.asarray(id_score_prob)
+        ndcg_data = np.asarray(np.column_stack([id_score_name, prediction, id_score_prob]))
+        ########## copialo nel branch master andre!!           
         
         id_score_sort = np.array(sorted(id_score,key=lambda x: x[0]))
         print id_score_sort, " id_score sort"
