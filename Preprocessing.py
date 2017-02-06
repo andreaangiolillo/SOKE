@@ -58,7 +58,7 @@ def extract_association_score(article = -1, graph = False):
         for row in data[1:]:
             #print int(row[1]) == article
             if int(row[1]) == article:
-                graph.append((row[2],row[3], row[4],row[6], row[7]))
+                graph.append((row[0],row[2],row[3], row[4],row[6], row[7]))
         kpi = graph
         #print len(kpi)
     return kpi
