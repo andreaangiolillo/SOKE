@@ -248,5 +248,5 @@ if __name__ == '__main__':
     data=Data([trace1, trace2,trace3])
     fig=Figure(data=data, layout=layout)
        
-    py.iplot(fig, filename='article145user17')
+    py.iplot(fig, filename='prova')
      
