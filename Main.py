@@ -137,7 +137,7 @@ def dcg(G, i):
         return [G[i]]
     else:
         l = ndcg(G, i - 1)
-        sum = l[i - 1] + (G[i] / np.log2(i+1))
+        sum = l[i - 1] + (G[i] / np.log2(i + 1))
         l.append(sum)
     return l
         
@@ -336,7 +336,7 @@ def learning(article, user, t, k) :
            
         print ids 
         
-        print ndcg([3, 2, 4, 6, 5, 1, 1, 6, 1], 9 - 1)
+        print ndcg([3, 2, 4, 6, 5, 1, 1, 6, 1], 9 - 1)#esempio! poi sistemo sul nostro caso!
         
           
     return sort_prob(id_score)
