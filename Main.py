@@ -97,7 +97,7 @@ def entropy(x):
 
 ''' 
 
-def ndcg(id_score):
+def ndcg1(id_score):
     id_score_name = []
     id_score_prob = []
     
@@ -112,6 +112,35 @@ def ndcg(id_score):
     ndcg_data = np.asarray(np.column_stack([id_score_name, prediction, id_score_prob]))
     #print ndcg_data,"ndcg"
     return ndcg
+
+'''
+    @param  G       -  array with user association score per association
+    @param  i       -  index for recursion
+    @return l       -  list with ndcg value for each association 
+
+''' 
+#work in progress! sono stanco continuo domani.. carenza di sonno a mille
+def ndcg(G, i):
+    # sort statements
+    return dcg(G, i)#I've to use the ordered assocs! not G
+
+'''
+    @param  G       -  array with user association score per association
+    @param  i       -  index for recursion
+    @return l       -  list with dcg value for each association 
+
+''' 
+#recursive algorithm that calculates the dcg measure
+def dcg(G, i):
+    l = []
+    if (i == 0):
+        return [G[i]]
+    else:
+        l = ndcg(G, i - 1)
+        sum = l[i - 1] + (G[i] / np.log2(i+1))
+        l.append(sum)
+    return l
+        
 
 
 '''
@@ -306,8 +335,12 @@ def learning(article, user, t, k) :
             ids.append(item[0])
            
         print ids 
+        
+        print ndcg([3, 2, 4, 6, 5, 1, 1, 6, 1], 9 - 1)
+        
           
     return sort_prob(id_score)
+    
     
 
 
