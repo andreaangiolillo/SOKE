@@ -98,7 +98,9 @@ def entropy(x):
 ''' 
 
 def radix_sort(id_score):
-    
+    for i in reversed(range(3, id_score.shape[1] - 1)):
+        id_score = sorted(id_score, key=lambda x: x[:,i], reverse=True)
+        
     return id_score
 
 '''
