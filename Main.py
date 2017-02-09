@@ -98,8 +98,10 @@ def entropy(x):
 ''' 
 
 def radix_sort(id_score):
-    for i in reversed(range(3, id_score.shape[1] - 1)):
-        id_score = sorted(id_score, key=lambda x: x[:,i], reverse=True)
+    maxcol = id_score.shape[1]
+    for i in reversed(range(1, maxcol)):
+        print i
+        id_score = sorted(id_score, key=lambda x: x[i])
         
     return id_score
 
@@ -114,8 +116,7 @@ def ndcg(data_for_prediction, ndcg_data, clf):
     prob = clf.predict_proba(data_for_prediction[:, 2:])
     data_to_order = np.asarray(np.column_stack([ndcg_data, prob]))
     
-    ndcg_data = radix_sort(data_to_order)
-    
+    ndcg_data = np.asmatrix(radix_sort(data_to_order))
     
     return dcg(ndcg_data[:,1], len(ndcg_data[:,1]) - 1)#I've to use the ordered assocs! not G
 
@@ -129,10 +130,10 @@ def ndcg(data_for_prediction, ndcg_data, clf):
 def dcg(G, i):
     l = []
     if (i == 0):
-        return [G[i]]
+        return [G[i, 0]]
     else:
         l = dcg(G, i - 1)
-        sum = l[i - 1] + (G[i] / np.log2(i + 1))
+        sum = l[i - 1] + (G[i, 0] / np.log2(i + 1))
         l.append(sum)
     return l
         
