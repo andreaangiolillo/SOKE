@@ -97,21 +97,9 @@ def entropy(x):
 
 ''' 
 
-def ndcg1(id_score):
-    id_score_name = []
-    id_score_prob = []
+def radix_sort(id_score):
     
-    for i in range(0, len(id_score)):
-        id_score_name.append(id_score[i][0]) 
-        id_score_prob.append(id_score[i][1])
-    
-    
-    id_score_prob = np.asarray(id_score_prob)
-    
-    print id_score_prob, "sort?"
-    ndcg_data = np.asarray(np.column_stack([id_score_name, prediction, id_score_prob]))
-    #print ndcg_data,"ndcg"
-    return ndcg
+    return id_score
 
 '''
     @param  G       -  array with user association score per association
@@ -120,9 +108,14 @@ def ndcg1(id_score):
 
 ''' 
 #work in progress! sono stanco continuo domani.. carenza di sonno a mille
-def ndcg(G, i):
-    # sort statements
-    return dcg(G, i)#I've to use the ordered assocs! not G
+def ndcg(data_for_prediction, ndcg_data, clf):
+    prob = clf.predict_proba(data_for_prediction[:, 2:])
+    data_to_order = np.asarray(np.column_stack([ndcg_data, prob]))
+    
+    ndcg_data = radix_sort(data_to_order)
+    
+    
+    return dcg(ndcg_data[:,1], len(ndcg_data[:,1]) - 1)#I've to use the ordered assocs! not G
 
 '''
     @param  G       -  array with user association score per association
@@ -136,7 +129,7 @@ def dcg(G, i):
     if (i == 0):
         return [G[i]]
     else:
-        l = ndcg(G, i - 1)
+        l = dcg(G, i - 1)
         sum = l[i - 1] + (G[i] / np.log2(i + 1))
         l.append(sum)
     return l
@@ -238,7 +231,6 @@ def clustering(article, user):
         [associations_score.append(row) for row in all_score if int(row[1]) == int(article)]
         associations_score = np.array(associations_score) #list to numpy array
         associations_score = associations_score[:, [0, 5, 8, 9, 6, 3, 4]]
-        #print associations_score
         
         df = pd.DataFrame(data = associations_score[0:, 0:],
                         index = associations_score[0:, 0],
@@ -271,8 +263,10 @@ def clustering(article, user):
 def learning(article, user, t, k) :
     assoc = Preprocessing.extract_association_score(article)  
     score_eval = Preprocessing.extract_user_evaluated_association(user)
+    print score_eval, "score_eval"
     ids= np.sort(clustering(article, user))
     print ids, "ids"
+    flag_ndcg = True
 
     clf = MultinomialNB()
     for i in range (0, t):
@@ -286,7 +280,7 @@ def learning(article, user, t, k) :
          
         print data, "data"
         print score, "score" 
-      
+        
         #training
         for row in range(0, len(score)):
             x = np.array(data[row])
@@ -298,7 +292,7 @@ def learning(article, user, t, k) :
             if row == 0:           
                 clf.partial_fit(x, y, [1, 2, 3, 4, 5, 6])
             else:
-               clf.partial_fit(x, y) 
+                clf.partial_fit(x, y)
         print len(assoc)
                   
         assoc_ = []#remove ID, article and length from data for the prediction
@@ -306,7 +300,7 @@ def learning(article, user, t, k) :
         assoc_ = np.array(assoc_)
           
         print "t: ", i
-        print assoc_
+        print assoc_, "input predict"
         prediction = clf.predict(assoc_)    
         print prediction
            
@@ -335,8 +329,10 @@ def learning(article, user, t, k) :
             ids.append(item[0])
            
         print ids 
+        #np.asarray(np.column_stack([id_score_name, prediction, id_score_prob]))
+        ndcg_data = score_eval[:, 1:3]
         
-        print ndcg([3, 2, 4, 6, 5, 1, 1, 6, 1], 9 - 1)#esempio! poi sistemo sul nostro caso!
+        print ndcg(assoc, ndcg_data, clf)#esempio! poi sistemo sul nostro caso!
         
           
     return sort_prob(id_score)
