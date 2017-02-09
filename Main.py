@@ -106,19 +106,19 @@ def radix_sort(id_score):
     return id_score
 
 '''
-    @param  G       -  array with user association score per association
-    @param  i       -  index for recursion
+    @param  data_for_prediction       -  feature vector for each association.
+    @param  ndcg_data       -  association with his ideal score
     @return l       -  list with ndcg value for each association 
 
 ''' 
-#work in progress! sono stanco continuo domani.. carenza di sonno a mille
+
 def ndcg(data_for_prediction, ndcg_data, clf):
     prob = clf.predict_proba(data_for_prediction[:, 2:])
     data_to_order = np.asarray(np.column_stack([ndcg_data, prob]))
     
     ndcg_data = np.asmatrix(radix_sort(data_to_order))
     
-    return dcg(ndcg_data[:,1], len(ndcg_data[:,1]) - 1)#I've to use the ordered assocs! not G
+    return dcg(ndcg_data[:,1], len(ndcg_data[:,1]) - 1)
 
 '''
     @param  G       -  array with user association score per association
