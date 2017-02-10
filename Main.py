@@ -91,6 +91,7 @@ def entropy(x):
     return entropy_list
 
 
+
 '''
     @param  id_score    - matrix with a user id, user value and cluster probability score
     @return A matrix ordered for each field
@@ -169,8 +170,7 @@ def dcg(G, i):
         l = dcg(G, i - 1)
         sum = l[i - 1] + (G[i] / np.log2(i + 1))
         l.append(sum)
-    return l
-        
+    return l     
 
 
 '''
@@ -371,9 +371,9 @@ def learning(article, user, t, k) :
            
         print ids 
         #np.asarray(np.column_stack([id_score_name, prediction, id_score_prob]))
-#         ndcg_data = score_eval[:, 1:3]
+        ndcg_data = score_eval[:, 1:3]
 #         
-#         print ndcg(assoc, ndcg_data, clf)#esempio! poi sistemo sul nostro caso!
+        print ndcg(assoc, ndcg_data, clf)#esempio! poi sistemo sul nostro caso!
 #         
           
     return sort_prob(id_score)
