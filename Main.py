@@ -117,8 +117,7 @@ def flat_list(l):
 def ndcg(data_for_prediction, ndcg_data, clf):
     prob = clf.predict_proba(data_for_prediction[:, 2:])
     #dcg on not ordered list
-    dcg_list = (dcg(ndcg_data[:, 1], len(ndcg_data[:, 1]) - 1))
-    print dcg_list, "dcg_list"
+    dcg_list = dcg(ndcg_data[:, 1], len(ndcg_data[:, 1]) - 1)
     data_to_order = np.asarray(np.column_stack([ndcg_data, prob]))
     
     ndcg_data = np.asmatrix(radix_sort(data_to_order))
@@ -131,12 +130,12 @@ def ndcg(data_for_prediction, ndcg_data, clf):
     #return np.divide(ndcg_list, dcg_list)
 
 '''
-    @param  G       -  array with user association score per association
+    @param  G       -  matrix with user association score per association
     @param  i       -  index for recursion
     @return l       -  list with dcg value for each association 
 
 ''' 
-#recursive algorithm that calculates the dcg measure
+
 def dcg1(G, i):
     l = []
     if (i == 0):
