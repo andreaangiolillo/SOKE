@@ -124,16 +124,15 @@ def ndcg(data_for_prediction, ndcg_data, model):
     prob = model.predict_proba(data_for_prediction[:, 2:])
     
     #dcg on input 
-    dcg_list = dcg(ndcg_data[:, 1], len(ndcg_data[:, 1]) - 1)
+    dcg_value = dcg(ndcg_data[:, 1], len(ndcg_data[:, 1]) - 1)
     data_to_order = np.asarray(np.column_stack([ndcg_data, prob]))
     
     ndcg_data = np.asmatrix(radix_sort(data_to_order, 1, data_to_order.shape[1] - 1))
     
     #dcg on ordered input
-    ndcg_list = np.asarray(dcg1(ndcg_data[:,1], len(ndcg_data[:,1]) - 1)).tolist()
-    ndcg_list = flat_list(flat_list(ndcg_list))
+    ndcg_value = dcg1(ndcg_data[:,1], len(ndcg_data[:,1]) - 1)
     
-    return np.column_stack([ndcg_data[:, 0], np.divide(ndcg_list, dcg_list)])
+    return (ndcg_value / dcg_value)[0, 0]
     #print ndcg_list / dcg_list
     
     #return np.divide(ndcg_list, dcg_list)
@@ -146,14 +145,11 @@ def ndcg(data_for_prediction, ndcg_data, model):
 ''' 
 
 def dcg1(G, i):
-    l = []
     if (i == 0):
-        return [G[i, 0]]
+        return G[i, 0]
     else:
-        l = dcg(G, i - 1)
-        sum = l[i - 1] + (G[i, 0] / np.log2(i + 1))
-        l.append(sum)
-    return l
+        return dcg(G, i - 1) + (G[i, 0] / np.log2(i + 1))
+
 
 '''
     @param  G       -  array with user association score per association
@@ -163,14 +159,10 @@ def dcg1(G, i):
 ''' 
 #recursive algorithm that calculates the dcg measure
 def dcg(G, i):
-    l = []
     if (i == 0):
-        return [G[i]]
+        return G[i]
     else:
-        l = dcg(G, i - 1)
-        sum = l[i - 1] + (G[i] / np.log2(i + 1))
-        l.append(sum)
-    return l     
+        return dcg(G, i - 1) + (G[i] / np.log2(i + 1))    
 
 
 '''
