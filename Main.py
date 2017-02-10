@@ -92,39 +92,47 @@ def entropy(x):
 
 
 '''
-    @param  id_score    -
-    @return list        - 
+    @param  id_score    - matrix with a user id, user value and cluster probability score
+    @return A matrix ordered for each field
 
 ''' 
 
-def radix_sort(id_score):
-    maxcol = id_score.shape[1]
-    for i in reversed(range(1, maxcol)):
+def radix_sort(id_score, start, stop):
+    for i in reversed(range(start, stop)):
         id_score = sorted(id_score, key=lambda x: x[i])
     return id_score
 
+'''
+    @param  l       -  input list
+    @return flatten list
+
+''' 
 def flat_list(l):
     return [item for sublist in l for item in sublist]
-    
 
 '''
     @param  data_for_prediction       -  feature vector for each association.
     @param  ndcg_data       -  association with it's user score
+    @param  model    - trained prediction model
     @return l       -  list with ndcg value for each association 
 
 ''' 
 
-def ndcg(data_for_prediction, ndcg_data, clf):
-    prob = clf.predict_proba(data_for_prediction[:, 2:])
-    #dcg on not ordered list
+def ndcg(data_for_prediction, ndcg_data, model):
+    #this calculates the probability that an association belong to a cluster
+    prob = model.predict_proba(data_for_prediction[:, 2:])
+    
+    #dcg on input 
     dcg_list = dcg(ndcg_data[:, 1], len(ndcg_data[:, 1]) - 1)
     data_to_order = np.asarray(np.column_stack([ndcg_data, prob]))
     
-    ndcg_data = np.asmatrix(radix_sort(data_to_order))
+    ndcg_data = np.asmatrix(radix_sort(data_to_order, 1, data_to_order.shape[1] - 1))
     
+    #dcg on ordered input
     ndcg_list = np.asarray(dcg1(ndcg_data[:,1], len(ndcg_data[:,1]) - 1)).tolist()
     ndcg_list = flat_list(flat_list(ndcg_list))
-    return np.divide(ndcg_list, dcg_list)
+    
+    return np.column_stack([ndcg_data[:, 0], np.divide(ndcg_list, dcg_list)])
     #print ndcg_list / dcg_list
     
     #return np.divide(ndcg_list, dcg_list)
