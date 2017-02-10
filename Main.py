@@ -173,8 +173,12 @@ def sort_prob(prob):
     sort_list_4 = sorted(sort_list_4, key=getKey,  reverse=True)
     sort_list_5 = sorted(sort_list_5, key=getKey,  reverse=True)
     sort_list_6 = sorted(sort_list_6, key=getKey,  reverse=True)
+    #print prob, "prob"
+    print sort_list_6,"lista 6"
+    #print sort_list_1,"lista 1"
     
-    sort = sort_list_1 + sort_list_2 + sort_list_3 + sort_list_4 + sort_list_5 + sort_list_6 
+    sort = sort_list_6 + sort_list_5 + sort_list_4 + sort_list_3 + sort_list_2 + sort_list_1 
+    print sort, "print sort"
     sort = np.array(sort)[:,:1]
     
     sort_id = []
@@ -317,7 +321,7 @@ def learning(article, user, t, k) :
 
 if __name__ == '__main__':
     
-    print learning(130, 3, 5, 2)
+    print learning(130, 1, 5, 2)
 
  
         
