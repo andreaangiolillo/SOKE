@@ -307,7 +307,7 @@ def learning(article, user, t, k) :
     print score_eval, "score_eval"
     ids= np.sort(clustering(article, user))
     print ids, "ids"
-    flag_ndcg = True
+
 
     clf = MultinomialNB()
     for i in range (0, t):
@@ -371,10 +371,10 @@ def learning(article, user, t, k) :
            
         print ids 
         #np.asarray(np.column_stack([id_score_name, prediction, id_score_prob]))
-        ndcg_data = score_eval[:, 1:3]
-        
-        print ndcg(assoc, ndcg_data, clf)#esempio! poi sistemo sul nostro caso!
-        
+#         ndcg_data = score_eval[:, 1:3]
+#         
+#         print ndcg(assoc, ndcg_data, clf)#esempio! poi sistemo sul nostro caso!
+#         
           
     return sort_prob(id_score)
     
@@ -389,5 +389,5 @@ if __name__ == '__main__':
     
     print learning(130, 1, 5, 2)
 
- 
+    
         

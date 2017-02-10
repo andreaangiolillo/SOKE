@@ -1,137 +1,253 @@
-import networkx as nx
-import matplotlib.pyplot as plt
+import igraph as ig
+import plotly.plotly as py
+from plotly.graph_objs import *
 import Preprocessing
-import igraph
+import Main 
+import json
+import random 
+import urllib2
+py.sign_in('walter123456', 'xmGKiFqUcLmC29v3zb5I')
 
+article = 145
+user = 17
 
-
-
-
-def create_graph_with_igraph(article):
-    
-    g = igraph.Graph([(0,1), (0,2), (2,3), (3,4), (4,2), (2,5), (5,0), (6,3), (5,6)])
-    
-    g.vs["name"] = ["Alice", "Bob", "Claire", "Dennis", "Esther", "Frank", "George"]
-    g.vs["age"] = [25, 31, 18, 47, 22, 23, 50]
-    g.vs["gender"] = ["f", "m", "f", "m", "f", "m", "m"]
-    g.es["is_formal"] = [False, False, True, True, True, False, True, False, False]
-    
-    
-    
-    color_dict = {"m": "blue", "f": "pink"}
-    layout = g.layout("kk")
-    visual_style = {}
-    visual_style["vertex_size"] = 20
-    visual_style["vertex_color"] = [color_dict[gender] for gender in g.vs["gender"]]
-    visual_style["vertex_label"] = g.vs["name"]
-    visual_style["edge_width"] = [1 + 2 * int(is_formal) for is_formal in g.es["is_formal"]]
-    visual_style["edge_label"] = g.vs["age"]
-    visual_style["layout"] = layout
-    visual_style["bbox"] = (600, 600)
-    visual_style["margin"] = 20
-    igraph.plot(g, **visual_style)
-   
 def create_graph_with_networkx(article):
     
     data = Preprocessing.extract_association_score(article,True)
     graph = []
-    labels =[]
-#     for row in data:
-#         print len(row)
-#         print row
-#     
-#     
+    labels_edge =[]
+    node = []
+    online_learning_top10 = Main.learning(article, user, 5, 2)[:10]
+    
+    print online_learning_top10, "ONLINE LEARNING"
+    
+    
+    group = []
+    name_ass_online_learning = []
+   
+    print data
     
     for row in data:
-        if row[2] != "":
-            graph.append((row[0], row[2]))
-            labels.append(row[1])
-            graph.append((row[2], row[4]))
-            labels.append(row[3])
+        
+          
+        if row[3] != "":
+             
+            #for color
+            if int(row[0]) in online_learning_top10:
+                name_ass_online_learning.append(row[1])
+                name_ass_online_learning.append(row[3])
+                name_ass_online_learning.append(row[5])
+             
+            node.append(row[1])    
+            node.append(row[3])
+            node.append(row[5])
+            labels_edge.append(row[2])
+            if "R:" in row[2]:
+                graph.append((row[3], row[1]))
+            elif "L:" in row[2]:
+                graph.append((row[1], row[3]))
+                 
+            labels_edge.append(row[4])
+             
+            if "R:" in row[4]:
+                graph.append((row[5], row[3]))
+            elif "L:" in row[4]:
+                graph.append((row[3], row[5]))
+             
         else:
-            graph.append((row[0], row[4]))
-            labels.append(row[1])
+            #for color
+            if int(row[0]) in online_learning_top10:
+                name_ass_online_learning.append(row[1])
+                name_ass_online_learning.append(row[5])
+             
+            node.append(row[1])
+            node.append(row[5])
+            labels_edge.append(row[2])
             
-    #print graph
-#     
-#     graph = [(0, 1), (1, 5), (1, 7), (4, 5), (4, 8), (1, 6), (3, 7), (5, 9),
-#              (2, 4), (0, 4), (2, 5), (3, 6), (8, 9), (2,2), (3,3), (0,99),(99,98), ("aaa","ssss"), (111,111)]
+            if "R:" in row[2]:
+                graph.append((row[5], row[1]))
+            elif "L:" in row[2]:
+                graph.append((row[1], row[5]))
+            
+             
+ 
+    #print labels_edge,"labels_edge"
+    node = set(node)
+         
+    for n in node:
+         
+        if n in name_ass_online_learning:
+            group.append('rgb(255, 0, 0)')
+        else:
+            group.append('rgb(69, 169, 255)')
+             
+     
+     
+     
+    #print node
+    print graph, "G"
+    print labels_edge, "L"
+    print node, "N"
+    print group, "GG" 
+    return graph, labels_edge, node, group
 
 
-    #print labels
-
-    draw_graph(graph, labels)
 
 
-
-
-
-
-
-
-
-def draw_graph(graph, labels=None, graph_layout='shell',
-               node_size=500, node_color='blue', node_alpha=0.3,
-               node_text_size=12,
-               edge_color='blue', edge_alpha=0.3, edge_tickness=1,
-               edge_text_pos=0.3,
-               text_font='sans-serif'):
-
-    # create networkx graph
-    G=nx.Graph()
-
-    # add edges
-    for edge in graph:
-        G.add_edge(edge[0], edge[1])
-
-    # these are different layouts for the network you may try
-    # shell seems to work best
-    if graph_layout == 'spring':
-        graph_pos=nx.spring_layout(G)
-    elif graph_layout == 'spectral':
-        graph_pos=nx.spectral_layout(G)
-    elif graph_layout == 'random':
-        graph_pos=nx.random_layout(G)
-    else:
-        graph_pos=nx.shell_layout(G)
-    
-    ax = plt.subplots(figsize=(10, 10))
-    # draw graph
-    nx.draw_networkx_nodes(G,graph_pos,node_size=node_size, 
-                           alpha=node_alpha, node_color=node_color)
-    nx.draw_networkx_edges(G,graph_pos,width=edge_tickness,
-                           alpha=edge_alpha,edge_color=edge_color)
-    nx.draw_networkx_labels(G, graph_pos,font_size=node_text_size,
-                            font_family=text_font)
-
-    if labels is None:
-        labels = range(len(graph))
-
-    edge_labels = dict(zip(graph, labels))
-    nx.draw_networkx_edge_labels(G, graph_pos, edge_labels=edge_labels, 
-                                 label_pos=edge_text_pos)
-    
-    # show graph
-  
-    plt.show()
 
 
 if __name__ == '__main__':
+    edge, edgename, node, group = create_graph_with_networkx(article)
     
-    #create_graph_with_networkx(130)
+    print "first check: ", len(edgename) == len(edge)
     
-    create_graph_with_igraph(130)
+    N=len(node)
+    dictionary_node = {}
+   
+    i = 0
+    for n in node:
+        dictionary_node[n] = i
+        #print n, "node"
+        i += 1
     
     
+    print edge, "EDGE"
+    print dictionary_node, "dictionary"
+    edge_with_num = []   
+    for ed in edge:
+        edge_with_num.append((dictionary_node[ed[0]], dictionary_node[ed[1]]));
+         
+    #print "third check: ", len(edge_with_num) == len(edgename)
     
-#     data = Preprocessing.extract_association_score(130,True)
-# 
-#     graph = [(0, 1), (1, 5), (1, 7), (4, 5), (4, 8), (1, 6), (3, 7), (5, 9),
-#              (2, 4), (0, 4), (2, 5), (3, 6), (8, 9), (2,2), (3,3), (0,99),(99,98), ("aaa","ssss"), (111,111)]
-#     
-#     # you may name your edge labels
-#     labels = map(chr, range(65, 65+len(graph)))
-#     draw_graph(graph, labels)
-#     
-    # if edge labels is not specified, numeric labels (0, 1, 2...) will be used
-    #draw_graph(graph)
+    print edge_with_num, "edge_with_num", len(edge_with_num) == len(edgename)
+    print edgename
+     
+    #labels_edge
+    name_sorted = sorted(dictionary_node.items(), key=lambda x: x[1], reverse=False)
+    print name_sorted[0]
+    labels = []#NAME NODE
+    for item in name_sorted:
+        #print item[0]
+        labels.append(item[0])
+      
+    print name_sorted
+    print labels    
+       
+    print edge_with_num
+      
+    G=ig.Graph(edge_with_num, directed=False)
+     
+    layt=G.layout('kk_3d', dim=3)
+     
+    Xn=[layt[k][0] for k in range(N)]# x-coordinates of nodes
+    Yn=[layt[k][1] for k in range(N)]# y-coordinates
+    Zn=[layt[k][2] for k in range(N)]# z-coordinates
+    Xe=[]
+    Ye=[]
+    Ze=[]
+    Xx = []
+    Yy = []
+    Zz = []
+    
+    
+    for e in edge_with_num:
+       
+        Xe+=[layt[e[0]][0],layt[e[1]][0], None]# x-coordinates of edge ends
+        #print Xe
+        Xx.append((layt[e[0]][0] + layt[e[1]][0])/2)
+        Ye+=[layt[e[0]][1],layt[e[1]][1], None]
+        Yy.append((layt[e[0]][1] + layt[e[1]][1])/2)
+        Ze+=[layt[e[0]][2],layt[e[1]][2], None]
+        Zz.append((layt[e[0]][2] + layt[e[1]][2])/2)
+  
+            
+    trace1=Scatter3d(x=Xe,
+                   y=Ye,
+                   z=Ze,
+                   mode='lines',
+                   line=Line(color='rgb(125,125,125)', width=2),
+#                    text = "",
+                    hoverinfo= 'none'
+                     
+                   )
+    trace2=Scatter3d(x=Xn,
+                   y=Yn,
+                   z=Zn,
+                   mode='markers',
+                   name='actors',
+                   marker=Marker(symbol='dot',
+                                 size=6,
+                                 color=group,
+                                 colorscale='Viridis',
+                                 line=Line(color='rgb(69, 169, 255)', width=0.7)
+                                  
+                                 ),
+                   text=labels,
+                   hoverinfo='text'
+                   )
+    trace3=Scatter3d(x=Xx,
+                   y=Yy,
+                   z=Zz,
+                   mode='markers',
+                   name=edgename,
+                   marker=Marker(symbol='dot',
+                                 size=2,
+                                 #color=group,
+                                 colorscale='Viridis',
+                                 #line=Line(color='rgb(50,50,50)', width=0.2)
+                                  
+                                 ),
+                   text=edgename,
+                   hoverinfo='text'
+                   )
+       
+       
+       
+       
+    axis=dict(showbackground=False,
+              showline=False,
+              zeroline=False,
+              showgrid=False,
+              showticklabels=False,
+              title=''
+              )
+       
+       
+    layout = Layout(
+             title="",
+#              paper_bgcolor='rgba(0,0,0,0)',
+#              plot_bgcolor='rgba(0,0,0,0)',
+             width=1000,
+             height=1000,
+             showlegend=False,
+             scene=Scene(
+             xaxis=XAxis(axis),
+             yaxis=YAxis(axis),
+             zaxis=ZAxis(axis),
+            ),
+         margin=Margin(
+            t=100
+        ),
+        hovermode='closest',
+        annotations=Annotations([
+               Annotation(
+               showarrow=False,
+                text="",
+                xref='paper',
+                yref='paper',
+                x=0,
+                y=0.1,
+                xanchor='left',
+                yanchor='bottom',
+                font=Font(
+                size=14
+                )
+                )
+            ]),    )
+       
+       
+    data=Data([trace1, trace2,trace3])
+    fig=Figure(data=data, layout=layout)
+       
+    py.iplot(fig, filename='prova')
+     
