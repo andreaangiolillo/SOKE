@@ -100,25 +100,52 @@ def entropy(x):
 def radix_sort(id_score):
     maxcol = id_score.shape[1]
     for i in reversed(range(1, maxcol)):
-        print i
         id_score = sorted(id_score, key=lambda x: x[i])
-        
     return id_score
+
+def flat_list(l):
+    return [item for sublist in l for item in sublist]
+    
 
 '''
     @param  data_for_prediction       -  feature vector for each association.
-    @param  ndcg_data       -  association with his ideal score
+    @param  ndcg_data       -  association with it's user score
     @return l       -  list with ndcg value for each association 
 
 ''' 
 
 def ndcg(data_for_prediction, ndcg_data, clf):
     prob = clf.predict_proba(data_for_prediction[:, 2:])
+    #dcg on not ordered list
+    dcg_list = (dcg(ndcg_data[:, 1], len(ndcg_data[:, 1]) - 1))
+    print dcg_list, "dcg_list"
     data_to_order = np.asarray(np.column_stack([ndcg_data, prob]))
     
     ndcg_data = np.asmatrix(radix_sort(data_to_order))
     
-    return dcg(ndcg_data[:,1], len(ndcg_data[:,1]) - 1)
+    ndcg_list = np.asarray(dcg1(ndcg_data[:,1], len(ndcg_data[:,1]) - 1)).tolist()
+    ndcg_list = flat_list(flat_list(ndcg_list))
+    return np.divide(ndcg_list, dcg_list)
+    #print ndcg_list / dcg_list
+    
+    #return np.divide(ndcg_list, dcg_list)
+
+'''
+    @param  G       -  array with user association score per association
+    @param  i       -  index for recursion
+    @return l       -  list with dcg value for each association 
+
+''' 
+#recursive algorithm that calculates the dcg measure
+def dcg1(G, i):
+    l = []
+    if (i == 0):
+        return [G[i, 0]]
+    else:
+        l = dcg(G, i - 1)
+        sum = l[i - 1] + (G[i, 0] / np.log2(i + 1))
+        l.append(sum)
+    return l
 
 '''
     @param  G       -  array with user association score per association
@@ -130,10 +157,10 @@ def ndcg(data_for_prediction, ndcg_data, clf):
 def dcg(G, i):
     l = []
     if (i == 0):
-        return [G[i, 0]]
+        return [G[i]]
     else:
         l = dcg(G, i - 1)
-        sum = l[i - 1] + (G[i, 0] / np.log2(i + 1))
+        sum = l[i - 1] + (G[i] / np.log2(i + 1))
         l.append(sum)
     return l
         
