@@ -285,6 +285,7 @@ def learning(article, user, t, k) :
     ndcg_values = []
     ndcg_list.extend(ids)
     user_assoc_score = []
+    
     for i in range(0, len(ndcg_list)):
         for item in range(0, ndcg_data.shape[0] - 1):
             if(ndcg_data[item, 0] == ndcg_list[i]):
@@ -368,11 +369,6 @@ def learning(article, user, t, k) :
     print ndcg_values      
     return sort_prob(id_score)
     
-    
-
-
-
-
 
 
 if __name__ == '__main__':
