@@ -365,15 +365,56 @@ def learning(article, user, t, k) :
             
         print user_assoc_score, "score associazioni selezionate"
         ndcg_values.append(ndcg(user_assoc_score)[len(user_assoc_score) - 1])
-#         
-    print ndcg_values      
-    return sort_prob(id_score)
+#        
+    return ndcg_values
     
 
 
 if __name__ == '__main__':
+    ndcg_list_article130 = []
+    #article 130
     
-    print learning(130, 1, 5, 2)
-
+    ndcg_list_article130.append(learning(130, 1, 5, 2))
+    ndcg_list_article130.append(learning(130, 3, 5, 2))
+    ndcg_list_article130.append(learning(130, 4, 5, 2))
+    ndcg_list_article130.append(learning(130, 8, 5, 2))
+    ndcg_list_article130.append(learning(130, 10, 5, 2))
+    ndcg_list_article130.append(learning(130, 14, 5, 2))
+    ndcg_list_article130.append(learning(130, 16, 5, 2))
+    ndcg_list_article130.append(learning(130, 17, 5, 2))
+    ndcg_list_article130.append(learning(130, 19, 5, 2))
+    
+    ndcg_list_article130 = [sum(x)/float(len(x)) for x in zip(*ndcg_list_article130)]
+    
+    
+    ndcg_list_article133 = []
+    #article 133
+    
+    ndcg_list_article133.append(learning(133, 6, 5, 2))
+    ndcg_list_article133.append(learning(133, 8, 5, 2))
+    ndcg_list_article133.append(learning(133, 11, 5, 2))
+    ndcg_list_article133.append(learning(133, 14, 5, 2))
+    ndcg_list_article133.append(learning(133, 15, 5, 2))
+    ndcg_list_article133.append(learning(133, 19, 5, 2))
+    
+    ndcg_list_article133 = [sum(x)/float(len(x)) for x in zip(*ndcg_list_article133)]
+    
+    ndcg_list_article139 = []
+    #article 139
+    
+    ndcg_list_article139.append(learning(139, 8, 5, 2))
+    ndcg_list_article139.append(learning(139, 12, 5, 2))
+    ndcg_list_article139.append(learning(139, 14, 5, 2))
+    ndcg_list_article139.append(learning(139, 15, 5, 2))
+    ndcg_list_article139.append(learning(139, 19, 5, 2))
+    
+    ndcg_list_article139 = [sum(x)/float(len(x)) for x in zip(*ndcg_list_article139)]
+    
+    print ndcg_list_article130, "130"
+    print ndcg_list_article133, "133"
+    print ndcg_list_article139, "139"
+    
+    
+    
     
         
