@@ -158,7 +158,7 @@ def dcg(G, i):
 '''     
 def dcg1(G, i):
     if (i == 0):
-        return [G[i]]
+        return [((math.pow(2, G[i]) - 1) / np.log2(i + 2))]
     else:
         list = dcg(G, i - 1)
         list.append(list [i - 1] + ((math.pow(2, G[i]) - 1) / np.log2(i + 2)))   
@@ -361,20 +361,15 @@ def learning(article, user, t, k) :
             
         print to_be_evalueted, "to_be_evaluated"
         ids = []
+        ndcg_list = []
         for item in to_be_evalueted:
             ids.append(item[0])
            
         print ids 
         #np.asarray(np.column_stack([id_score_name, prediction, id_score_prob]))
-        added_to_list = 0
-        h = 0
         
-        while added_to_list < 2:#2 valori per le restanti 4 iterazioni. totale: 12 associazioni
-            if not(sorted_associations[h] in ndcg_list):
-                ndcg_list.extend([sorted_associations[h]])
-                added_to_list += 1
-            h +=1
-                    
+        ndcg_list.extend(sorted_associations[0:11])
+        
             
             
         print ndcg_list, "ndcg_list"
