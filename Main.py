@@ -333,8 +333,7 @@ def learning(article, user, t, k) :
             for i in range (0, len_p):
                 #id_score.append((prediction[i], name_assoc[i], prob[i]))
                 id_score.append((name_assoc[i], prob[i]))
-                
-        print id_score
+        
                 
         sorted_associations = sort_prob(id_score)#first associations are those we will select
                 
