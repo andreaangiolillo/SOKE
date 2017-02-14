@@ -158,7 +158,7 @@ def dcg(G, i):
 '''     
 def dcg1(G, i):
     if (i == 0):
-        return [(math.pow(2, G[i]) - 1) / np.log2(i + 2)]
+        return [G[i]]
     else:
         list = dcg(G, i - 1)
         list.append(list [i - 1] + ((math.pow(2, G[i]) - 1) / np.log2(i + 2)))   
@@ -368,14 +368,12 @@ def learning(article, user, t, k) :
         #np.asarray(np.column_stack([id_score_name, prediction, id_score_prob]))
         added_to_list = 0
         h = 0
-        if j == 0:
-            ndcg_list.extend(sorted_associations[0:4])#prima iterazione 4 valori per ndcg
-        else:
-            while added_to_list < 2:#2 valori per le restanti 4 iterazioni. totale: 12 associazioni
-                if not(sorted_associations[h] in ndcg_list):
-                    ndcg_list.extend([sorted_associations[h]])
-                    added_to_list += 1
-                h +=1
+        
+        while added_to_list < 2:#2 valori per le restanti 4 iterazioni. totale: 12 associazioni
+            if not(sorted_associations[h] in ndcg_list):
+                ndcg_list.extend([sorted_associations[h]])
+                added_to_list += 1
+            h +=1
                     
             
             
@@ -425,7 +423,7 @@ if __name__ == '__main__':
     
     articles_mean = [sum(x)/float(len(x)) for x in zip(*articles_mean)]
     
-    print articles_mean, "performance media sui 3 aricoli"
+    print articles_mean, "performance media sui 3 articoli"
     print metrics.auc([0, 1, 2, 3, 4], articles_mean) / metrics.auc([0, 1, 2, 3, 4], [1, 1, 1, 1, 1]) 
     #normalizzato su intervallo [0,1]
     
