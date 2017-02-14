@@ -5,6 +5,7 @@ import Preprocessing
 import Clustering_dirichlet
 import pandas as pd
 from sklearn.naive_bayes import MultinomialNB
+from sklearn import metrics 
 
 
 
@@ -115,16 +116,14 @@ def flat_list(l):
     return [i[0] for i in l]
 
 '''
-    @param  data_for_prediction       -  feature vector for each association.
     @param  ndcg_data       -  association with it's user score
-    @param  model    - trained prediction model
-    @return l       -  list with ndcg value for each association 
+    @return l               -  list with ndcg values for each i| 1 <= i < #of input elements
 
 ''' 
 
 def ndcg(ndcg_data):
     dcg_values = dcg(ndcg_data, len(ndcg_data) - 1)
-    #print sorted(ndcg_data, reverse=True), "pincopallo" # stampate questo per vedere che effettivamente è corretto
+    #print sorted(ndcg_data, reverse=True), "lista ordinata per rilevanza" # stampate questo per vedere che effettivamente è corretto
     idcg_values = dcg(sorted(ndcg_data, reverse=True), len(ndcg_data) - 1)
     print idcg_values, "idcg_values"
     print dcg_values, "dcg_values"
@@ -137,10 +136,10 @@ def ndcg(ndcg_data):
 '''
     @param  G       -  array with user association score per association
     @param  i       -  index for recursion
-    @return l       -  list with dcg value for each association 
+    @return l       -  list with dcg values for each i| 1 <= i < #of input elements
 
 ''' 
-#recursive algorithm that calculates the dcg measure
+
 def dcg(G, i):
     if (i == 0):
         return [G[i]]
@@ -161,8 +160,8 @@ def getKey(item):
   
     
 '''
-    @param  prob - list of probability  
-    @return list - list sorted
+    @param  prob - list of tuples. The first position of each tuple is an association name and the second is an array of probabilities
+    @return list - Association names ordered by their relevance
 '''    
 def sort_prob(prob):
     sort_list_1 = []
@@ -262,7 +261,7 @@ def clustering(article, user):
                                          "relevance_score",
                                          "rarity_score"])
         df = df.set_index("association_id")
-        print df.head(10)
+        #print df.head(10)
         diri = Clustering_dirichlet.DirichletClustering()
         print "\n", user, ": ", article
         diri.dirichlet(df, user, article)
@@ -335,6 +334,8 @@ def learning(article, user, t, k) :
                 #id_score.append((prediction[i], name_assoc[i], prob[i]))
                 id_score.append((name_assoc[i], prob[i]))
                 
+        print id_score
+                
         sorted_associations = sort_prob(id_score)#first associations are those we will select
                 
         entropies = entropy(id_score)  
@@ -382,24 +383,36 @@ if __name__ == '__main__':
     ndcg_list_article130 = []
     #article 130
     
-    ndcg_list_article130.append(learning(130, 1, 5, 2))
+    ndcg_list_article130.extend(learning(130, 1, 5, 2))
     
     
     ndcg_list_article133 = []
     #article 133
     
-    ndcg_list_article133.append(learning(133, 6, 5, 2))
+    ndcg_list_article133.extend(learning(133, 6, 5, 2))
     
     ndcg_list_article139 = []
     #article 139
     
-    ndcg_list_article139.append(learning(139, 8, 5, 2))
+    ndcg_list_article139.extend(learning(139, 8, 5, 2))
     
     #provate con 10 iterazioni.. si nota come le performance sono molto buone
     
     print ndcg_list_article130, "130"
     print ndcg_list_article133, "133"
     print ndcg_list_article139, "139"
+    
+    articles_mean = []
+    
+    articles_mean.append(ndcg_list_article130)
+    articles_mean.append(ndcg_list_article133)
+    articles_mean.append(ndcg_list_article139)
+    
+    articles_mean = [sum(x)/float(len(x)) for x in zip(*articles_mean)]
+    
+    print articles_mean, "performance media sui 3 aricoli"
+    print metrics.auc([0, 1, 2, 3, 4], articles_mean) / metrics.auc([0, 1, 2, 3, 4], [1, 1, 1, 1, 1]) 
+    #normalizzato su intervallo [0,1]
     
 
 # risultati che potremmo usare.. sono sempre crescenti almeno..   
