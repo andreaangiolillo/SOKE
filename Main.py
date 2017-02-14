@@ -124,9 +124,9 @@ def flat_list(l):
 ''' 
 
 def ndcg(ndcg_data):
-    dcg_values = dcg(ndcg_data, len(ndcg_data) - 1)
+    dcg_values = dcg1(ndcg_data, len(ndcg_data) - 1)
     #print sorted(ndcg_data, reverse=True), "lista ordinata per rilevanza" # stampate questo per vedere che effettivamente è corretto
-    idcg_values = dcg(sorted(ndcg_data, reverse=True), len(ndcg_data) - 1)
+    idcg_values = dcg1(sorted(ndcg_data, reverse=True), len(ndcg_data) - 1)
     print idcg_values, "idcg_values"
     print dcg_values, "dcg_values"
     
@@ -158,10 +158,10 @@ def dcg(G, i):
 '''     
 def dcg1(G, i):
     if (i == 0):
-        return [((math.pow(2, G[i]) - 1) / np.log2(i + 2))]
+        return [((math.pow(2, G[i]) - 1) / math.log(i + 2, 2))]
     else:
-        list = dcg(G, i - 1)
-        list.append(list [i - 1] + ((math.pow(2, G[i]) - 1) / np.log2(i + 2)))   
+        list = dcg1(G, i - 1)
+        list.append(list [i - 1] + ((math.pow(2, G[i]) - 1) / math.log(i + 2, 2)))   
         return list 
 
 
@@ -391,13 +391,13 @@ if __name__ == '__main__':
     ndcg_list_article130 = []
     #article 130
     
-    ndcg_list_article130.extend(learning(130, 1, 5, 2))
+    ndcg_list_article130.extend(learning(130, 8, 5, 2))
     
     
     ndcg_list_article133 = []
     #article 133
     
-    ndcg_list_article133.extend(learning(133, 6, 5, 2))
+    ndcg_list_article133.extend(learning(133, 8, 5, 2))
     
     ndcg_list_article139 = []
     #article 139
@@ -432,7 +432,7 @@ if __name__ == '__main__':
     ax.plot([0, 1, 2, 3, 4], articles_mean, 'yo--', label = "Media Articoli")
     plt.title("Valutazione performance")
     plt.legend(loc='best')
-    fig.savefig('/Users/AdamKhayam/Downloads/plot.png')   # save the figure to file
+    fig.savefig('/Users/AdamKhayam/Downloads/plot.png')   #change pathname
     plt.close(fig) 
     
 
