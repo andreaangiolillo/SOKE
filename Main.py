@@ -70,7 +70,7 @@ def get_features_from_ids(article, ids, assoc):
 
 def entropy(x):
     entropy_list = {}
-    print x, "x"
+    #print x, "x"
      
     for row in x:
         id = row[0]
@@ -100,7 +100,10 @@ def entropy(x):
 
 def radix_sort(id_score, start, stop):
     for i in reversed(range(start, stop)):
-        id_score = sorted(id_score, key=lambda x: x[i])
+        if i==1 :
+            id_score = sorted(id_score, key=lambda x: x[i], reverse = True)
+        else:
+            id_score = sorted(id_score, key=lambda x: x[i])
     return id_score
 
 '''
@@ -121,6 +124,7 @@ def flat_list(l):
 
 def ndcg(ndcg_data):
     dcg_values = dcg(ndcg_data, len(ndcg_data) - 1)
+    #print sorted(ndcg_data, reverse=True), "pincopallo" # stampate questo per vedere che effettivamente è corretto
     idcg_values = dcg(sorted(ndcg_data, reverse=True), len(ndcg_data) - 1)
     print idcg_values, "idcg_values"
     print dcg_values, "dcg_values"
@@ -167,7 +171,8 @@ def sort_prob(prob):
     sort_list_4 = []
     sort_list_5 = []
     sort_list_6 = []
-    print "START SORT"
+    
+    #print "START SORT"
     for row in prob:
         name = row[0]
         feasibility = row[1]
@@ -206,11 +211,11 @@ def sort_prob(prob):
     sort_list_5 = sorted(sort_list_5, key=getKey,  reverse=True)
     sort_list_6 = sorted(sort_list_6, key=getKey,  reverse=True)
     #print prob, "prob"
-    print sort_list_6,"lista 6"
+    #print sort_list_6,"lista 6"
     #print sort_list_1,"lista 1"
     
     sort = sort_list_6 + sort_list_5 + sort_list_4 + sort_list_3 + sort_list_2 + sort_list_1 
-    print sort, "print sort"
+    #print sort, "print sort"
     sort = np.array(sort)[:,:1]
     
     sort_id = []
@@ -283,18 +288,7 @@ def learning(article, user, t, k) :
     ndcg_data = score_eval[:, 1:3]
     ndcg_list = []
     ndcg_values = []
-    ndcg_list.extend(ids)
-    user_assoc_score = []
-    
-    for i in range(0, len(ndcg_list)):
-        for item in range(0, ndcg_data.shape[0] - 1):
-            if(ndcg_data[item, 0] == ndcg_list[i]):
-                user_assoc_score.append(ndcg_data[item, 1])
-            
-    print user_assoc_score, "score associazioni selezionate"
-    ndcg_values.append(ndcg(user_assoc_score)[len(user_assoc_score) - 1])
-    
-
+    j = 0
 
     clf = MultinomialNB()
     for i in range (0, t):
@@ -326,11 +320,10 @@ def learning(article, user, t, k) :
           
         print "t: ", i
         #print assoc_, "input prediction"
-        prediction = clf.predict(assoc_)    
+        prediction = clf.predict(assoc_)  
         #print prediction
            
         prob = clf.predict_proba(assoc_)  
-        #print prob
                   
         name_assoc = assoc[:,0]
         #print name_assoc 
@@ -342,7 +335,10 @@ def learning(article, user, t, k) :
                 #id_score.append((prediction[i], name_assoc[i], prob[i]))
                 id_score.append((name_assoc[i], prob[i]))
                 
+        sorted_associations = sort_prob(id_score)#first associations are those we will select
+                
         entropies = entropy(id_score)  
+        
         entropies = sorted(entropies.items(), key=lambda x: x[1], reverse=True)
         
         to_be_evalueted = entropies[:k]
@@ -354,8 +350,19 @@ def learning(article, user, t, k) :
            
         print ids 
         #np.asarray(np.column_stack([id_score_name, prediction, id_score_prob]))
-        
-        ndcg_list.extend(ids)
+        added_to_list = 0
+        h = 0
+        if j == 0:
+            ndcg_list.extend(sorted_associations[0:4])#prima iterazione 4 valori per ndcg
+        else:
+            while added_to_list < 2:#2 valori per le restanti 4 iterazioni. totale: 12 associazioni
+                if not(sorted_associations[h] in ndcg_list):
+                    ndcg_list.extend([sorted_associations[h]])
+                    added_to_list += 1
+                h +=1
+                    
+            
+            
         print ndcg_list, "ndcg_list"
         user_assoc_score = []
         for i in range(0, len(ndcg_list)):
@@ -365,7 +372,8 @@ def learning(article, user, t, k) :
             
         print user_assoc_score, "score associazioni selezionate"
         ndcg_values.append(ndcg(user_assoc_score)[len(user_assoc_score) - 1])
-#        
+        j += 1
+        
     return ndcg_values
     
 
@@ -375,44 +383,29 @@ if __name__ == '__main__':
     #article 130
     
     ndcg_list_article130.append(learning(130, 1, 5, 2))
-    ndcg_list_article130.append(learning(130, 3, 5, 2))
-    ndcg_list_article130.append(learning(130, 4, 5, 2))
-    ndcg_list_article130.append(learning(130, 8, 5, 2))
-    ndcg_list_article130.append(learning(130, 10, 5, 2))
-    ndcg_list_article130.append(learning(130, 14, 5, 2))
-    ndcg_list_article130.append(learning(130, 16, 5, 2))
-    ndcg_list_article130.append(learning(130, 17, 5, 2))
-    ndcg_list_article130.append(learning(130, 19, 5, 2))
-    
-    ndcg_list_article130 = [sum(x)/float(len(x)) for x in zip(*ndcg_list_article130)]
     
     
     ndcg_list_article133 = []
     #article 133
     
     ndcg_list_article133.append(learning(133, 6, 5, 2))
-    ndcg_list_article133.append(learning(133, 8, 5, 2))
-    ndcg_list_article133.append(learning(133, 11, 5, 2))
-    ndcg_list_article133.append(learning(133, 14, 5, 2))
-    ndcg_list_article133.append(learning(133, 15, 5, 2))
-    ndcg_list_article133.append(learning(133, 19, 5, 2))
-    
-    ndcg_list_article133 = [sum(x)/float(len(x)) for x in zip(*ndcg_list_article133)]
     
     ndcg_list_article139 = []
     #article 139
     
     ndcg_list_article139.append(learning(139, 8, 5, 2))
-    ndcg_list_article139.append(learning(139, 12, 5, 2))
-    ndcg_list_article139.append(learning(139, 14, 5, 2))
-    ndcg_list_article139.append(learning(139, 15, 5, 2))
-    ndcg_list_article139.append(learning(139, 19, 5, 2))
     
-    ndcg_list_article139 = [sum(x)/float(len(x)) for x in zip(*ndcg_list_article139)]
+    #provate con 10 iterazioni.. si nota come le performance sono molto buone
     
     print ndcg_list_article130, "130"
     print ndcg_list_article133, "133"
     print ndcg_list_article139, "139"
+    
+
+# risultati che potremmo usare.. sono sempre crescenti almeno..   
+# [[0.93809831371947316, 0.94633194539740906, 0.95051430448092467, 0.953201868412901, 0.95515517891506674]] 130
+# [[0.93980191239125721, 0.9453636626222881, 0.94729453353087412, 0.9479709456835248, 0.94813056525784167]] 133
+# [[0.87021818539655171, 0.89030614710296441, 0.90297306029675672, 0.91205292883961697, 0.91903389131754554]] 139
     
     
     
