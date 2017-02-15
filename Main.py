@@ -8,7 +8,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn import metrics 
 import matplotlib.pyplot as plt
 import math
-
+import os
 
 
 '''
@@ -380,6 +380,7 @@ def learning(article, user, t, k) :
                     user_assoc_score.append(ndcg_data[item, 1])
             
         print user_assoc_score, "score associazioni selezionate"
+        print sorted(user_assoc_score, reverse = True), "score associazioni selezionate ordinati"
         ndcg_values.append(ndcg(user_assoc_score)[len(user_assoc_score) - 1])
         j += 1
         
@@ -419,7 +420,8 @@ if __name__ == '__main__':
     articles_mean = [sum(x)/float(len(x)) for x in zip(*articles_mean)]
     
     print articles_mean, "performance media sui 3 articoli"
-    print metrics.auc([0, 1, 2, 3, 4], articles_mean) / metrics.auc([0, 1, 2, 3, 4], [1, 1, 1, 1, 1]) 
+    ALC = metrics.auc([0, 1, 2, 3, 4], articles_mean) / metrics.auc([0, 1, 2, 3, 4], [1, 1, 1, 1, 1]) 
+    print ALC
     #normalizzato su intervallo [0,1]
     
     fig, ax = plt.subplots( nrows=1, ncols=1 )  # create figure & 1 axis
@@ -430,7 +432,8 @@ if __name__ == '__main__':
     ax.plot([0, 1, 2, 3, 4], ndcg_list_article133, 'ro--', label = "Articolo 133")
     ax.plot([0, 1, 2, 3, 4], ndcg_list_article139, 'go--', label = "Articolo 139")
     ax.plot([0, 1, 2, 3, 4], articles_mean, 'yo--', label = "Media Articoli")
-    plt.title("Valutazione performance")
+    title = "Valutazione performance \n ALC = ", ALC
+    plt.title(title[0] + str(title[1]))
     plt.legend(loc='best')
     fig.savefig('/Users/AdamKhayam/Downloads/plot.png')   #change pathname
     plt.close(fig) 
