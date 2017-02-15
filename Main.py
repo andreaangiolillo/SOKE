@@ -435,7 +435,7 @@ if __name__ == '__main__':
     title = "Valutazione performance \n ALC = ", ALC
     plt.title(title[0] + str(title[1]))
     plt.legend(loc='best')
-    fig.savefig('/Users/AdamKhayam/Downloads/plot.png')   #change pathname
+    fig.savefig('Data/plot/plot.png')   #change pathname
     plt.close(fig) 
     
 
