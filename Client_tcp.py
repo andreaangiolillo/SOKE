@@ -25,7 +25,7 @@ def main():
         print i 
     
     #sending the valuation
-    eval = np.array[1,2,1,4,5,1] 
+    eval = [1,3,4,5,1,3]
     s.send(pickle.dumps(eval))
         
 if __name__ == '__main__':
