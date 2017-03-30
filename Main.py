@@ -315,6 +315,7 @@ def learning(article, user, t, k) :
         data = assoc["data"]
         assoc = assoc["assoc"]
         
+        print score, "SCOREEE"
         #training
         for row in range(0, len(score)):
             x = np.array(data[row])
@@ -328,115 +329,118 @@ def learning(article, user, t, k) :
             else:
                 clf.partial_fit(x, y)
         print len(assoc)
-                  
-        assoc_ = []#remove ID, article and length from data for the prediction
-        [assoc_.append(row[2:]) for row in assoc ]
-        assoc_ = np.array(assoc_)
-          
-        print "t: ", i
-        #print assoc_, "input prediction"
-        prediction = clf.predict(assoc_)  
-        #print prediction
-           
-        prob = clf.predict_proba(assoc_)  
-                  
-        name_assoc = assoc[:,0]
-        #print name_assoc 
-          
-        id_score = []
-        len_p = len(prediction)
-        if len_p == len(name_assoc):
-            for i in range (0, len_p):
-                #id_score.append((prediction[i], name_assoc[i], prob[i]))
-                id_score.append((name_assoc[i], prob[i]))
-        
-                
-        sorted_associations = sort_prob(id_score)#first associations are those we will select
-                
-        entropies = entropy(id_score)  
-        
-        entropies = sorted(entropies.items(), key=lambda x: x[1], reverse=True)
-        
-        to_be_evalueted = entropies[:k]
-            
-        print to_be_evalueted, "to_be_evaluated"
-        ids = []
-        ndcg_list = []
-        for item in to_be_evalueted:
-            ids.append(item[0])
-           
-        print ids 
-        #np.asarray(np.column_stack([id_score_name, prediction, id_score_prob]))
-        
-        ndcg_list.extend(sorted_associations[0:11])
-        
-            
-            
-        print ndcg_list, "ndcg_list"
-        user_assoc_score = []
-        for i in range(0, len(ndcg_list)):
-            for item in range(0, ndcg_data.shape[0] - 1):
-                if(ndcg_data[item, 0] == ndcg_list[i]):
-                    user_assoc_score.append(ndcg_data[item, 1])
-            
-        print user_assoc_score, "score associazioni selezionate"
-        print sorted(user_assoc_score, reverse = True), "score associazioni selezionate ordinati"
-        ndcg_values.append(ndcg(user_assoc_score)[len(user_assoc_score) - 1])
-        j += 1
+#                   
+#         assoc_ = []#remove ID, article and length from data for the prediction
+#         [assoc_.append(row[2:]) for row in assoc ]
+#         assoc_ = np.array(assoc_)
+#           
+#         print "t: ", i
+#         #print assoc_, "input prediction"
+#         prediction = clf.predict(assoc_)  
+#         #print prediction
+#            
+#         prob = clf.predict_proba(assoc_)  
+#                   
+#         name_assoc = assoc[:,0]
+#         #print name_assoc 
+#           
+#         id_score = []
+#         len_p = len(prediction)
+#         if len_p == len(name_assoc):
+#             for i in range (0, len_p):
+#                 #id_score.append((prediction[i], name_assoc[i], prob[i]))
+#                 id_score.append((name_assoc[i], prob[i]))
+#         
+#                 
+#         sorted_associations = sort_prob(id_score)#first associations are those we will select
+#                 
+#         entropies = entropy(id_score)  
+#         
+#         entropies = sorted(entropies.items(), key=lambda x: x[1], reverse=True)
+#         
+#         to_be_evalueted = entropies[:k]
+#             
+#         print to_be_evalueted, "to_be_evaluated"
+#         ids = []
+#         ndcg_list = []
+#         for item in to_be_evalueted:
+#             ids.append(item[0])
+#            
+#         print ids 
+#         #np.asarray(np.column_stack([id_score_name, prediction, id_score_prob]))
+#         
+#         ndcg_list.extend(sorted_associations[0:11])
+#         
+#             
+#             
+#         print ndcg_list, "ndcg_list"
+#         user_assoc_score = []
+#         for i in range(0, len(ndcg_list)):
+#             for item in range(0, ndcg_data.shape[0] - 1):
+#                 if(ndcg_data[item, 0] == ndcg_list[i]):
+#                     user_assoc_score.append(ndcg_data[item, 1])
+#             
+#         print user_assoc_score, "score associazioni selezionate"
+#         print sorted(user_assoc_score, reverse = True), "score associazioni selezionate ordinati"
+#         ndcg_values.append(ndcg(user_assoc_score)[len(user_assoc_score) - 1])
+#         j += 1
         
     return ndcg_values
     
 
 
 if __name__ == '__main__':
-    ndcg_list_article130 = []
-    #article 130
     
-    ndcg_list_article130.extend(learning(130, 8, 5, 2))
+        learning(130, 1, 5, 2)
     
-    
-    ndcg_list_article133 = []
-    #article 133
-    
-    ndcg_list_article133.extend(learning(133, 8, 5, 2))
-    
-    ndcg_list_article139 = []
-    #article 139
-    
-    ndcg_list_article139.extend(learning(139, 8, 5, 2))
-    
-    #provate con 10 iterazioni.. si nota come le performance sono molto buone
-    
-    print ndcg_list_article130, "130"
-    print ndcg_list_article133, "133"
-    print ndcg_list_article139, "139"
-    
-    articles_mean = []
-    
-    articles_mean.append(ndcg_list_article130)
-    articles_mean.append(ndcg_list_article133)
-    articles_mean.append(ndcg_list_article139)
-    
-    articles_mean = [sum(x)/float(len(x)) for x in zip(*articles_mean)]
-    
-    print articles_mean, "performance media sui 3 articoli"
-    ALC = metrics.auc([0, 1, 2, 3, 4], articles_mean) / metrics.auc([0, 1, 2, 3, 4], [1, 1, 1, 1, 1]) 
-    print ALC
-    #normalizzato su intervallo [0,1]
-    
-    fig, ax = plt.subplots( nrows=1, ncols=1 )  # create figure & 1 axis
-    plt.xlabel("Iterazione")
-    plt.ylabel("nDCG value")
-    plt.autoscale(enable = True, axis = 'y')
-    ax.plot([0, 1, 2, 3, 4], ndcg_list_article130, 'bo--', label = "Articolo 130")
-    ax.plot([0, 1, 2, 3, 4], ndcg_list_article133, 'ro--', label = "Articolo 133")
-    ax.plot([0, 1, 2, 3, 4], ndcg_list_article139, 'go--', label = "Articolo 139")
-    ax.plot([0, 1, 2, 3, 4], articles_mean, 'yo--', label = "Media Articoli")
-    title = "Valutazione performance \n ALC = ", ALC
-    plt.title(title[0] + str(title[1]))
-    plt.legend(loc='best')
-    fig.savefig('Data/plot/plot.png')   #change pathname
-    plt.close(fig) 
+#     ndcg_list_article130 = []
+#     #article 130
+#     
+#     ndcg_list_article130.extend(learning(130, 8, 5, 2))
+#     
+#     
+#     ndcg_list_article133 = []
+#     #article 133
+#     
+#     ndcg_list_article133.extend(learning(133, 8, 5, 2))
+#     
+#     ndcg_list_article139 = []
+#     #article 139
+#     
+#     ndcg_list_article139.extend(learning(139, 8, 5, 2))
+#     
+#     #provate con 10 iterazioni.. si nota come le performance sono molto buone
+#     
+#     print ndcg_list_article130, "130"
+#     print ndcg_list_article133, "133"
+#     print ndcg_list_article139, "139"
+#     
+#     articles_mean = []
+#     
+#     articles_mean.append(ndcg_list_article130)
+#     articles_mean.append(ndcg_list_article133)
+#     articles_mean.append(ndcg_list_article139)
+#     
+#     articles_mean = [sum(x)/float(len(x)) for x in zip(*articles_mean)]
+#     
+#     print articles_mean, "performance media sui 3 articoli"
+#     ALC = metrics.auc([0, 1, 2, 3, 4], articles_mean) / metrics.auc([0, 1, 2, 3, 4], [1, 1, 1, 1, 1]) 
+#     print ALC
+#     #normalizzato su intervallo [0,1]
+#     
+#     fig, ax = plt.subplots( nrows=1, ncols=1 )  # create figure & 1 axis
+#     plt.xlabel("Iterazione")
+#     plt.ylabel("nDCG value")
+#     plt.autoscale(enable = True, axis = 'y')
+#     ax.plot([0, 1, 2, 3, 4], ndcg_list_article130, 'bo--', label = "Articolo 130")
+#     ax.plot([0, 1, 2, 3, 4], ndcg_list_article133, 'ro--', label = "Articolo 133")
+#     ax.plot([0, 1, 2, 3, 4], ndcg_list_article139, 'go--', label = "Articolo 139")
+#     ax.plot([0, 1, 2, 3, 4], articles_mean, 'yo--', label = "Media Articoli")
+#     title = "Valutazione performance \n ALC = ", ALC
+#     plt.title(title[0] + str(title[1]))
+#     plt.legend(loc='best')
+#     fig.savefig('Data/plot/plot.png')   #change pathname
+#     plt.close(fig) 
     
 
 
