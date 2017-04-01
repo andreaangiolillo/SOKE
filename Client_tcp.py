@@ -19,13 +19,15 @@ def main():
     data = s.recv(1024)
     data_arr = pickle.loads(data)#deserialization
     
-    
+    c = 0
+    eval = []
     print "Received from server:" 
     for i in data_arr:
         print i 
+        c = c + 1  
+        eval.append(c)
     
     #sending the valuation
-    eval = [1,3,4,5,1,3]
     s.send(pickle.dumps(eval))
         
 if __name__ == '__main__':
