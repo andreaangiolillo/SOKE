@@ -114,13 +114,16 @@ def learning(ids, eval, article,learner):
     
     #removing ID and article from associations
     assoc_for_prediction = np.zeros((54,9))
+    assoc_name = []
     for i in range (0, all_assoc.shape[0]):
         assoc_for_prediction[i] = all_assoc[i][2:]
+        assoc_name.append(all_assoc[i][0])
+        
         #test
         #print all_assoc[i][2:]
+    prediction = learner.predict(assoc_for_prediction)
     
-    prediction = learner.predict(assoc_for_prediction)    
-    print prediction
+    return prediction, assoc_name
     
     #prediction
 #     prediction = learner.predict(all_assoc)
@@ -172,9 +175,10 @@ def main():
         
         #test
         for i in data:
-            print i 
+            print i
+        
             
-            
+        print data
         #sending the associations to evaluate
         assoc = pickle.dumps(data)#serialization
         c.send(assoc)
@@ -190,16 +194,20 @@ def main():
         
         
         ''' FORTH STEP: executing online learning '''
-        sort = learning(ids, np.asarray(eval), article,learner)
+        sort, selected_association_name = learning(ids, np.asarray(eval), article,learner)
+        
+        associations_properties = find(selected_association_name, article, True)
+        
+        
+        data = pickle.dumps(sort)
+        c.send(data)
+        data = pickle.dumps(find(selected_association_name, article, True))
+        c.send(data)
         
         
         
         
         
-        
-        
-        
-
         
     c.close()
     

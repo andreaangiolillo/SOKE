@@ -23,12 +23,24 @@ def main():
     eval = []
     print "Received from server:" 
     for i in data_arr:
-        print i 
+        print i
         c = c + 1  
         eval.append(c)
     
     #sending the valuation
     s.send(pickle.dumps(eval))
+    
+    
+    
+    data = s.recv(10960)
+    prediction_result = pickle.loads(data) 
+    
+    data = s.recv(40960)
+    assoc_properties = pickle.loads(data)
+    
+    print prediction_result, "\n", assoc_properties, "client" 
+    
+    
         
 if __name__ == '__main__':
     main()
