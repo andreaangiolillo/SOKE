@@ -121,31 +121,29 @@ class ThreadedServer(object):
             assoc_for_prediction[i] = all_assoc[i][2:]
             assoc_name.append(all_assoc[i][0])
             
-            #test
-            #print all_assoc[i][2:]
+            
         prediction = learner.predict(assoc_for_prediction)
         
         return prediction, assoc_name
         
-        #prediction
-    #     prediction = learner.predict(all_assoc)
-    #     print prediction
-    #     
-      
+  
+    #Init of server 
     def __init__(self, host, port):
         self.host = host
         self.port = port
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.sock.bind((self.host, self.port))
-
+    
+    #listen to clients
     def listen(self):
         self.sock.listen(5)
         while True:
             client, address = self.sock.accept()
             client.settimeout(60)
             threading.Thread(target = self.listenToClient,args = (client,address)).start()
-
+    
+    #similar to main
     def listenToClient(self, client, address):
         #----------------------------------------------------------- size = 1024
         #----------------------------------------------------------- while True:
@@ -233,5 +231,5 @@ if __name__ == "__main__":
     #port_num = input("Port? ")
     host = "127.0.0.1"
     port_num = 6000
-    ThreadedServer('',port_num).listen()
+    ThreadedServer('',port_num).listen() #assigns a free port to client's thread
     
