@@ -215,7 +215,7 @@ class ThreadedServer(object):
                 print i
             
             
-            ''' FORTH STEP: executing online learning '''
+            ''' FOURTH STEP: executing online learning '''
             sort, selected_association_name = self.learning(ids, np.asarray(eval), article,learner)
             
             associations_properties = self.find(selected_association_name, article, True)
