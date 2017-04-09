@@ -1,0 +1,1584 @@
+{
+"metrics" : {
+"classCount" : 3,
+"datatypeCount" : 0,
+"objectPropertyCount" : 0,
+"datatypePropertyCount" : 0,
+"propertyCount" : 1,
+"nodeCount" : 53,
+"axiomCount" : 216,
+"individualCount" : 8
+},"class":[
+{
+ "id": "0",
+ "type": "owl:Class"
+},
+{
+ "id": "1",
+ "type": "owl:Class"
+},
+{
+ "id": "2",
+ "type": "owl:Class"
+},
+{
+ "id": "3",
+ "type": "owl:Class"
+},
+{
+ "id": "4",
+ "type": "owl:Class"
+},
+{
+ "id": "5",
+ "type": "owl:Class"
+},
+{
+ "id": "6",
+ "type": "owl:Class"
+},
+{
+ "id": "7",
+ "type": "owl:Class"
+},
+{
+ "id": "8",
+ "type": "owl:Class"
+},
+{
+ "id": "9",
+ "type": "owl:Class"
+},
+{
+ "id": "10",
+ "type": "owl:Class"
+},
+{
+ "id": "11",
+ "type": "owl:Class"
+},
+{
+ "id": "12",
+ "type": "owl:Class"
+},
+{
+ "id": "13",
+ "type": "owl:Class"
+},
+{
+ "id": "14",
+ "type": "owl:Class"
+},
+{
+ "id": "15",
+ "type": "owl:Class"
+},
+{
+ "id": "16",
+ "type": "owl:Class"
+},
+{
+ "id": "17",
+ "type": "owl:Class"
+},
+{
+ "id": "18",
+ "type": "owl:Class"
+},
+{
+ "id": "19",
+ "type": "owl:Class"
+},
+{
+ "id": "20",
+ "type": "owl:Class"
+},
+{
+ "id": "21",
+ "type": "owl:Class"
+},
+{
+ "id": "22",
+ "type": "owl:Class"
+},
+{
+ "id": "23",
+ "type": "owl:Class"
+},
+{
+ "id": "24",
+ "type": "owl:Class"
+},
+{
+ "id": "25",
+ "type": "owl:Class"
+},
+{
+ "id": "26",
+ "type": "owl:Class"
+},
+{
+ "id": "27",
+ "type": "owl:Class"
+},
+{
+ "id": "28",
+ "type": "owl:Class"
+},
+{
+ "id": "29",
+ "type": "owl:Class"
+},
+{
+ "id": "30",
+ "type": "owl:Class"
+},
+{
+ "id": "31",
+ "type": "owl:Class"
+},
+{
+ "id": "32",
+ "type": "owl:Class"
+},
+{
+ "id": "33",
+ "type": "owl:Class"
+},
+{
+ "id": "34",
+ "type": "owl:Class"
+},
+{
+ "id": "35",
+ "type": "owl:Class"
+},
+{
+ "id": "36",
+ "type": "owl:Class"
+}
+],"classAttribute": [
+{
+"id" : "0",
+ "label" : { 
+ "undefined" : "Matteo_Renzi"
+}
+},
+{
+"id" : "1",
+ "label" : { 
+ "undefined" : "Italy"
+}
+},
+{
+"id" : "2",
+ "label" : { 
+ "undefined" : "Lorenzo_Guerini"
+}
+},
+{
+"id" : "3",
+ "label" : { 
+ "undefined" : "Sergio_Mattarella"
+}
+},
+{
+"id" : "4",
+ "label" : { 
+ "undefined" : "Leonardo_Domenici"
+}
+},
+{
+"id" : "5",
+ "label" : { 
+ "undefined" : "University_of_Florence"
+}
+},
+{
+"id" : "6",
+ "label" : { 
+ "undefined" : "Florence"
+}
+},
+{
+"id" : "7",
+ "label" : { 
+ "undefined" : "Province_of_Florence"
+}
+},
+{
+"id" : "8",
+ "label" : { 
+ "undefined" : "Tuscany"
+}
+},
+{
+"id" : "9",
+ "label" : { 
+ "undefined" : "Dario_Nardella"
+}
+},
+{
+"id" : "10",
+ "label" : { 
+ "undefined" : "Federica_Mogherini"
+}
+},
+{
+"id" : "11",
+ "label" : { 
+ "undefined" : "Lapo_Pistelli"
+}
+},
+{
+"id" : "12",
+ "label" : { 
+ "undefined" : "Dario_Franceschini"
+}
+},
+{
+"id" : "13",
+ "label" : { 
+ "undefined" : "Roberta_Pinotti"
+}
+},
+{
+"id" : "14",
+ "label" : { 
+ "undefined" : "Paolo_Gentiloni"
+}
+},
+{
+"id" : "15",
+ "label" : { 
+ "undefined" : "Angelino_Alfano"
+}
+},
+{
+"id" : "16",
+ "label" : { 
+ "undefined" : "European_Parliament_election,_2014_(Italy)"
+}
+},
+{
+"id" : "17",
+ "label" : { 
+ "undefined" : "Italian_local_elections,_2014"
+}
+},
+{
+"id" : "18",
+ "label" : { 
+ "undefined" : "Palazzo_Chigi"
+}
+},
+{
+"id" : "19",
+ "label" : { 
+ "undefined" : "Andrea_Orlando"
+}
+},
+{
+"id" : "20",
+ "label" : { 
+ "undefined" : "Italian_local_elections,_2015"
+}
+},
+{
+"id" : "21",
+ "label" : { 
+ "undefined" : "Next_Italian_general_election"
+}
+},
+{
+"id" : "22",
+ "label" : { 
+ "undefined" : "Europe"
+}
+},
+{
+"id" : "23",
+ "label" : { 
+ "undefined" : "Vega_(rocket)"
+}
+},
+{
+"id" : "24",
+ "label" : { 
+ "undefined" : "Mont_Blanc_Tunnel"
+}
+},
+{
+"id" : "25",
+ "label" : { 
+ "undefined" : "Mediaset_Italia"
+}
+},
+{
+"id" : "26",
+ "label" : { 
+ "undefined" : "MullMuzzler"
+}
+},
+{
+"id" : "27",
+ "label" : { 
+ "undefined" : "TV2000"
+}
+},
+{
+"id" : "28",
+ "label" : { 
+ "undefined" : "Telepace"
+}
+},
+{
+"id" : "29",
+ "label" : { 
+ "undefined" : "Foundation_for_subsidiarity"
+}
+},
+{
+"id" : "30",
+ "label" : { 
+ "undefined" : "AXN_Sci_Fi"
+}
+},
+{
+"id" : "31",
+ "label" : { 
+ "undefined" : "Lucilio_Vanini"
+}
+},
+{
+"id" : "32",
+ "label" : { 
+ "undefined" : "Olivetti"
+}
+},
+{
+"id" : "33",
+ "label" : { 
+ "undefined" : "Swiss_people"
+}
+},
+{
+"id" : "34",
+ "label" : { 
+ "undefined" : "Video_Italia"
+}
+},
+{
+"id" : "35",
+ "label" : { 
+ "undefined" : "National_Observatory_of_Outsider_Art"
+}
+},
+{
+"id" : "36",
+ "label" : { 
+ "undefined" : "Academy_of_Fine_Arts,_Verona"
+}
+}],"property": [
+{
+ "id": "0",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "1",
+ "type": "owl:objectProperty"
+}
+,
+{
+ "id": "2",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "3",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "4",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "5",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "6",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "7",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "8",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "9",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "10",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "11",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "12",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "13",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "14",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "15",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "16",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "17",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "18",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "19",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "20",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "21",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "22",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "23",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "24",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "25",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "26",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "27",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "28",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "29",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "30",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "31",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "32",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "33",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "34",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "35",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "36",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "37",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "38",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "39",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "40",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "41",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "42",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "43",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "44",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "45",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "46",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "47",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "48",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "49",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "50",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "51",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "52",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "53",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "54",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "55",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "56",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "57",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "58",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "59",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "60",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "61",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "62",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "63",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "64",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "65",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "66",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "67",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "68",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "69",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "70",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "71",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "72",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "73",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "74",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "75",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "76",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "77",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "78",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "79",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "80",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "81",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "82",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "83",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "84",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "85",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "86",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "87",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "88",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "89",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "90",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "91",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "92",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "93",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "94",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "95",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "96",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "97",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "98",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "99",
+ "type": "owl:objectProperty"
+}],"propertyAttribute": [
+{
+"id" : "0",
+"domain" : "1",
+"range" : "0",
+"label" : { 
+ "en" : "R:birthPlace"
+}
+},
+{
+"id" : "1",
+"domain" : "0",
+"range" : "1",
+"label" : { 
+ "en" : "L:leader"
+}
+}
+,
+{
+"id" : "2",
+"domain" : "2",
+"range" : "0",
+"label" : { 
+ "en" : "R:deputy"
+}
+},
+{
+"id" : "3",
+"domain" : "1",
+"range" : "2",
+"label" : { 
+ "en" : "R:birthPlace"
+}
+},
+{
+"id" : "4",
+"domain" : "3",
+"range" : "0",
+"label" : { 
+ "en" : "R:president"
+}
+},
+{
+"id" : "5",
+"domain" : "1",
+"range" : "3",
+"label" : { 
+ "en" : "R:birthPlace"
+}
+},
+{
+"id" : "6",
+"domain" : "4",
+"range" : "0",
+"label" : { 
+ "en" : "R:predecessor"
+}
+},
+{
+"id" : "7",
+"domain" : "1",
+"range" : "4",
+"label" : { 
+ "en" : "R:birthPlace"
+}
+},
+{
+"id" : "8",
+"domain" : "5",
+"range" : "0",
+"label" : { 
+ "en" : "R:almaMater"
+}
+},
+{
+"id" : "9",
+"domain" : "1",
+"range" : "5",
+"label" : { 
+ "en" : "R:country"
+}
+},
+{
+"id" : "10",
+"domain" : "6",
+"range" : "0",
+"label" : { 
+ "en" : "R:birthPlace"
+}
+},
+{
+"id" : "11",
+"domain" : "1",
+"range" : "6",
+"label" : { 
+ "en" : "R:country"
+}
+},
+{
+"id" : "12",
+"domain" : "7",
+"range" : "0",
+"label" : { 
+ "en" : "R:predecessor"
+}
+},
+{
+"id" : "13",
+"domain" : "1",
+"range" : "7",
+"label" : { 
+ "en" : "R:country"
+}
+},
+{
+"id" : "14",
+"domain" : "7",
+"range" : "0",
+"label" : { 
+ "en" : "R:successor"
+}
+},
+{
+"id" : "15",
+"domain" : "1",
+"range" : "7",
+"label" : { 
+ "en" : "R:country"
+}
+},
+{
+"id" : "16",
+"domain" : "8",
+"range" : "0",
+"label" : { 
+ "en" : "R:birthPlace"
+}
+},
+{
+"id" : "17",
+"domain" : "1",
+"range" : "8",
+"label" : { 
+ "en" : "R:country"
+}
+},
+{
+"id" : "18",
+"domain" : "9",
+"range" : "0",
+"label" : { 
+ "en" : "R:successor"
+}
+},
+{
+"id" : "19",
+"domain" : "1",
+"range" : "9",
+"label" : { 
+ "en" : "R:nationality"
+}
+},
+{
+"id" : "20",
+"domain" : "4",
+"range" : "0",
+"label" : { 
+ "en" : "R:predecessor"
+}
+},
+{
+"id" : "21",
+"domain" : "1",
+"range" : "4",
+"label" : { 
+ "en" : "R:nationality"
+}
+},
+{
+"id" : "22",
+"domain" : "3",
+"range" : "0",
+"label" : { 
+ "en" : "R:president"
+}
+},
+{
+"id" : "23",
+"domain" : "3",
+"range" : "1",
+"label" : { 
+ "en" : "L:leader"
+}
+},
+{
+"id" : "24",
+"domain" : "0",
+"range" : "3",
+"label" : { 
+ "en" : "L:primeMinister"
+}
+},
+{
+"id" : "25",
+"domain" : "3",
+"range" : "1",
+"label" : { 
+ "en" : "L:leader"
+}
+},
+{
+"id" : "26",
+"domain" : "0",
+"range" : "10",
+"label" : { 
+ "en" : "L:primeMinister"
+}
+},
+{
+"id" : "27",
+"domain" : "1",
+"range" : "10",
+"label" : { 
+ "en" : "R:birthPlace"
+}
+},
+{
+"id" : "28",
+"domain" : "0",
+"range" : "3",
+"label" : { 
+ "en" : "L:primeMinister"
+}
+},
+{
+"id" : "29",
+"domain" : "1",
+"range" : "3",
+"label" : { 
+ "en" : "R:birthPlace"
+}
+},
+{
+"id" : "30",
+"domain" : "0",
+"range" : "11",
+"label" : { 
+ "en" : "L:primeMinister"
+}
+},
+{
+"id" : "31",
+"domain" : "1",
+"range" : "11",
+"label" : { 
+ "en" : "R:birthPlace"
+}
+},
+{
+"id" : "32",
+"domain" : "0",
+"range" : "4",
+"label" : { 
+ "en" : "L:successor"
+}
+},
+{
+"id" : "33",
+"domain" : "1",
+"range" : "4",
+"label" : { 
+ "en" : "R:birthPlace"
+}
+},
+{
+"id" : "34",
+"domain" : "0",
+"range" : "12",
+"label" : { 
+ "en" : "L:primeMinister"
+}
+},
+{
+"id" : "35",
+"domain" : "1",
+"range" : "12",
+"label" : { 
+ "en" : "R:birthPlace"
+}
+},
+{
+"id" : "36",
+"domain" : "0",
+"range" : "13",
+"label" : { 
+ "en" : "L:primeMinister"
+}
+},
+{
+"id" : "37",
+"domain" : "1",
+"range" : "13",
+"label" : { 
+ "en" : "R:birthPlace"
+}
+},
+{
+"id" : "38",
+"domain" : "0",
+"range" : "14",
+"label" : { 
+ "en" : "L:primeMinister"
+}
+},
+{
+"id" : "39",
+"domain" : "1",
+"range" : "14",
+"label" : { 
+ "en" : "R:birthPlace"
+}
+},
+{
+"id" : "40",
+"domain" : "0",
+"range" : "15",
+"label" : { 
+ "en" : "L:primeMinister"
+}
+},
+{
+"id" : "41",
+"domain" : "1",
+"range" : "15",
+"label" : { 
+ "en" : "R:birthPlace"
+}
+},
+{
+"id" : "42",
+"domain" : "0",
+"range" : "16",
+"label" : { 
+ "en" : "L:firstLeader"
+}
+},
+{
+"id" : "43",
+"domain" : "1",
+"range" : "16",
+"label" : { 
+ "en" : "R:country"
+}
+},
+{
+"id" : "44",
+"domain" : "0",
+"range" : "17",
+"label" : { 
+ "en" : "L:firstLeader"
+}
+},
+{
+"id" : "45",
+"domain" : "1",
+"range" : "17",
+"label" : { 
+ "en" : "R:country"
+}
+},
+{
+"id" : "46",
+"domain" : "0",
+"range" : "18",
+"label" : { 
+ "en" : "L:tenant"
+}
+},
+{
+"id" : "47",
+"domain" : "1",
+"range" : "18",
+"label" : { 
+ "en" : "R:country"
+}
+},
+{
+"id" : "48",
+"domain" : "0",
+"range" : "9",
+"label" : { 
+ "en" : "L:predecessor"
+}
+},
+{
+"id" : "49",
+"domain" : "1",
+"range" : "9",
+"label" : { 
+ "en" : "R:nationality"
+}
+},
+{
+"id" : "50",
+"domain" : "0",
+"range" : "4",
+"label" : { 
+ "en" : "L:successor"
+}
+},
+{
+"id" : "51",
+"domain" : "1",
+"range" : "4",
+"label" : { 
+ "en" : "R:nationality"
+}
+},
+{
+"id" : "52",
+"domain" : "0",
+"range" : "19",
+"label" : { 
+ "en" : "L:primeMinister"
+}
+},
+{
+"id" : "53",
+"domain" : "1",
+"range" : "19",
+"label" : { 
+ "en" : "R:birthPlace"
+}
+},
+{
+"id" : "54",
+"domain" : "0",
+"range" : "20",
+"label" : { 
+ "en" : "L:firstLeader"
+}
+},
+{
+"id" : "55",
+"domain" : "1",
+"range" : "20",
+"label" : { 
+ "en" : "R:country"
+}
+},
+{
+"id" : "56",
+"domain" : "0",
+"range" : "21",
+"label" : { 
+ "en" : "L:firstLeader"
+}
+},
+{
+"id" : "57",
+"domain" : "1",
+"range" : "21",
+"label" : { 
+ "en" : "R:country"
+}
+},
+{
+"id" : "58",
+"domain" : "22",
+"range" : "23",
+"label" : { 
+ "en" : "L:countryOrigin"
+}
+},
+{
+"id" : "59",
+"domain" : "1",
+"range" : "23",
+"label" : { 
+ "en" : "R:countryOrigin"
+}
+},
+{
+"id" : "60",
+"domain" : "22",
+"range" : "24",
+"label" : { 
+ "en" : "L:location"
+}
+},
+{
+"id" : "61",
+"domain" : "1",
+"range" : "24",
+"label" : { 
+ "en" : "R:routeEndLocation"
+}
+},
+{
+"id" : "62",
+"domain" : "22",
+"range" : "25",
+"label" : { 
+ "en" : "L:broadcastArea"
+}
+},
+{
+"id" : "63",
+"domain" : "1",
+"range" : "25",
+"label" : { 
+ "en" : "R:country"
+}
+},
+{
+"id" : "64",
+"domain" : "22",
+"range" : "26",
+"label" : { 
+ "en" : "L:hometown"
+}
+},
+{
+"id" : "65",
+"domain" : "1",
+"range" : "26",
+"label" : { 
+ "en" : "R:hometown"
+}
+},
+{
+"id" : "66",
+"domain" : "22",
+"range" : "25",
+"label" : { 
+ "en" : "L:broadcastArea"
+}
+},
+{
+"id" : "67",
+"domain" : "1",
+"range" : "25",
+"label" : { 
+ "en" : "R:locationCountry"
+}
+},
+{
+"id" : "68",
+"domain" : "22",
+"range" : "27",
+"label" : { 
+ "en" : "L:broadcastArea"
+}
+},
+{
+"id" : "69",
+"domain" : "1",
+"range" : "27",
+"label" : { 
+ "en" : "R:country"
+}
+},
+{
+"id" : "70",
+"domain" : "22",
+"range" : "28",
+"label" : { 
+ "en" : "L:broadcastArea"
+}
+},
+{
+"id" : "71",
+"domain" : "1",
+"range" : "28",
+"label" : { 
+ "en" : "R:country"
+}
+},
+{
+"id" : "72",
+"domain" : "22",
+"range" : "29",
+"label" : { 
+ "en" : "L:regionServed"
+}
+},
+{
+"id" : "73",
+"domain" : "1",
+"range" : "29",
+"label" : { 
+ "en" : "R:locationCountry"
+}
+},
+{
+"id" : "74",
+"domain" : "22",
+"range" : "27",
+"label" : { 
+ "en" : "L:broadcastArea"
+}
+},
+{
+"id" : "75",
+"domain" : "1",
+"range" : "27",
+"label" : { 
+ "en" : "R:locationCountry"
+}
+},
+{
+"id" : "76",
+"domain" : "22",
+"range" : "28",
+"label" : { 
+ "en" : "L:broadcastArea"
+}
+},
+{
+"id" : "77",
+"domain" : "1",
+"range" : "28",
+"label" : { 
+ "en" : "R:locationCountry"
+}
+},
+{
+"id" : "78",
+"domain" : "22",
+"range" : "30",
+"label" : { 
+ "en" : "L:country"
+}
+},
+{
+"id" : "79",
+"domain" : "1",
+"range" : "30",
+"label" : { 
+ "en" : "R:broadcastArea"
+}
+},
+{
+"id" : "80",
+"domain" : "22",
+"range" : "30",
+"label" : { 
+ "en" : "L:locationCountry"
+}
+},
+{
+"id" : "81",
+"domain" : "1",
+"range" : "30",
+"label" : { 
+ "en" : "R:broadcastArea"
+}
+},
+{
+"id" : "82",
+"domain" : "22",
+"range" : "31",
+"label" : { 
+ "en" : "L:region"
+}
+},
+{
+"id" : "83",
+"domain" : "1",
+"range" : "31",
+"label" : { 
+ "en" : "R:birthPlace"
+}
+},
+{
+"id" : "84",
+"domain" : "22",
+"range" : "32",
+"label" : { 
+ "en" : "L:regionServed"
+}
+},
+{
+"id" : "85",
+"domain" : "1",
+"range" : "32",
+"label" : { 
+ "en" : "R:foundationPlace"
+}
+},
+{
+"id" : "86",
+"domain" : "22",
+"range" : "32",
+"label" : { 
+ "en" : "L:regionServed"
+}
+},
+{
+"id" : "87",
+"domain" : "1",
+"range" : "32",
+"label" : { 
+ "en" : "R:locationCountry"
+}
+},
+{
+"id" : "88",
+"domain" : "22",
+"range" : "33",
+"label" : { 
+ "en" : "L:populationPlace"
+}
+},
+{
+"id" : "89",
+"domain" : "1",
+"range" : "33",
+"label" : { 
+ "en" : "R:populationPlace"
+}
+},
+{
+"id" : "90",
+"domain" : "22",
+"range" : "34",
+"label" : { 
+ "en" : "L:broadcastArea"
+}
+},
+{
+"id" : "91",
+"domain" : "1",
+"range" : "34",
+"label" : { 
+ "en" : "R:broadcastArea"
+}
+},
+{
+"id" : "92",
+"domain" : "22",
+"range" : "34",
+"label" : { 
+ "en" : "L:broadcastArea"
+}
+},
+{
+"id" : "93",
+"domain" : "1",
+"range" : "34",
+"label" : { 
+ "en" : "R:country"
+}
+},
+{
+"id" : "94",
+"domain" : "22",
+"range" : "34",
+"label" : { 
+ "en" : "L:broadcastArea"
+}
+},
+{
+"id" : "95",
+"domain" : "1",
+"range" : "34",
+"label" : { 
+ "en" : "R:locationCountry"
+}
+},
+{
+"id" : "96",
+"domain" : "22",
+"range" : "35",
+"label" : { 
+ "en" : "L:country"
+}
+},
+{
+"id" : "97",
+"domain" : "1",
+"range" : "35",
+"label" : { 
+ "en" : "R:state"
+}
+},
+{
+"id" : "98",
+"domain" : "22",
+"range" : "36",
+"label" : { 
+ "en" : "L:country"
+}
+},
+{
+"id" : "99",
+"domain" : "1",
+"range" : "36",
+"label" : { 
+ "en" : "R:state"
+}
+}]}
