@@ -1,4 +1,8 @@
-webvowl.app = function(e) {
+var d3 = require("d3");
+
+var file = "130"
+
+webvowl_1 = function(e) {
     function t(o) {
         if (n[o]) return n[o].exports;
         var r = n[o] = {
@@ -701,7 +705,7 @@ webvowl.app = function(e) {
                     } else if (e.substr(0, o.length) === o) {
                         var u = decodeURIComponent(e.slice(o.length));
                         l("convert?iri=" + encodeURIComponent(u), u), t.select("#converter-option").classed("selected-ontology", !0)
-                    } else l("data/" + e + ".json", e), n.each(function() {
+                    } else l("data/json/" + e + ".json", e), n.each(function() {
                         var n = t.select(this);
                         n.select("a").size() > 0 && n.select("a").attr("href") === "#" + e && n.classed("selected-ontology", !0)
                     })
@@ -842,7 +846,7 @@ webvowl.app = function(e) {
                     S.classed("hidden", !0)
                 }
                 var m, b, x, w = {},
-                    k = "foaf",
+                    k = file,
                     C = t.select("#loading-error"),
                     S = t.select("#loading-progress"),
                     O = !1,

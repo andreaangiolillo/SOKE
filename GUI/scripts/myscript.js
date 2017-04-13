@@ -103,7 +103,7 @@ function createJSON_for_graph(){
 			
 			associations = CSVToArray(response);
 			console.log(associations);
-			var article = "133";
+			var article = "130";
 			
 			var start = '{\n"metrics" : {\n"classCount" : 3,\n"datatypeCount" : 0,\n"objectPropertyCount" : 0,\n"datatypePropertyCount" : 0,\n"propertyCount" : 1,\n"nodeCount" : 53,\n"axiomCount" : 216,\n"individualCount" : 8\n}';
 			var owl_class = [];
@@ -113,7 +113,7 @@ function createJSON_for_graph(){
 			var owl_propertyAttribute = []
 			var str = '';
 			var id_class = 0;
-			var id_prop = 0;
+		
 			var dict = {};
 			
 			
@@ -180,15 +180,15 @@ function createJSON_for_graph(){
 						
 						if ((i == 1) || (article != associations[i-1][1])){
 							//property
-							str ='"property": [\n{\n "id": "'+id_prop+'",\n "type": "owl:objectProperty"\n}'
+							str ='"property": [\n{\n "id": "'+id_class+'",\n "type": "owl:objectProperty"\n}'
 							owl_prop.push(str);
 							
 							if(associations[i][3].search("L:") !=  -1){
-								str = '"propertyAttribute": [\n{\n"id" : "'+id_prop+'",\n"domain" : "'+ dict[associations[i][2]] +'",\n"range" : "'+ dict[associations[i][7]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
+								str = '"propertyAttribute": [\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][2]] +'",\n"range" : "'+ dict[associations[i][7]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
 								owl_propertyAttribute.push(str);
 								
 							}else if (associations[i][3].search("R:") !=  -1){
-								str = '"propertyAttribute": [\n{\n"id" : "'+id_prop+'",\n"domain" : "'+ dict[associations[i][7]] +'",\n"range" : "'+ dict[associations[i][2]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
+								str = '"propertyAttribute": [\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][7]] +'",\n"range" : "'+ dict[associations[i][2]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
 								owl_propertyAttribute.push(str);
 								
 								
@@ -199,15 +199,15 @@ function createJSON_for_graph(){
 						}else{
 							
 							//property
-							str ='\n{\n "id": "'+id_prop+'",\n "type": "owl:objectProperty"\n}\n'
+							str ='\n{\n "id": "'+id_class+'",\n "type": "owl:objectProperty"\n}\n'
 							owl_prop.push(str);
 							
 							if(associations[i][3].search("L:") !=  -1){
-								str = '\n{\n"id" : "'+id_prop+'",\n"domain" : "'+ dict[associations[i][2]] +'",\n"range" : "'+ dict[associations[i][7]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}\n';
+								str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][2]] +'",\n"range" : "'+ dict[associations[i][7]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}\n';
 								owl_propertyAttribute.push(str);
 								
 							}else if (associations[i][3].search("R:") !=  -1){
-								str = '\n{\n"id" : "'+id_prop+'",\n"domain" : "'+ dict[associations[i][7]] +'",\n"range" : "'+ dict[associations[i][2]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}\n';
+								str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][7]] +'",\n"range" : "'+ dict[associations[i][2]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}\n';
 								owl_propertyAttribute.push(str);
 								
 								
@@ -218,7 +218,7 @@ function createJSON_for_graph(){
 						}
 							
 						
-						id_prop = id_prop + 1; // id_prop
+						id_class = id_class + 1; // id_prop
 						
 						
 					
@@ -291,16 +291,16 @@ function createJSON_for_graph(){
 						
 						if((i == 1) || (article != associations[i-1][1])){
 							//property
-							str ='"property": [\n{\n "id": "'+id_prop+'",\n "type": "owl:objectProperty"\n}'
+							str ='"property": [\n{\n "id": "'+id_class+'",\n "type": "owl:objectProperty"\n}'
 							owl_prop.push(str);
 							
 							if(associations[i][3].search("L:") !=  -1){
 							
-								str = '"propertyAttribute": [\n{\n"id" : "'+id_prop+'",\n"domain" : "'+ dict[associations[i][2]] +'",\n"range" : "'+ dict[associations[i][4]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
+								str = '"propertyAttribute": [\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][2]] +'",\n"range" : "'+ dict[associations[i][4]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
 								owl_propertyAttribute.push(str);
 								
 							}else if (associations[i][3].search("R:") !=  -1){
-								str = '"propertyAttribute": [\n{\n"id" : "'+id_prop+'",\n"domain" : "'+ dict[associations[i][4]] +'",\n"range" : "'+ dict[associations[i][2]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
+								str = '"propertyAttribute": [\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][4]] +'",\n"range" : "'+ dict[associations[i][2]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
 								owl_propertyAttribute.push(str);
 								
 								
@@ -311,16 +311,16 @@ function createJSON_for_graph(){
 						}else{
 							
 							//property
-							str ='\n{\n "id": "'+id_prop+'",\n "type": "owl:objectProperty"\n}'
+							str ='\n{\n "id": "'+id_class+'",\n "type": "owl:objectProperty"\n}'
 							owl_prop.push(str);
 							
 							if(associations[i][3].search("L:") !=  -1){
 							
-								str = '\n{\n"id" : "'+id_prop+'",\n"domain" : "'+ dict[associations[i][2]] +'",\n"range" : "'+ dict[associations[i][4]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
+								str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][2]] +'",\n"range" : "'+ dict[associations[i][4]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
 								owl_propertyAttribute.push(str);
 								
 							}else if (associations[i][3].search("R:") !=  -1){
-								str = '\n{\n"id" : "'+id_prop+'",\n"domain" : "'+ dict[associations[i][4]] +'",\n"range" : "'+ dict[associations[i][2]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
+								str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][4]] +'",\n"range" : "'+ dict[associations[i][2]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
 								owl_propertyAttribute.push(str);
 								
 								
@@ -332,21 +332,21 @@ function createJSON_for_graph(){
 						
 						
 						
-						id_prop = id_prop + 1; // id_prop
+						id_class = id_class + 1; // id_prop
 						
 						
 					
 						//property
-						str ='\n{\n "id": "'+id_prop+'",\n "type": "owl:objectProperty"\n}'
+						str ='\n{\n "id": "'+id_class+'",\n "type": "owl:objectProperty"\n}'
 						owl_prop.push(str);
 						
 						if(associations[i][6].search("L:") !=  -1){
 							
-							str = '\n{\n"id" : "'+id_prop+'",\n"domain" : "'+ dict[associations[i][4]] +'",\n"range" : "'+ dict[associations[i][7]] +'",\n"label" : { \n "en" : "'+associations[i][6]+'"\n}\n}';
+							str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][4]] +'",\n"range" : "'+ dict[associations[i][7]] +'",\n"label" : { \n "en" : "'+associations[i][6]+'"\n}\n}';
 							owl_propertyAttribute.push(str);
 							
 						}else if (associations[i][6].search("R:") !=  -1){
-							str = '\n{\n"id" : "'+id_prop+'",\n"domain" : "'+ dict[associations[i][7]] +'",\n"range" : "'+ dict[associations[i][4]] +'",\n"label" : { \n "en" : "'+associations[i][6]+'"\n}\n}';
+							str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][7]] +'",\n"range" : "'+ dict[associations[i][4]] +'",\n"label" : { \n "en" : "'+associations[i][6]+'"\n}\n}';
 							owl_propertyAttribute.push(str);
 							
 							
@@ -355,7 +355,7 @@ function createJSON_for_graph(){
 						}
 						
 						
-						id_prop = id_prop + 1; // id_prop
+						id_class = id_class + 1; // id_prop
 					
 						
 						

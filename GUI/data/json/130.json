@@ -22,23 +22,7 @@
  "type": "owl:Class"
 },
 {
- "id": "3",
- "type": "owl:Class"
-},
-{
- "id": "4",
- "type": "owl:Class"
-},
-{
  "id": "5",
- "type": "owl:Class"
-},
-{
- "id": "6",
- "type": "owl:Class"
-},
-{
- "id": "7",
  "type": "owl:Class"
 },
 {
@@ -46,35 +30,7 @@
  "type": "owl:Class"
 },
 {
- "id": "9",
- "type": "owl:Class"
-},
-{
- "id": "10",
- "type": "owl:Class"
-},
-{
- "id": "11",
- "type": "owl:Class"
-},
-{
- "id": "12",
- "type": "owl:Class"
-},
-{
  "id": "13",
- "type": "owl:Class"
-},
-{
- "id": "14",
- "type": "owl:Class"
-},
-{
- "id": "15",
- "type": "owl:Class"
-},
-{
- "id": "16",
  "type": "owl:Class"
 },
 {
@@ -82,23 +38,7 @@
  "type": "owl:Class"
 },
 {
- "id": "18",
- "type": "owl:Class"
-},
-{
- "id": "19",
- "type": "owl:Class"
-},
-{
  "id": "20",
- "type": "owl:Class"
-},
-{
- "id": "21",
- "type": "owl:Class"
-},
-{
- "id": "22",
  "type": "owl:Class"
 },
 {
@@ -106,51 +46,111 @@
  "type": "owl:Class"
 },
 {
- "id": "24",
- "type": "owl:Class"
-},
-{
- "id": "25",
- "type": "owl:Class"
-},
-{
- "id": "26",
- "type": "owl:Class"
-},
-{
- "id": "27",
- "type": "owl:Class"
-},
-{
- "id": "28",
- "type": "owl:Class"
-},
-{
- "id": "29",
- "type": "owl:Class"
-},
-{
- "id": "30",
- "type": "owl:Class"
-},
-{
- "id": "31",
- "type": "owl:Class"
-},
-{
  "id": "32",
  "type": "owl:Class"
 },
 {
- "id": "33",
+ "id": "39",
  "type": "owl:Class"
 },
 {
- "id": "34",
+ "id": "47",
  "type": "owl:Class"
 },
 {
- "id": "35",
+ "id": "50",
+ "type": "owl:Class"
+},
+{
+ "id": "53",
+ "type": "owl:Class"
+},
+{
+ "id": "56",
+ "type": "owl:Class"
+},
+{
+ "id": "59",
+ "type": "owl:Class"
+},
+{
+ "id": "62",
+ "type": "owl:Class"
+},
+{
+ "id": "65",
+ "type": "owl:Class"
+},
+{
+ "id": "68",
+ "type": "owl:Class"
+},
+{
+ "id": "73",
+ "type": "owl:Class"
+},
+{
+ "id": "101",
+ "type": "owl:Class"
+},
+{
+ "id": "104",
+ "type": "owl:Class"
+},
+{
+ "id": "107",
+ "type": "owl:Class"
+},
+{
+ "id": "110",
+ "type": "owl:Class"
+},
+{
+ "id": "113",
+ "type": "owl:Class"
+},
+{
+ "id": "116",
+ "type": "owl:Class"
+},
+{
+ "id": "119",
+ "type": "owl:Class"
+},
+{
+ "id": "122",
+ "type": "owl:Class"
+},
+{
+ "id": "125",
+ "type": "owl:Class"
+},
+{
+ "id": "128",
+ "type": "owl:Class"
+},
+{
+ "id": "131",
+ "type": "owl:Class"
+},
+{
+ "id": "134",
+ "type": "owl:Class"
+},
+{
+ "id": "137",
+ "type": "owl:Class"
+},
+{
+ "id": "140",
+ "type": "owl:Class"
+},
+{
+ "id": "143",
+ "type": "owl:Class"
+},
+{
+ "id": "146",
  "type": "owl:Class"
 }
 ],"classAttribute": [
@@ -173,225 +173,209 @@
 }
 },
 {
-"id" : "3",
+"id" : "5",
  "label" : { 
  "undefined" : "Democratic_Party_(United_States)"
 }
 },
 {
-"id" : "4",
+"id" : "8",
  "label" : { 
  "undefined" : "Donald_Trump"
 }
 },
 {
-"id" : "5",
+"id" : "13",
  "label" : { 
  "undefined" : "Independent_politician"
 }
 },
 {
-"id" : "6",
+"id" : "17",
  "label" : { 
  "undefined" : "Patty_Murray"
 }
 },
 {
-"id" : "7",
+"id" : "20",
  "label" : { 
  "undefined" : "Peter_Welch"
 }
 },
 {
-"id" : "8",
+"id" : "23",
  "label" : { 
  "undefined" : "Patrick_Leahy"
 }
 },
 {
-"id" : "9",
+"id" : "32",
  "label" : { 
  "undefined" : "United_States_Senate"
 }
 },
 {
-"id" : "10",
+"id" : "39",
  "label" : { 
  "undefined" : "Republican_Party_(United_States)"
 }
 },
 {
-"id" : "11",
+"id" : "47",
  "label" : { 
  "undefined" : "Barack_Obama"
 }
 },
 {
-"id" : "12",
+"id" : "50",
  "label" : { 
  "undefined" : "Kirsten_Gillibrand"
 }
 },
 {
-"id" : "13",
+"id" : "53",
  "label" : { 
  "undefined" : "Daniel_Patrick_Moynihan"
 }
 },
 {
-"id" : "14",
+"id" : "56",
  "label" : { 
  "undefined" : "Bill_Clinton"
 }
 },
 {
-"id" : "15",
+"id" : "59",
  "label" : { 
  "undefined" : "Condoleezza_Rice"
 }
 },
 {
-"id" : "16",
+"id" : "62",
  "label" : { 
  "undefined" : "James_Steinberg"
 }
 },
 {
-"id" : "17",
+"id" : "65",
  "label" : { 
  "undefined" : "Chelsea_Clinton"
 }
 },
 {
-"id" : "18",
+"id" : "68",
  "label" : { 
  "undefined" : "John_Kerry"
 }
 },
 {
-"id" : "19",
+"id" : "73",
  "label" : { 
  "undefined" : "Presidency_of_Bill_Clinton"
 }
 },
 {
-"id" : "20",
+"id" : "101",
  "label" : { 
  "undefined" : "Joe_Biden"
 }
 },
 {
-"id" : "21",
+"id" : "104",
  "label" : { 
  "undefined" : "Mark_E._Clayton"
 }
 },
 {
-"id" : "22",
+"id" : "107",
  "label" : { 
  "undefined" : "William_Luther_Hill"
 }
 },
 {
-"id" : "23",
+"id" : "110",
  "label" : { 
  "undefined" : "John_Martin_Hamley"
 }
 },
 {
-"id" : "24",
+"id" : "113",
  "label" : { 
  "undefined" : "Presidency_of_Barack_Obama"
 }
 },
 {
-"id" : "25",
+"id" : "116",
  "label" : { 
  "undefined" : "Sally_Smith_(politician)"
 }
 },
 {
-"id" : "26",
+"id" : "119",
  "label" : { 
  "undefined" : "Kansas_Legislature"
 }
 },
 {
-"id" : "27",
+"id" : "122",
  "label" : { 
  "undefined" : "Frank_Voelker,_Sr."
 }
 },
 {
-"id" : "28",
+"id" : "125",
  "label" : { 
  "undefined" : "Claiborne_Pell"
 }
 },
 {
-"id" : "29",
+"id" : "128",
  "label" : { 
  "undefined" : "Francis_Xavier_Ransdell"
 }
 },
 {
-"id" : "30",
+"id" : "131",
  "label" : { 
  "undefined" : "Pete_Ashdown"
 }
 },
 {
-"id" : "31",
+"id" : "134",
  "label" : { 
  "undefined" : "LaDonna_Harris"
 }
 },
 {
-"id" : "32",
+"id" : "137",
  "label" : { 
  "undefined" : "Emily_Taft_Douglas"
 }
 },
 {
-"id" : "33",
+"id" : "140",
  "label" : { 
  "undefined" : "George_Arceneaux,_Jr."
 }
 },
 {
-"id" : "34",
+"id" : "143",
  "label" : { 
  "undefined" : "Frank_Voelker,_Jr."
 }
 },
 {
-"id" : "35",
+"id" : "146",
  "label" : { 
  "undefined" : "United_States_Congress"
 }
 }],"property": [
-{
- "id": "0",
- "type": "owl:objectProperty"
-},
-{
- "id": "1",
- "type": "owl:objectProperty"
-},
-{
- "id": "2",
- "type": "owl:objectProperty"
-},
 {
  "id": "3",
  "type": "owl:objectProperty"
 },
 {
  "id": "4",
- "type": "owl:objectProperty"
-},
-{
- "id": "5",
  "type": "owl:objectProperty"
 },
 {
@@ -403,28 +387,19 @@
  "type": "owl:objectProperty"
 },
 {
- "id": "8",
- "type": "owl:objectProperty"
-},
-{
  "id": "9",
  "type": "owl:objectProperty"
 },
 {
  "id": "10",
  "type": "owl:objectProperty"
-}
-,
+},
 {
  "id": "11",
  "type": "owl:objectProperty"
 },
 {
  "id": "12",
- "type": "owl:objectProperty"
-},
-{
- "id": "13",
  "type": "owl:objectProperty"
 },
 {
@@ -438,11 +413,8 @@
 {
  "id": "16",
  "type": "owl:objectProperty"
-},
-{
- "id": "17",
- "type": "owl:objectProperty"
-},
+}
+,
 {
  "id": "18",
  "type": "owl:objectProperty"
@@ -452,19 +424,11 @@
  "type": "owl:objectProperty"
 },
 {
- "id": "20",
- "type": "owl:objectProperty"
-},
-{
  "id": "21",
  "type": "owl:objectProperty"
 },
 {
  "id": "22",
- "type": "owl:objectProperty"
-},
-{
- "id": "23",
  "type": "owl:objectProperty"
 },
 {
@@ -500,10 +464,6 @@
  "type": "owl:objectProperty"
 },
 {
- "id": "32",
- "type": "owl:objectProperty"
-},
-{
  "id": "33",
  "type": "owl:objectProperty"
 },
@@ -514,8 +474,7 @@
 {
  "id": "35",
  "type": "owl:objectProperty"
-}
-,
+},
 {
  "id": "36",
  "type": "owl:objectProperty"
@@ -526,10 +485,6 @@
 },
 {
  "id": "38",
- "type": "owl:objectProperty"
-},
-{
- "id": "39",
  "type": "owl:objectProperty"
 },
 {
@@ -559,21 +514,14 @@
 {
  "id": "46",
  "type": "owl:objectProperty"
-},
-{
- "id": "47",
- "type": "owl:objectProperty"
-},
+}
+,
 {
  "id": "48",
  "type": "owl:objectProperty"
 },
 {
  "id": "49",
- "type": "owl:objectProperty"
-},
-{
- "id": "50",
  "type": "owl:objectProperty"
 },
 {
@@ -585,19 +533,11 @@
  "type": "owl:objectProperty"
 },
 {
- "id": "53",
- "type": "owl:objectProperty"
-},
-{
  "id": "54",
  "type": "owl:objectProperty"
 },
 {
  "id": "55",
- "type": "owl:objectProperty"
-},
-{
- "id": "56",
  "type": "owl:objectProperty"
 },
 {
@@ -609,19 +549,11 @@
  "type": "owl:objectProperty"
 },
 {
- "id": "59",
- "type": "owl:objectProperty"
-},
-{
  "id": "60",
  "type": "owl:objectProperty"
 },
 {
  "id": "61",
- "type": "owl:objectProperty"
-},
-{
- "id": "62",
  "type": "owl:objectProperty"
 },
 {
@@ -633,19 +565,11 @@
  "type": "owl:objectProperty"
 },
 {
- "id": "65",
- "type": "owl:objectProperty"
-},
-{
  "id": "66",
  "type": "owl:objectProperty"
 },
 {
  "id": "67",
- "type": "owl:objectProperty"
-},
-{
- "id": "68",
  "type": "owl:objectProperty"
 },
 {
@@ -655,18 +579,13 @@
 {
  "id": "70",
  "type": "owl:objectProperty"
-}
-,
+},
 {
  "id": "71",
  "type": "owl:objectProperty"
 },
 {
  "id": "72",
- "type": "owl:objectProperty"
-},
-{
- "id": "73",
  "type": "owl:objectProperty"
 },
 {
@@ -692,13 +611,11 @@
 {
  "id": "79",
  "type": "owl:objectProperty"
-}
-,
+},
 {
  "id": "80",
  "type": "owl:objectProperty"
-}
-,
+},
 {
  "id": "81",
  "type": "owl:objectProperty"
@@ -738,7 +655,8 @@
 {
  "id": "90",
  "type": "owl:objectProperty"
-},
+}
+,
 {
  "id": "91",
  "type": "owl:objectProperty"
@@ -774,25 +692,19 @@
 {
  "id": "99",
  "type": "owl:objectProperty"
-},
+}
+,
 {
  "id": "100",
  "type": "owl:objectProperty"
-},
-{
- "id": "101",
- "type": "owl:objectProperty"
-},
+}
+,
 {
  "id": "102",
  "type": "owl:objectProperty"
 },
 {
  "id": "103",
- "type": "owl:objectProperty"
-},
-{
- "id": "104",
  "type": "owl:objectProperty"
 },
 {
@@ -804,19 +716,11 @@
  "type": "owl:objectProperty"
 },
 {
- "id": "107",
- "type": "owl:objectProperty"
-},
-{
  "id": "108",
  "type": "owl:objectProperty"
 },
 {
  "id": "109",
- "type": "owl:objectProperty"
-},
-{
- "id": "110",
  "type": "owl:objectProperty"
 },
 {
@@ -828,15 +732,111 @@
  "type": "owl:objectProperty"
 },
 {
- "id": "113",
+ "id": "114",
  "type": "owl:objectProperty"
 },
 {
- "id": "114",
+ "id": "115",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "117",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "118",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "120",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "121",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "123",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "124",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "126",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "127",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "129",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "130",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "132",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "133",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "135",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "136",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "138",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "139",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "141",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "142",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "144",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "145",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "147",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "148",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "149",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "150",
  "type": "owl:objectProperty"
 }],"propertyAttribute": [
 {
-"id" : "0",
+"id" : "3",
 "domain" : "1",
 "range" : "0",
 "label" : { 
@@ -844,7 +844,7 @@
 }
 },
 {
-"id" : "1",
+"id" : "4",
 "domain" : "1",
 "range" : "2",
 "label" : { 
@@ -852,40 +852,8 @@
 }
 },
 {
-"id" : "2",
-"domain" : "3",
-"range" : "0",
-"label" : { 
- "en" : "R:otherParty"
-}
-},
-{
-"id" : "3",
-"domain" : "3",
-"range" : "2",
-"label" : { 
- "en" : "L:party"
-}
-},
-{
-"id" : "4",
-"domain" : "1",
-"range" : "0",
-"label" : { 
- "en" : "R:birthPlace"
-}
-},
-{
-"id" : "5",
-"domain" : "1",
-"range" : "4",
-"label" : { 
- "en" : "L:birthPlace"
-}
-},
-{
 "id" : "6",
-"domain" : "3",
+"domain" : "5",
 "range" : "0",
 "label" : { 
  "en" : "R:otherParty"
@@ -893,31 +861,63 @@
 },
 {
 "id" : "7",
-"domain" : "3",
-"range" : "4",
+"domain" : "5",
+"range" : "2",
 "label" : { 
  "en" : "L:party"
 }
 },
 {
-"id" : "8",
+"id" : "9",
+"domain" : "1",
+"range" : "0",
+"label" : { 
+ "en" : "R:birthPlace"
+}
+},
+{
+"id" : "10",
+"domain" : "1",
+"range" : "8",
+"label" : { 
+ "en" : "L:birthPlace"
+}
+},
+{
+"id" : "11",
 "domain" : "5",
+"range" : "0",
+"label" : { 
+ "en" : "R:otherParty"
+}
+},
+{
+"id" : "12",
+"domain" : "5",
+"range" : "8",
+"label" : { 
+ "en" : "L:party"
+}
+},
+{
+"id" : "14",
+"domain" : "13",
 "range" : "0",
 "label" : { 
  "en" : "R:party"
 }
 },
 {
-"id" : "9",
-"domain" : "5",
-"range" : "4",
+"id" : "15",
+"domain" : "13",
+"range" : "8",
 "label" : { 
  "en" : "L:party"
 }
 },
 {
-"id" : "10",
-"domain" : "3",
+"id" : "16",
+"domain" : "5",
 "range" : "0",
 "label" : { 
  "en" : "R:otherParty"
@@ -925,183 +925,183 @@
 }
 ,
 {
-"id" : "11",
-"domain" : "6",
+"id" : "18",
+"domain" : "17",
 "range" : "0",
 "label" : { 
  "en" : "R:predecessor"
 }
 },
 {
-"id" : "12",
-"domain" : "3",
-"range" : "6",
-"label" : { 
- "en" : "R:party"
-}
-},
-{
-"id" : "13",
-"domain" : "7",
-"range" : "0",
-"label" : { 
- "en" : "R:successor"
-}
-},
-{
-"id" : "14",
-"domain" : "3",
-"range" : "7",
-"label" : { 
- "en" : "R:party"
-}
-},
-{
-"id" : "15",
-"domain" : "8",
-"range" : "0",
-"label" : { 
- "en" : "R:associate"
-}
-},
-{
-"id" : "16",
-"domain" : "3",
-"range" : "8",
-"label" : { 
- "en" : "R:party"
-}
-},
-{
-"id" : "17",
-"domain" : "0",
-"range" : "6",
-"label" : { 
- "en" : "L:successor"
-}
-},
-{
-"id" : "18",
-"domain" : "3",
-"range" : "6",
-"label" : { 
- "en" : "R:party"
-}
-},
-{
 "id" : "19",
-"domain" : "0",
-"range" : "7",
-"label" : { 
- "en" : "L:predecessor"
-}
-},
-{
-"id" : "20",
-"domain" : "3",
-"range" : "7",
+"domain" : "5",
+"range" : "17",
 "label" : { 
  "en" : "R:party"
 }
 },
 {
 "id" : "21",
-"domain" : "0",
-"range" : "8",
+"domain" : "20",
+"range" : "0",
 "label" : { 
- "en" : "L:associate"
+ "en" : "R:successor"
 }
 },
 {
 "id" : "22",
-"domain" : "3",
-"range" : "8",
-"label" : { 
- "en" : "R:party"
-}
-},
-{
-"id" : "23",
 "domain" : "5",
-"range" : "0",
+"range" : "20",
 "label" : { 
  "en" : "R:party"
 }
 },
 {
 "id" : "24",
+"domain" : "23",
+"range" : "0",
+"label" : { 
+ "en" : "R:associate"
+}
+},
+{
+"id" : "25",
 "domain" : "5",
-"range" : "9",
+"range" : "23",
+"label" : { 
+ "en" : "R:party"
+}
+},
+{
+"id" : "26",
+"domain" : "0",
+"range" : "17",
+"label" : { 
+ "en" : "L:successor"
+}
+},
+{
+"id" : "27",
+"domain" : "5",
+"range" : "17",
+"label" : { 
+ "en" : "R:party"
+}
+},
+{
+"id" : "28",
+"domain" : "0",
+"range" : "20",
+"label" : { 
+ "en" : "L:predecessor"
+}
+},
+{
+"id" : "29",
+"domain" : "5",
+"range" : "20",
+"label" : { 
+ "en" : "R:party"
+}
+},
+{
+"id" : "30",
+"domain" : "0",
+"range" : "23",
+"label" : { 
+ "en" : "L:associate"
+}
+},
+{
+"id" : "31",
+"domain" : "5",
+"range" : "23",
+"label" : { 
+ "en" : "R:party"
+}
+},
+{
+"id" : "33",
+"domain" : "13",
+"range" : "0",
+"label" : { 
+ "en" : "R:party"
+}
+},
+{
+"id" : "34",
+"domain" : "13",
+"range" : "32",
 "label" : { 
  "en" : "L:politicalPartyInLegislature"
 }
 },
 {
-"id" : "25",
-"domain" : "3",
+"id" : "35",
+"domain" : "5",
 "range" : "0",
 "label" : { 
  "en" : "R:otherParty"
 }
 },
 {
-"id" : "26",
-"domain" : "3",
-"range" : "9",
+"id" : "36",
+"domain" : "5",
+"range" : "32",
 "label" : { 
  "en" : "L:politicalPartyOfLeader"
 }
 },
 {
-"id" : "27",
-"domain" : "3",
+"id" : "37",
+"domain" : "5",
 "range" : "0",
 "label" : { 
  "en" : "R:otherParty"
 }
 },
 {
-"id" : "28",
-"domain" : "3",
-"range" : "9",
+"id" : "38",
+"domain" : "5",
+"range" : "32",
 "label" : { 
  "en" : "L:politicalPartyInLegislature"
 }
 },
 {
-"id" : "29",
-"domain" : "10",
+"id" : "40",
+"domain" : "39",
 "range" : "2",
 "label" : { 
  "en" : "R:otherParty"
 }
 },
 {
-"id" : "30",
-"domain" : "10",
-"range" : "4",
+"id" : "41",
+"domain" : "39",
+"range" : "8",
 "label" : { 
  "en" : "L:party"
 }
 },
 {
-"id" : "31",
-"domain" : "3",
+"id" : "42",
+"domain" : "5",
 "range" : "2",
 "label" : { 
  "en" : "R:party"
 }
 },
 {
-"id" : "32",
-"domain" : "3",
-"range" : "4",
+"id" : "43",
+"domain" : "5",
+"range" : "8",
 "label" : { 
  "en" : "L:party"
 }
 },
 {
-"id" : "33",
+"id" : "44",
 "domain" : "1",
 "range" : "2",
 "label" : { 
@@ -1109,16 +1109,16 @@
 }
 },
 {
-"id" : "34",
+"id" : "45",
 "domain" : "1",
-"range" : "4",
+"range" : "8",
 "label" : { 
  "en" : "L:birthPlace"
 }
 },
 {
-"id" : "35",
-"domain" : "3",
+"id" : "46",
+"domain" : "5",
 "range" : "2",
 "label" : { 
  "en" : "R:party"
@@ -1126,636 +1126,636 @@
 }
 ,
 {
-"id" : "36",
-"domain" : "11",
+"id" : "48",
+"domain" : "47",
 "range" : "2",
 "label" : { 
  "en" : "R:president"
 }
 },
 {
-"id" : "37",
-"domain" : "3",
-"range" : "11",
-"label" : { 
- "en" : "R:party"
-}
-},
-{
-"id" : "38",
-"domain" : "12",
-"range" : "2",
-"label" : { 
- "en" : "R:successor"
-}
-},
-{
-"id" : "39",
-"domain" : "3",
-"range" : "12",
-"label" : { 
- "en" : "R:party"
-}
-},
-{
-"id" : "40",
-"domain" : "13",
-"range" : "2",
-"label" : { 
- "en" : "R:predecessor"
-}
-},
-{
-"id" : "41",
-"domain" : "3",
-"range" : "13",
-"label" : { 
- "en" : "R:party"
-}
-},
-{
-"id" : "42",
-"domain" : "14",
-"range" : "2",
-"label" : { 
- "en" : "R:spouse"
-}
-},
-{
-"id" : "43",
-"domain" : "3",
-"range" : "14",
-"label" : { 
- "en" : "R:party"
-}
-},
-{
-"id" : "44",
-"domain" : "15",
-"range" : "2",
-"label" : { 
- "en" : "R:predecessor"
-}
-},
-{
-"id" : "45",
-"domain" : "3",
-"range" : "15",
-"label" : { 
- "en" : "R:party"
-}
-},
-{
-"id" : "46",
-"domain" : "16",
-"range" : "2",
-"label" : { 
- "en" : "R:deputy"
-}
-},
-{
-"id" : "47",
-"domain" : "3",
-"range" : "16",
-"label" : { 
- "en" : "R:party"
-}
-},
-{
-"id" : "48",
-"domain" : "17",
-"range" : "2",
-"label" : { 
- "en" : "R:child"
-}
-},
-{
 "id" : "49",
-"domain" : "3",
-"range" : "17",
+"domain" : "5",
+"range" : "47",
 "label" : { 
  "en" : "R:party"
-}
-},
-{
-"id" : "50",
-"domain" : "18",
-"range" : "2",
-"label" : { 
- "en" : "R:successor"
 }
 },
 {
 "id" : "51",
-"domain" : "3",
-"range" : "18",
+"domain" : "50",
+"range" : "2",
 "label" : { 
- "en" : "R:party"
+ "en" : "R:successor"
 }
 },
 {
 "id" : "52",
-"domain" : "2",
-"range" : "12",
-"label" : { 
- "en" : "L:predecessor"
-}
-},
-{
-"id" : "53",
-"domain" : "3",
-"range" : "12",
+"domain" : "5",
+"range" : "50",
 "label" : { 
  "en" : "R:party"
 }
 },
 {
 "id" : "54",
-"domain" : "2",
-"range" : "19",
+"domain" : "53",
+"range" : "2",
 "label" : { 
- "en" : "L:spouse"
+ "en" : "R:predecessor"
 }
 },
 {
 "id" : "55",
-"domain" : "3",
-"range" : "19",
+"domain" : "5",
+"range" : "53",
 "label" : { 
  "en" : "R:party"
-}
-},
-{
-"id" : "56",
-"domain" : "2",
-"range" : "14",
-"label" : { 
- "en" : "L:spouse"
 }
 },
 {
 "id" : "57",
-"domain" : "3",
-"range" : "14",
+"domain" : "56",
+"range" : "2",
 "label" : { 
- "en" : "R:party"
+ "en" : "R:spouse"
 }
 },
 {
 "id" : "58",
-"domain" : "2",
-"range" : "15",
-"label" : { 
- "en" : "L:successor"
-}
-},
-{
-"id" : "59",
-"domain" : "3",
-"range" : "15",
+"domain" : "5",
+"range" : "56",
 "label" : { 
  "en" : "R:party"
 }
 },
 {
 "id" : "60",
-"domain" : "2",
-"range" : "18",
+"domain" : "59",
+"range" : "2",
 "label" : { 
- "en" : "L:predecessor"
+ "en" : "R:predecessor"
 }
 },
 {
 "id" : "61",
-"domain" : "3",
-"range" : "18",
+"domain" : "5",
+"range" : "59",
 "label" : { 
  "en" : "R:party"
-}
-},
-{
-"id" : "62",
-"domain" : "2",
-"range" : "17",
-"label" : { 
- "en" : "L:parent"
 }
 },
 {
 "id" : "63",
-"domain" : "3",
-"range" : "17",
+"domain" : "62",
+"range" : "2",
 "label" : { 
- "en" : "R:party"
+ "en" : "R:deputy"
 }
 },
 {
 "id" : "64",
-"domain" : "10",
-"range" : "2",
-"label" : { 
- "en" : "R:otherParty"
-}
-},
-{
-"id" : "65",
-"domain" : "10",
-"range" : "9",
-"label" : { 
- "en" : "L:politicalPartyInLegislature"
-}
-},
-{
-"id" : "66",
-"domain" : "3",
-"range" : "2",
+"domain" : "5",
+"range" : "62",
 "label" : { 
  "en" : "R:party"
 }
 },
 {
-"id" : "67",
-"domain" : "3",
-"range" : "9",
+"id" : "66",
+"domain" : "65",
+"range" : "2",
 "label" : { 
- "en" : "L:politicalPartyOfLeader"
+ "en" : "R:child"
 }
 },
 {
-"id" : "68",
-"domain" : "3",
-"range" : "2",
+"id" : "67",
+"domain" : "5",
+"range" : "65",
 "label" : { 
  "en" : "R:party"
 }
 },
 {
 "id" : "69",
-"domain" : "3",
-"range" : "9",
+"domain" : "68",
+"range" : "2",
 "label" : { 
- "en" : "L:politicalPartyInLegislature"
+ "en" : "R:successor"
 }
 },
 {
 "id" : "70",
-"domain" : "3",
-"range" : "4",
+"domain" : "5",
+"range" : "68",
 "label" : { 
  "en" : "R:party"
 }
-}
-,
+},
 {
 "id" : "71",
-"domain" : "5",
-"range" : "4",
+"domain" : "2",
+"range" : "50",
 "label" : { 
- "en" : "R:party"
+ "en" : "L:predecessor"
 }
 },
 {
 "id" : "72",
 "domain" : "5",
-"range" : "9",
-"label" : { 
- "en" : "L:politicalPartyInLegislature"
-}
-},
-{
-"id" : "73",
-"domain" : "3",
-"range" : "4",
+"range" : "50",
 "label" : { 
  "en" : "R:party"
 }
 },
 {
 "id" : "74",
-"domain" : "3",
-"range" : "9",
+"domain" : "2",
+"range" : "73",
 "label" : { 
- "en" : "L:politicalPartyInLegislature"
+ "en" : "L:spouse"
 }
 },
 {
 "id" : "75",
-"domain" : "10",
-"range" : "4",
+"domain" : "5",
+"range" : "73",
 "label" : { 
  "en" : "R:party"
 }
 },
 {
 "id" : "76",
-"domain" : "10",
-"range" : "9",
+"domain" : "2",
+"range" : "56",
 "label" : { 
- "en" : "L:politicalPartyInLegislature"
+ "en" : "L:spouse"
 }
 },
 {
 "id" : "77",
-"domain" : "3",
-"range" : "4",
+"domain" : "5",
+"range" : "56",
 "label" : { 
  "en" : "R:party"
 }
 },
 {
 "id" : "78",
-"domain" : "3",
-"range" : "9",
+"domain" : "2",
+"range" : "59",
+"label" : { 
+ "en" : "L:successor"
+}
+},
+{
+"id" : "79",
+"domain" : "5",
+"range" : "59",
+"label" : { 
+ "en" : "R:party"
+}
+},
+{
+"id" : "80",
+"domain" : "2",
+"range" : "68",
+"label" : { 
+ "en" : "L:predecessor"
+}
+},
+{
+"id" : "81",
+"domain" : "5",
+"range" : "68",
+"label" : { 
+ "en" : "R:party"
+}
+},
+{
+"id" : "82",
+"domain" : "2",
+"range" : "65",
+"label" : { 
+ "en" : "L:parent"
+}
+},
+{
+"id" : "83",
+"domain" : "5",
+"range" : "65",
+"label" : { 
+ "en" : "R:party"
+}
+},
+{
+"id" : "84",
+"domain" : "39",
+"range" : "2",
+"label" : { 
+ "en" : "R:otherParty"
+}
+},
+{
+"id" : "85",
+"domain" : "39",
+"range" : "32",
+"label" : { 
+ "en" : "L:politicalPartyInLegislature"
+}
+},
+{
+"id" : "86",
+"domain" : "5",
+"range" : "2",
+"label" : { 
+ "en" : "R:party"
+}
+},
+{
+"id" : "87",
+"domain" : "5",
+"range" : "32",
 "label" : { 
  "en" : "L:politicalPartyOfLeader"
 }
 },
 {
-"id" : "79",
-"domain" : "3",
-"range" : "9",
+"id" : "88",
+"domain" : "5",
+"range" : "2",
+"label" : { 
+ "en" : "R:party"
+}
+},
+{
+"id" : "89",
+"domain" : "5",
+"range" : "32",
+"label" : { 
+ "en" : "L:politicalPartyInLegislature"
+}
+},
+{
+"id" : "90",
+"domain" : "5",
+"range" : "8",
+"label" : { 
+ "en" : "R:party"
+}
+}
+,
+{
+"id" : "91",
+"domain" : "13",
+"range" : "8",
+"label" : { 
+ "en" : "R:party"
+}
+},
+{
+"id" : "92",
+"domain" : "13",
+"range" : "32",
+"label" : { 
+ "en" : "L:politicalPartyInLegislature"
+}
+},
+{
+"id" : "93",
+"domain" : "5",
+"range" : "8",
+"label" : { 
+ "en" : "R:party"
+}
+},
+{
+"id" : "94",
+"domain" : "5",
+"range" : "32",
+"label" : { 
+ "en" : "L:politicalPartyInLegislature"
+}
+},
+{
+"id" : "95",
+"domain" : "39",
+"range" : "8",
+"label" : { 
+ "en" : "R:party"
+}
+},
+{
+"id" : "96",
+"domain" : "39",
+"range" : "32",
+"label" : { 
+ "en" : "L:politicalPartyInLegislature"
+}
+},
+{
+"id" : "97",
+"domain" : "5",
+"range" : "8",
+"label" : { 
+ "en" : "R:party"
+}
+},
+{
+"id" : "98",
+"domain" : "5",
+"range" : "32",
+"label" : { 
+ "en" : "L:politicalPartyOfLeader"
+}
+},
+{
+"id" : "99",
+"domain" : "5",
+"range" : "32",
 "label" : { 
  "en" : "L:politicalPartyInLegislature"
 }
 }
 ,
 {
-"id" : "80",
-"domain" : "3",
-"range" : "9",
+"id" : "100",
+"domain" : "5",
+"range" : "32",
 "label" : { 
  "en" : "L:politicalPartyOfLeader"
 }
 }
 ,
 {
-"id" : "81",
-"domain" : "3",
-"range" : "20",
+"id" : "102",
+"domain" : "5",
+"range" : "101",
 "label" : { 
  "en" : "L:party"
 }
 },
 {
-"id" : "82",
-"domain" : "20",
-"range" : "9",
+"id" : "103",
+"domain" : "101",
+"range" : "32",
 "label" : { 
  "en" : "L:leader"
 }
 },
 {
-"id" : "83",
-"domain" : "3",
-"range" : "21",
-"label" : { 
- "en" : "L:party"
-}
-},
-{
-"id" : "84",
-"domain" : "9",
-"range" : "21",
-"label" : { 
- "en" : "R:occupation"
-}
-},
-{
-"id" : "85",
-"domain" : "3",
-"range" : "22",
-"label" : { 
- "en" : "L:party"
-}
-},
-{
-"id" : "86",
-"domain" : "9",
-"range" : "22",
-"label" : { 
- "en" : "R:profession"
-}
-},
-{
-"id" : "87",
-"domain" : "3",
-"range" : "23",
-"label" : { 
- "en" : "L:party"
-}
-},
-{
-"id" : "88",
-"domain" : "9",
-"range" : "23",
-"label" : { 
- "en" : "R:relation"
-}
-},
-{
-"id" : "89",
-"domain" : "3",
-"range" : "24",
-"label" : { 
- "en" : "L:party"
-}
-},
-{
-"id" : "90",
-"domain" : "9",
-"range" : "24",
-"label" : { 
- "en" : "R:profession"
-}
-},
-{
-"id" : "91",
-"domain" : "3",
-"range" : "25",
-"label" : { 
- "en" : "L:party"
-}
-},
-{
-"id" : "92",
-"domain" : "9",
-"range" : "25",
-"label" : { 
- "en" : "R:occupation"
-}
-},
-{
-"id" : "93",
-"domain" : "3",
-"range" : "26",
-"label" : { 
- "en" : "L:politicalPartyInLegislature"
-}
-},
-{
-"id" : "94",
-"domain" : "9",
-"range" : "26",
-"label" : { 
- "en" : "R:house"
-}
-},
-{
-"id" : "95",
-"domain" : "3",
-"range" : "27",
-"label" : { 
- "en" : "L:party"
-}
-},
-{
-"id" : "96",
-"domain" : "9",
-"range" : "27",
-"label" : { 
- "en" : "R:relation"
-}
-},
-{
-"id" : "97",
-"domain" : "3",
-"range" : "28",
-"label" : { 
- "en" : "L:party"
-}
-},
-{
-"id" : "98",
-"domain" : "9",
-"range" : "28",
-"label" : { 
- "en" : "R:profession"
-}
-},
-{
-"id" : "99",
-"domain" : "3",
-"range" : "29",
-"label" : { 
- "en" : "L:party"
-}
-},
-{
-"id" : "100",
-"domain" : "9",
-"range" : "29",
-"label" : { 
- "en" : "R:relation"
-}
-},
-{
-"id" : "101",
-"domain" : "3",
-"range" : "30",
-"label" : { 
- "en" : "L:party"
-}
-},
-{
-"id" : "102",
-"domain" : "9",
-"range" : "30",
-"label" : { 
- "en" : "R:knownFor"
-}
-},
-{
-"id" : "103",
-"domain" : "3",
-"range" : "31",
-"label" : { 
- "en" : "L:party"
-}
-},
-{
-"id" : "104",
-"domain" : "9",
-"range" : "31",
-"label" : { 
- "en" : "R:spouse"
-}
-},
-{
 "id" : "105",
-"domain" : "3",
-"range" : "32",
+"domain" : "5",
+"range" : "104",
 "label" : { 
  "en" : "L:party"
 }
 },
 {
 "id" : "106",
-"domain" : "9",
-"range" : "32",
-"label" : { 
- "en" : "R:spouse"
-}
-},
-{
-"id" : "107",
-"domain" : "3",
-"range" : "33",
-"label" : { 
- "en" : "L:party"
-}
-},
-{
-"id" : "108",
-"domain" : "9",
-"range" : "33",
+"domain" : "32",
+"range" : "104",
 "label" : { 
  "en" : "R:occupation"
 }
 },
 {
-"id" : "109",
-"domain" : "3",
-"range" : "34",
+"id" : "108",
+"domain" : "5",
+"range" : "107",
 "label" : { 
  "en" : "L:party"
 }
 },
 {
-"id" : "110",
-"domain" : "9",
-"range" : "34",
+"id" : "109",
+"domain" : "32",
+"range" : "107",
+"label" : { 
+ "en" : "R:profession"
+}
+},
+{
+"id" : "111",
+"domain" : "5",
+"range" : "110",
+"label" : { 
+ "en" : "L:party"
+}
+},
+{
+"id" : "112",
+"domain" : "32",
+"range" : "110",
 "label" : { 
  "en" : "R:relation"
 }
 },
 {
-"id" : "111",
-"domain" : "3",
-"range" : "35",
+"id" : "114",
+"domain" : "5",
+"range" : "113",
+"label" : { 
+ "en" : "L:party"
+}
+},
+{
+"id" : "115",
+"domain" : "32",
+"range" : "113",
+"label" : { 
+ "en" : "R:profession"
+}
+},
+{
+"id" : "117",
+"domain" : "5",
+"range" : "116",
+"label" : { 
+ "en" : "L:party"
+}
+},
+{
+"id" : "118",
+"domain" : "32",
+"range" : "116",
+"label" : { 
+ "en" : "R:occupation"
+}
+},
+{
+"id" : "120",
+"domain" : "5",
+"range" : "119",
 "label" : { 
  "en" : "L:politicalPartyInLegislature"
 }
 },
 {
-"id" : "112",
-"domain" : "9",
-"range" : "35",
+"id" : "121",
+"domain" : "32",
+"range" : "119",
 "label" : { 
  "en" : "R:house"
 }
 },
 {
-"id" : "113",
-"domain" : "3",
-"range" : "35",
+"id" : "123",
+"domain" : "5",
+"range" : "122",
+"label" : { 
+ "en" : "L:party"
+}
+},
+{
+"id" : "124",
+"domain" : "32",
+"range" : "122",
+"label" : { 
+ "en" : "R:relation"
+}
+},
+{
+"id" : "126",
+"domain" : "5",
+"range" : "125",
+"label" : { 
+ "en" : "L:party"
+}
+},
+{
+"id" : "127",
+"domain" : "32",
+"range" : "125",
+"label" : { 
+ "en" : "R:profession"
+}
+},
+{
+"id" : "129",
+"domain" : "5",
+"range" : "128",
+"label" : { 
+ "en" : "L:party"
+}
+},
+{
+"id" : "130",
+"domain" : "32",
+"range" : "128",
+"label" : { 
+ "en" : "R:relation"
+}
+},
+{
+"id" : "132",
+"domain" : "5",
+"range" : "131",
+"label" : { 
+ "en" : "L:party"
+}
+},
+{
+"id" : "133",
+"domain" : "32",
+"range" : "131",
+"label" : { 
+ "en" : "R:knownFor"
+}
+},
+{
+"id" : "135",
+"domain" : "5",
+"range" : "134",
+"label" : { 
+ "en" : "L:party"
+}
+},
+{
+"id" : "136",
+"domain" : "32",
+"range" : "134",
+"label" : { 
+ "en" : "R:spouse"
+}
+},
+{
+"id" : "138",
+"domain" : "5",
+"range" : "137",
+"label" : { 
+ "en" : "L:party"
+}
+},
+{
+"id" : "139",
+"domain" : "32",
+"range" : "137",
+"label" : { 
+ "en" : "R:spouse"
+}
+},
+{
+"id" : "141",
+"domain" : "5",
+"range" : "140",
+"label" : { 
+ "en" : "L:party"
+}
+},
+{
+"id" : "142",
+"domain" : "32",
+"range" : "140",
+"label" : { 
+ "en" : "R:occupation"
+}
+},
+{
+"id" : "144",
+"domain" : "5",
+"range" : "143",
+"label" : { 
+ "en" : "L:party"
+}
+},
+{
+"id" : "145",
+"domain" : "32",
+"range" : "143",
+"label" : { 
+ "en" : "R:relation"
+}
+},
+{
+"id" : "147",
+"domain" : "5",
+"range" : "146",
+"label" : { 
+ "en" : "L:politicalPartyInLegislature"
+}
+},
+{
+"id" : "148",
+"domain" : "32",
+"range" : "146",
+"label" : { 
+ "en" : "R:house"
+}
+},
+{
+"id" : "149",
+"domain" : "5",
+"range" : "146",
 "label" : { 
  "en" : "L:politicalPartyOfLeader"
 }
 },
 {
-"id" : "114",
-"domain" : "9",
-"range" : "35",
+"id" : "150",
+"domain" : "32",
+"range" : "146",
 "label" : { 
  "en" : "R:house"
 }
