@@ -182,7 +182,7 @@ class ThreadedServer(object):
             if not user:
                 break
             print "From connected user: " + str(user)
-            client.send("OK")
+            client.send("User received")
             
             #get article
             article = int(client.recv(1024))
@@ -216,15 +216,52 @@ class ThreadedServer(object):
             
             
             ''' FOURTH STEP: executing online learning '''
-            sort, selected_association_name = self.learning(ids, np.asarray(eval), article,learner)
+            prediction, selected_association_name = self.learning(ids, np.asarray(eval), article, learner)
             
-            associations_properties = self.find(selected_association_name, article, True)
+            assoc_properties = self.find(selected_association_name, article, True)
             
             
-            data = pickle.dumps(sort)
+            data = pickle.dumps(prediction)
             client.send(data)
-            data = pickle.dumps(self.find(selected_association_name, article, True))
+            data = pickle.dumps(assoc_properties)
             client.send(data)
+              
+            ''' FIFTH STEP: find new associations to evaluate '''     
+            assoc_ = []#remove ID, article and length from data for the prediction
+            [assoc_.append(row[2:]) for row in assoc ]
+            assoc_ = np.array(assoc_)
+               
+            #print assoc_, "input prediction"
+            prediction = clf.predict(assoc_)  
+            #print prediction
+                
+            prob = clf.predict_proba(assoc_)  
+                       
+            name_assoc = assoc[:,0]
+            #print name_assoc 
+               
+            id_score = []
+            len_p = len(prediction)
+            if len_p == len(name_assoc):
+                for i in range (0, len_p):
+                    #id_score.append((prediction[i], name_assoc[i], prob[i]))
+                    id_score.append((name_assoc[i], prob[i]))
+             
+                     
+            sorted_associations = sort_prob(id_score)#first associations are those we will select
+                     
+            entropies = entropy(id_score)  
+             
+            entropies = sorted(entropies.items(), key=lambda x: x[1], reverse=True)
+             
+            to_be_evalueted = entropies[:k]
+                 
+            print to_be_evalueted, "to_be_evaluated"
+            ids = []
+            ndcg_list = []
+            for item in to_be_evalueted:
+                ids.append(item[0])
+
             
 
 if __name__ == "__main__":
