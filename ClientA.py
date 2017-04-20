@@ -41,10 +41,12 @@ def main():
     
     #print prediction, "\n", assoc_properties, "client" 
     
-    
-    serialized_data = s.recv(10960)
+    print "\\\\\\\\\\\\\\"
+    serialized_data = s.recv(40960)
     assoc_to_evaluate = pickle.loads(serialized_data)
-    
+    print "/////////////////"
+    print assoc_to_evaluate
+
     
         
 if __name__ == '__main__':

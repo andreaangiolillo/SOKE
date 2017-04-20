@@ -36,6 +36,9 @@ class ThreadedServer(object):
     
         return output
 
+    def getKey(self, item):
+        return item[1]
+
     """
     @attention:
     This method deletes ids from list.
@@ -55,6 +58,89 @@ class ThreadedServer(object):
         @return ids     - list of associations id (centroid)
     
     '''     
+    
+    def sort_prob(self, prob):
+        sort_list_1 = []
+        sort_list_2 = []
+        sort_list_3 = []
+        sort_list_4 = []
+        sort_list_5 = []
+        sort_list_6 = []
+        
+        #print "START SORT"
+        for row in prob:
+            name = row[0]
+            feasibility = row[1]
+            cl = 0
+            max = 0
+            for col in range(0,6):
+                if max < feasibility[col]:
+                    max = feasibility[col]
+                    cl = col
+            if cl == 0:
+                sort_list_1.append((name, max))
+            elif cl == 1:
+                 sort_list_2.append((name, max))
+            elif cl == 2:
+                sort_list_3.append((name, max))
+            elif cl == 3:
+                 sort_list_4.append((name, max))
+            elif cl == 4:
+                sort_list_5.append((name, max))
+            elif cl == 5:
+                sort_list_6.append((name, max))
+            
+    #     print sort_list_1, "1 ", len(sort_list_1)
+    #     print sort_list_2, "2 ", len(sort_list_2)
+    #     print sort_list_3, "3 ", len(sort_list_3)
+    #     print sort_list_4, "4 ", len(sort_list_4)
+    #     print sort_list_5, "5 ", len(sort_list_5)
+    #     print sort_list_6, "6 ", len(sort_list_6)
+    #     print len(prob)
+        
+    
+        sort_list_1 = sorted(sort_list_1, key=self.getKey,  reverse=True)
+        sort_list_2 = sorted(sort_list_2, key=self.getKey,  reverse=True)
+        sort_list_3 = sorted(sort_list_3, key=self.getKey,  reverse=True)
+        sort_list_4 = sorted(sort_list_4, key=self.getKey,  reverse=True)
+        sort_list_5 = sorted(sort_list_5, key=self.getKey,  reverse=True)
+        sort_list_6 = sorted(sort_list_6, key=self.getKey,  reverse=True)
+        #print prob, "prob"
+        #print sort_list_6,"lista 6"
+        #print sort_list_1,"lista 1"
+        
+        sort = sort_list_6 + sort_list_5 + sort_list_4 + sort_list_3 + sort_list_2 + sort_list_1 
+        #print sort, "print sort"
+        sort = np.array(sort)[:,:1]
+        
+        sort_id = []
+        
+        for element in sort:
+            sort_id.append(int(element[0]))
+        
+        return sort_id
+
+    def entropy(self, x):
+        entropy_list = {}
+        #print x, "x"
+         
+        for row in x:
+            id = row[0]
+            prob = row[1]
+            entropy = 0
+            #print "id: ", id ,"prob:",prob 
+            for i in range(0, len(prob)):
+                if prob[i] != 0:
+                    #print prob[i], "prob"
+                    entropy += -prob[i] * np.log2(prob[i])
+                    #print entropy, " entropy ", "prob[i]", prob[i] , " log ",  np.log2(prob[i])
+            
+    #         if entropy > 1:
+    #             print prob, "id ", id    
+    #                 
+            entropy_list[id] = entropy
+             
+        return entropy_list
            
     def clustering(self,article,user):
                         
@@ -116,15 +202,15 @@ class ThreadedServer(object):
         
         #removing ID and article from associations
         assoc_for_prediction = np.zeros((54,9))
-        assoc_name = []
+        assoc_ids = []
         for i in range (0, all_assoc.shape[0]):
             assoc_for_prediction[i] = all_assoc[i][2:]
-            assoc_name.append(all_assoc[i][0])
+            assoc_ids.append(all_assoc[i][0])
             
             
-        prediction = learner.predict(assoc_for_prediction)
+        predictions = learner.predict(assoc_for_prediction)
         
-        return prediction, assoc_name
+        return predictions, assoc_ids
         
   
     #Init of server 
@@ -207,39 +293,37 @@ class ThreadedServer(object):
             #getting the evaluation 
             eval = pickle.loads(client.recv(1024))
             
-            #test
-            for i in eval:
-                print i
-            
             
             ''' FOURTH STEP: executing online learning '''
-            prediction, assoc_name = self.learning(ids, np.asarray(eval), article, learner)
-            
-            assoc_properties = self.find(assoc_name, article, True)
-            
-            
-            data = pickle.dumps(prediction)
+            predictions, assoc_ids = self.learning(ids, np.asarray(eval), article, learner)
+            assoc_properties = self.find(assoc_ids, article, True)
+                        
+            data = pickle.dumps(predictions)
             client.send(data)
             data = pickle.dumps(assoc_properties)
             client.send(data)
-              
-            ''' FIFTH STEP: find new associations to evaluate '''     
-                
-            prob = clf.predict_proba(assoc_name)  
-
-            name_assoc = assoc_name[:,0]
+            
+            ''' FIFTH STEP: find new associations to evaluate '''
+            assoc_measures_ids = self.find(assoc_ids, article, False) #get the measures for all assoc_ids (contains id and article_id)
+            #now remove ids and article_id from assoc_measures_ids
+            assoc_measures = []
+            for item in assoc_measures_ids:
+                assoc_measures.append(item[2:])
+            
+            prob = learner.predict_proba(assoc_measures)  
+            #name_assoc = assoc_ids[:,0]
                
             id_score = []
-            len_p = len(prediction)
-            if len_p == len(name_assoc):
+            len_p = len(predictions)
+            if len_p == len(assoc_ids):
                 for i in range (0, len_p):
-                    #id_score.append((prediction[i], name_assoc[i], prob[i]))
-                    id_score.append((name_assoc[i], prob[i]))
+                    #id_score.append((predictions[i], name_assoc[i], prob[i]))
+                    id_score.append((assoc_ids[i], prob[i]))
              
                      
-            sorted_associations = sort_prob(id_score)#first associations are those we will select
+            sorted_associations = self.sort_prob(id_score)#first associations are those we will select
                      
-            entropies = entropy(id_score)  
+            entropies = self.entropy(id_score)  
              
             entropies = sorted(entropies.items(), key=lambda x: x[1], reverse=True)
              
@@ -252,6 +336,7 @@ class ThreadedServer(object):
                 ids.append(item[0])
             
             assoc_to_evaluate = find(ids, article, True)
+            print assoc_to_evaluate
             serialized_data = pickle.dumps(assoc_to_evaluate)
             client.send(serialized_data)
 
