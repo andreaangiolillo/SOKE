@@ -52,13 +52,7 @@ class ThreadedServer(object):
         return output
 
 
-    '''
-        @attention: This method executes a clutering of the associations to get the centroids 
-        @param  article - article ID
-        @return ids     - list of associations id (centroid)
-    
-    '''     
-    
+
     def sort_prob(self, prob):
         sort_list_1 = []
         sort_list_2 = []
@@ -141,7 +135,15 @@ class ThreadedServer(object):
             entropy_list[id] = entropy
              
         return entropy_list
-           
+ 
+ 
+    '''
+        @attention: This method executes a clutering of the associations to get the centroids 
+        @param  article - article ID
+        @return ids     - list of associations id (centroid)
+    
+    '''     
+              
     def clustering(self,article,user):
                         
             all_score = Preprocessing.extract_association_score(article)
