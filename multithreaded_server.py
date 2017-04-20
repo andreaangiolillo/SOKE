@@ -25,7 +25,7 @@ class ThreadedServer(object):
     localPageViewMean)
     '''
 
-    def find(self, list,article, flag):
+    def find(self, list, article, flag):
         output = []
         all_score = Preprocessing.extract_association_score(article,flag)
         for i in list:
@@ -190,14 +190,11 @@ class ThreadedServer(object):
                 break
             print "From connected user: " + str(article)
             
-            '''SECOND STEP: executing the cluster for finding the 
-            associations to evaluate for the first loop'''
+            '''SECOND STEP: executing the cluster to find the 
+            associations to evaluate in the first loop'''
             data, ids = self.clustering(article, user)
             
             
-            #test
-            for i in data:
-                print i
             
                 
             print data
@@ -216,9 +213,9 @@ class ThreadedServer(object):
             
             
             ''' FOURTH STEP: executing online learning '''
-            prediction, selected_association_name = self.learning(ids, np.asarray(eval), article, learner)
+            prediction, assoc_name = self.learning(ids, np.asarray(eval), article, learner)
             
-            assoc_properties = self.find(selected_association_name, article, True)
+            assoc_properties = self.find(assoc_name, article, True)
             
             
             data = pickle.dumps(prediction)
@@ -227,18 +224,10 @@ class ThreadedServer(object):
             client.send(data)
               
             ''' FIFTH STEP: find new associations to evaluate '''     
-            assoc_ = []#remove ID, article and length from data for the prediction
-            [assoc_.append(row[2:]) for row in assoc ]
-            assoc_ = np.array(assoc_)
-               
-            #print assoc_, "input prediction"
-            prediction = clf.predict(assoc_)  
-            #print prediction
                 
-            prob = clf.predict_proba(assoc_)  
-                       
-            name_assoc = assoc[:,0]
-            #print name_assoc 
+            prob = clf.predict_proba(assoc_name)  
+
+            name_assoc = assoc_name[:,0]
                
             id_score = []
             len_p = len(prediction)
@@ -261,6 +250,10 @@ class ThreadedServer(object):
             ndcg_list = []
             for item in to_be_evalueted:
                 ids.append(item[0])
+            
+            assoc_to_evaluate = find(ids, article, True)
+            serialized_data = pickle.dumps(assoc_to_evaluate)
+            client.send(serialized_data)
 
             
 

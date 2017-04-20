@@ -60,8 +60,8 @@ def get_features_from_ids(article, ids, assoc):
                 break
          
     return {
-            "assoc": assoc,
-            "data": data 
+            "assoc": assoc, #contains all elements-{ids elements}
+            "data": data #contains ids elements
             }
     
 
@@ -328,6 +328,7 @@ def learning(article, user, t, k) :
                 clf.partial_fit(x, y, [1, 2, 3, 4, 5, 6])
             else:
                 clf.partial_fit(x, y)
+        
         print len(assoc)
 #                   
 #         assoc_ = []#remove ID, article and length from data for the prediction
