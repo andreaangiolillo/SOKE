@@ -240,7 +240,7 @@ let template = [{
 	
 
 app.on('ready', function(){
-	mainWindow = new BrowserWindow({width: 1024, height: 768, fullscreen:true});
+	mainWindow = new BrowserWindow({width: 1024, height: 1024, fullscreen:false});
 	mainWindow.loadURL(url.format({
 		pathname: path.join(__dirname, 'text.html'),
 		protocol: 'file:',
