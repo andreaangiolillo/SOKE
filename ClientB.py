@@ -39,6 +39,12 @@ def main():
     assoc_properties = pickle.loads(data)
     
     print prediction_result, "\n", assoc_properties, "client" 
+    print "\\\\\\\\\\\\\\"
+    serialized_data = s.recv(40960)
+    assoc_to_evaluate = pickle.loads(serialized_data)
+    print "/////////////////"
+    print assoc_to_evaluate
+
     
     
         

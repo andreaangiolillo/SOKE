@@ -107,6 +107,7 @@ class ThreadedServer(object):
         #print sort, "print sort"
         sort = np.array(sort)[:,:1]
         
+        
         sort_id = []
         
         for element in sort:
@@ -177,7 +178,7 @@ class ThreadedServer(object):
         data = self.find(ids, article, False)
         
         #test
-        print ids, "!!!!!! IDS !!!!!!"
+        print (ids, "!!!!!! IDS !!!!!!")
         print data, "data"
         
     
@@ -203,7 +204,7 @@ class ThreadedServer(object):
         all_assoc = np.asarray(all_assoc)
         
         #removing ID and article from associations
-        assoc_for_prediction = np.zeros((54,9))
+        assoc_for_prediction = np.zeros((len(all_assoc),9))
         assoc_ids = []
         for i in range (0, all_assoc.shape[0]):
             assoc_for_prediction[i] = all_assoc[i][2:]
@@ -284,8 +285,7 @@ class ThreadedServer(object):
             
             
             
-                
-            print data
+            
             #sending the associations to evaluate
             assoc = pickle.dumps(data)#serialization
             client.send(assoc)
@@ -321,15 +321,19 @@ class ThreadedServer(object):
                 for i in range (0, len_p):
                     #id_score.append((predictions[i], name_assoc[i], prob[i]))
                     id_score.append((assoc_ids[i], prob[i]))
+            
+            print len_p, " == ", len(assoc_ids)
              
                      
             sorted_associations = self.sort_prob(id_score)#first associations are those we will select
-                     
+            
             entropies = self.entropy(id_score)  
              
             entropies = sorted(entropies.items(), key=lambda x: x[1], reverse=True)
+            
+            print entropies
              
-            to_be_evalueted = entropies[:k]
+            to_be_evalueted = entropies[:3]
                  
             print to_be_evalueted, "to_be_evaluated"
             ids = []
@@ -337,7 +341,7 @@ class ThreadedServer(object):
             for item in to_be_evalueted:
                 ids.append(item[0])
             
-            assoc_to_evaluate = find(ids, article, True)
+            assoc_to_evaluate = self.find(ids, article, True)
             print assoc_to_evaluate
             serialized_data = pickle.dumps(assoc_to_evaluate)
             client.send(serialized_data)
