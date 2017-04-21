@@ -1149,9 +1149,11 @@ webvowl_1 = function(e) {
                     d.node().value = ""
                 }, g.setup = function() {
                     y = [], d = t.select("#search-input-text"), u = t.select("#searchEntryContainer"), d.on("input", s), d.on("keydown", a), d.on("click", r), d.on("mouseover", o)
-                }, g.hideSearchEntries = function() {
+                }, 
+                g.hideSearchEntries = function() {
                     u.style("display", "none"), w = !1
-                }, g.showSearchEntries = function() {
+                },
+                g.showSearchEntries = function() {
                     u.style("display", "block"), w = !0
                 }, g.clearText = function() {
                     d.node().value = "";
@@ -1230,7 +1232,7 @@ webvowl_1 = function(e) {
                 function r() {
                     var e = s.length - 2,
                         t = s.length - 1;
-                    s[e].style.display = "none", s[t].style.display = "none", c.indexOf(0) !== -1 && (s[e].style.display = "block", s[t].style.display = "block")
+                    s[e].style.display = "block", s[t].style.display = "block", c.indexOf(0) !== -1 && (s[e].style.display = "block", s[t].style.display = "block")
                 }
 
                 function i() {
@@ -1264,30 +1266,30 @@ webvowl_1 = function(e) {
                     var e, t = c.indexOf(1);
                     t === -1 && (o(), t = c.indexOf(1));
                     var n, l = s[t].getBoundingClientRect().top;
-                    for (e = 0; e < s.length - 2; e++) n = s[e].getBoundingClientRect().top, n === l ? c[e] = 1 : (c[e] = 0, s[e].style.display = "none");
+                    for (e = 0; e < s.length - 2; e++) n = s[e].getBoundingClientRect().top, n === l ? c[e] = 1 : (c[e] = 0, s[e].style.display = "block");
                     var d = c.indexOf(1),
                         u = c.lastIndexOf(1);
                     for (d === -1 && u === -1 && (o(), d = c.indexOf(1), u = c.lastIndexOf(1)), e = d + 1; e < s.length - 2; e++) {
                         if (s[e].style.display = "block", l = s[d].getBoundingClientRect().top, n = s[e].getBoundingClientRect().top, l !== n) {
-                            s[e].style.display = "none", c[e] = 0;
+                            s[e].style.display = "block", c[e] = 0;
                             break
                         }
                         c[e] = 1
                     }
                     r();
                     var p, f = i();
-                    if (f || 0 !== d || (p = c.lastIndexOf(1), p !== -1 && (c[p] = 0, s[p].style.display = "none")), 0 !== d || u !== c.length) {
+                    if (f || 0 !== d || (p = c.lastIndexOf(1), p !== -1 && (c[p] = 0, s[p].style.display = "block")), 0 !== d || u !== c.length) {
                         if (u = c.lastIndexOf(1), u >= 1) {
-                            for (e = u - 1; e >= 0; e--) c[e] = 0, s[e].style.display = "none";
+                            for (e = u - 1; e >= 0; e--) c[e] = 0, s[e].style.display = "block";
                             for (e = u - 1; e >= 0; e--) {
                                 if (c[e] = 0, s[e].style.display = "block", l = s[u].getBoundingClientRect().top, n = s[e].getBoundingClientRect().top, l !== n) {
-                                    s[e].style.display = "none", c[e] = 0;
+                                    s[e].style.display = "block", c[e] = 0;
                                     break
                                 }
                                 c[e] = 1
                             }
                         }
-                        r(), f = i(), f || (p = c.indexOf(1), p !== -1 && (c[p] = 0, s[p].style.display = "none"))
+                        r(), f = i(), f || (p = c.indexOf(1), p !== -1 && (c[p] = 0, s[p].style.display = "block"))
                     }
                     c.indexOf(1) === -1 && o(), a()
                 }, l
