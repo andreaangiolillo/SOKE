@@ -105,20 +105,16 @@ function createJSON_for_graph(){
 			console.log(associations);
 			var article = "130";
 			
-			var start = '{\n"metrics" : {\n"classCount" : 3,\n"datatypeCount" : 0,\n"objectPropertyCount" : 0,\n"datatypePropertyCount" : 0,\n"propertyCount" : 1,\n"nodeCount" : 53,\n"axiomCount" : 216,\n"individualCount" : 8\n}';
 			var owl_class = [];
-			owl_class.push(start);
 			var owl_classAttribute = []
 			var owl_prop = [];
 			var owl_propertyAttribute = []
 			var str = '';
 			var id_class = 0;
 		
-			var dict = {};
-			
-			
-
-			
+			var dict = {};//Entities' dictionary
+			var edge_dict = {};
+			var edge_key = "";
 			
 			for (var i = 1; i < associations.length; i++){
 				
@@ -127,23 +123,6 @@ function createJSON_for_graph(){
 					if(associations[i][4] == ""){
 						//there are only 2 entities 
 						
-						if((i == 1) || (article != associations[i-1][1])){
-							if (dict[associations[i][2]] == undefined) {
-								
-								//class
-								str ='"class":[\n{\n "id": "'+id_class+'",\n "type": "owl:Class"\n}'
-								owl_class.push(str);
-								
-								str = '"classAttribute": [\n{\n"id" : "'+id_class+'",\n "label" : { \n "undefined" : "'+associations[i][2]+'"\n}\n}';
-								owl_classAttribute.push(str);
-								
-								dict[associations[i][2]] = id_class;//add to dictionary
-								id_class = id_class + 1; // id_class
-							}
-							
-							
-							
-						}
 						
 						if (dict[associations[i][2]] == undefined) {
 							
@@ -175,47 +154,38 @@ function createJSON_for_graph(){
 						}
 							
 							
-						
-						
-						
-						if ((i == 1) || (article != associations[i-1][1])){
-							//property
-							str ='"property": [\n{\n "id": "'+id_class+'",\n "type": "owl:objectProperty"\n}'
-							owl_prop.push(str);
-							
-							if(associations[i][3].search("L:") !=  -1){
-								str = '"propertyAttribute": [\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][2]] +'",\n"range" : "'+ dict[associations[i][7]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
+					
+						//edge's attributes
+						if(associations[i][3].search("L:") !=  -1){
+							edge_key = associations[i][2] + (associations[i][3]).substring(2) + associations[i][7];//creating the key for the dictionary
+							if(edge_dict[edge_key] == undefined){
+								str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][2]] +'",\n"range" : "'+ dict[associations[i][7]] +'",\n"label" : { \n "en" : "'+(associations[i][3]).substring(2)+'"\n}\n}\n';
 								owl_propertyAttribute.push(str);
+								edge_dict[edge_key] = str;
 								
-							}else if (associations[i][3].search("R:") !=  -1){
-								str = '"propertyAttribute": [\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][7]] +'",\n"range" : "'+ dict[associations[i][2]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
-								owl_propertyAttribute.push(str);
+								//property (edge)
+								str ='\n{\n "id": "'+id_class+'",\n "type": "owl:objectProperty"\n}\n'//edge
+								owl_prop.push(str);
 								
-								
-							}else{
-								console.log("!!!!!!!!!ERROR!!!!!!!");
 							}
+						}else if (associations[i][3].search("R:") !=  -1){
+							edge_key = associations[i][7] + (associations[i][3]).substring(2) + associations[i][2];//creating the key for the dictionary
+							if(edge_dict[edge_key] == undefined){
+								str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][7]] +'",\n"range" : "'+ dict[associations[i][2]] +'",\n"label" : { \n "en" : "'+(associations[i][3]).substring(2)+'"\n}\n}\n';
+								owl_propertyAttribute.push(str);
+								edge_dict[edge_key] = str;
 								
+								//property (edge)
+								str ='\n{\n "id": "'+id_class+'",\n "type": "owl:objectProperty"\n}\n'//edge
+								owl_prop.push(str);
+								
+							}
+							
 						}else{
-							
-							//property
-							str ='\n{\n "id": "'+id_class+'",\n "type": "owl:objectProperty"\n}\n'
-							owl_prop.push(str);
-							
-							if(associations[i][3].search("L:") !=  -1){
-								str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][2]] +'",\n"range" : "'+ dict[associations[i][7]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}\n';
-								owl_propertyAttribute.push(str);
-								
-							}else if (associations[i][3].search("R:") !=  -1){
-								str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][7]] +'",\n"range" : "'+ dict[associations[i][2]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}\n';
-								owl_propertyAttribute.push(str);
-								
-								
-							}else{
-								console.log("!!!!!!!!!ERROR!!!!!!!");
-							}
-							
+							console.log("!!!!!!!!!ERROR!!!!!!!");
 						}
+							
+						
 							
 						
 						id_class = id_class + 1; // id_prop
@@ -227,22 +197,6 @@ function createJSON_for_graph(){
 					}else{
 						// there are 3 entities
 						
-						
-						if((i == 1) || (article != associations[i-1][1])){
-							if (dict[associations[i][2]] == undefined) {
-								
-								//class
-								str ='"class":[\n{\n "id": "'+id_class+'",\n "type": "owl:Class"\n}'
-								owl_class.push(str);
-								
-								str = '"classAttribute": [\n{\n"id" : "'+id_class+'",\n "label" : { \n "undefined" : "'+associations[i][2]+'"\n}\n}';
-								owl_classAttribute.push(str);
-								
-								dict[associations[i][2]] = id_class;//add to dictionary
-								id_class = id_class + 1; // id_class
-							}	
-							
-						}
 						
 						
 						if (dict[associations[i][2]] == undefined) {
@@ -289,45 +243,39 @@ function createJSON_for_graph(){
 						}
 
 						
-						if((i == 1) || (article != associations[i-1][1])){
-							//property
-							str ='"property": [\n{\n "id": "'+id_class+'",\n "type": "owl:objectProperty"\n}'
-							owl_prop.push(str);
+					
 							
-							if(associations[i][3].search("L:") !=  -1){
+					
+						
+						
+						if((associations[i][3].search("L:") !=  -1)){
+							edge_key = associations[i][2] + (associations[i][3]).substring(2) + associations[i][4];//creating the key for the dictionary
+							if((edge_dict[edge_key] == undefined)){
+								str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][2]] +'",\n"range" : "'+ dict[associations[i][4]] +'",\n"label" : { \n "en" : "'+(associations[i][3]).substring(2)+'"\n}\n}';
+								owl_propertyAttribute.push(str);
+								edge_dict[edge_key] = str;
+								
+								//property
+								str ='\n{\n "id": "'+id_class+'",\n "type": "owl:objectProperty"\n}'
+								owl_prop.push(str);
+							}
 							
-								str = '"propertyAttribute": [\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][2]] +'",\n"range" : "'+ dict[associations[i][4]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
+						}else if (associations[i][3].search("R:") !=  -1){
+							edge_key = associations[i][4] + (associations[i][3]).substring(2) + associations[i][2];//creating the key for the dictionary
+							if((edge_dict[edge_key] == undefined)){
+								str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][4]] +'",\n"range" : "'+ dict[associations[i][2]] +'",\n"label" : { \n "en" : "'+(associations[i][3]).substring(2)+'"\n}\n}';
 								owl_propertyAttribute.push(str);
+								edge_dict[edge_key] = str;
 								
-							}else if (associations[i][3].search("R:") !=  -1){
-								str = '"propertyAttribute": [\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][4]] +'",\n"range" : "'+ dict[associations[i][2]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
-								owl_propertyAttribute.push(str);
-								
-								
-							}else{
-								console.log("!!!!!!!!!ERROR!!!!!!!");
-							}	
+								//property
+								str ='\n{\n "id": "'+id_class+'",\n "type": "owl:objectProperty"\n}'
+								owl_prop.push(str);
+							}
 							
 						}else{
-							
-							//property
-							str ='\n{\n "id": "'+id_class+'",\n "type": "owl:objectProperty"\n}'
-							owl_prop.push(str);
-							
-							if(associations[i][3].search("L:") !=  -1){
-							
-								str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][2]] +'",\n"range" : "'+ dict[associations[i][4]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
-								owl_propertyAttribute.push(str);
-								
-							}else if (associations[i][3].search("R:") !=  -1){
-								str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][4]] +'",\n"range" : "'+ dict[associations[i][2]] +'",\n"label" : { \n "en" : "'+associations[i][3]+'"\n}\n}';
-								owl_propertyAttribute.push(str);
-								
-								
-							}else{
-								console.log("!!!!!!!!!ERROR!!!!!!!");
-							}
+							console.log("!!!!!!!!!ERROR!!!!!!!");
 						}
+						
 						
 						
 						
@@ -336,19 +284,30 @@ function createJSON_for_graph(){
 						
 						
 					
-						//property
-						str ='\n{\n "id": "'+id_class+'",\n "type": "owl:objectProperty"\n}'
-						owl_prop.push(str);
+
 						
 						if(associations[i][6].search("L:") !=  -1){
-							
-							str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][4]] +'",\n"range" : "'+ dict[associations[i][7]] +'",\n"label" : { \n "en" : "'+associations[i][6]+'"\n}\n}';
-							owl_propertyAttribute.push(str);
-							
+							edge_key = associations[i][4] + (associations[i][6]).substring(2) + associations[i][7];//creating the key for the dictionary
+							if((edge_dict[edge_key] == undefined)){
+								str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][4]] +'",\n"range" : "'+ dict[associations[i][7]] +'",\n"label" : { \n "en" : "'+(associations[i][6]).substring(2)+'"\n}\n}';
+								owl_propertyAttribute.push(str);
+								edge_dict[edge_key] = str;
+								
+								//property
+								str ='\n{\n "id": "'+id_class+'",\n "type": "owl:objectProperty"\n}'
+								owl_prop.push(str);
+							}
 						}else if (associations[i][6].search("R:") !=  -1){
-							str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][7]] +'",\n"range" : "'+ dict[associations[i][4]] +'",\n"label" : { \n "en" : "'+associations[i][6]+'"\n}\n}';
-							owl_propertyAttribute.push(str);
-							
+							edge_key =  associations[i][7] + (associations[i][6]).substring(2) + associations[i][4];//creating the key for the dictionary
+							if((edge_dict[edge_key] == undefined)){
+								str = '\n{\n"id" : "'+id_class+'",\n"domain" : "'+ dict[associations[i][7]] +'",\n"range" : "'+ dict[associations[i][4]] +'",\n"label" : { \n "en" : "'+(associations[i][6]).substring(2)+'"\n}\n}';
+								owl_propertyAttribute.push(str);
+								edge_dict[edge_key] = str;
+								
+								//property
+								str ='\n{\n "id": "'+id_class+'",\n "type": "owl:objectProperty"\n}'
+								owl_prop.push(str);
+							}
 							
 						}else{
 							console.log("!!!!!!!!!ERROR!!!!!!!");
@@ -371,7 +330,13 @@ function createJSON_for_graph(){
 			console.log(owl_prop);
 			console.log(owl_propertyAttribute);
 			console.log(dict);
-			fs.writeFile("data/json/"+article+".json", owl_class+"\n]," + owl_classAttribute +"\]," + owl_prop + "\]," + owl_propertyAttribute +"]}") ;
+			
+			
+			console.log(edge_dict);
+			
+			
+			var start = '{\n"metrics" : {\n"classCount" : 3,\n"datatypeCount" : 0,\n"objectPropertyCount" : 0,\n"datatypePropertyCount" : 0,\n"propertyCount" : 1,\n"nodeCount" : 53,\n"axiomCount" : 216,\n"individualCount" : 8\n},';
+			fs.writeFile("data/json/"+article+".json", start + '"class":[' + owl_class+"\n]," + '"classAttribute": [' + owl_classAttribute +"\],"+ '"property": [' + owl_prop + "\]," + '"propertyAttribute": [' +owl_propertyAttribute +"]}") ;
 		  }
 		});
 	
