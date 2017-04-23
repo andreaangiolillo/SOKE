@@ -229,7 +229,7 @@ class ThreadedServer(object):
         self.sock.listen(5)
         while True:
             client, address = self.sock.accept()
-            client.setTimeout(300000) #wait up to 5 minutes
+            client.settimeout(300000) #wait up to 5 minutes
             threading.Thread(target = self.listenToClient,args = (client,address)).start()
     
     #similar to main
