@@ -23,7 +23,7 @@ import numpy as np
 #
 def extract_association_score(article = -1, graph = False):
 
-    with open('Data/association_score.csv', 'r') as csvfile:
+    with open('data/association_score.csv', 'r') as csvfile:
         reader = csv.reader(csvfile)
         data = list(reader)
         

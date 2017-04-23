@@ -271,7 +271,7 @@ class ThreadedServer(object):
             if not user:
                 break
             print "From connected user: " + str(user)
-            client.send("User received")
+#             client.send("User received")
             
             #get article
             article = int(client.recv(1024))
@@ -284,10 +284,14 @@ class ThreadedServer(object):
             data, ids = self.clustering(article, user)
             
             
-            
-            
+            string_assoc_to_evalueted = ""
+            for i in data:
+                for j in i:
+                    string_assoc_to_evalueted = string_assoc_to_evalueted + ","  + j 
+             
+                string_assoc_to_evalueted = string_assoc_to_evalueted + "."
             #sending the associations to evaluate
-            assoc = pickle.dumps(data)#serialization
+            assoc = pickle.dumps(string_assoc_to_evalueted)#serialization
             client.send(assoc)
             
             '''THIRD STEP: getting the evaluation from the Client
