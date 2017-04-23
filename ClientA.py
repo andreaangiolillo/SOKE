@@ -29,20 +29,20 @@ def main():
         eval.append(c)
     
     #sending the valuation
-    s.send(pickle.dumps(eval))
-    
-    
-    
-    data = s.recv(10960)
-    prediction = pickle.loads(data) 
-    
-    data = s.recv(40960)
-    assoc_properties = pickle.loads(data)
-    
-    #print prediction, "\n", assoc_properties, "client" 
-    
-    serialized_data = s.recv(40960)
-    assoc_to_evaluate = pickle.loads(serialized_data)
+#     s.send(pickle.dumps(eval))
+#     
+#     
+#     
+#     data = s.recv(10960)
+#     prediction = pickle.loads(data) 
+#     
+#     data = s.recv(40960)
+#     assoc_properties = pickle.loads(data)
+#     
+#     #print prediction, "\n", assoc_properties, "client" 
+#     
+#     serialized_data = s.recv(40960)
+#     assoc_to_evaluate = pickle.loads(serialized_data)
 
     
         

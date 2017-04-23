@@ -229,7 +229,7 @@ class ThreadedServer(object):
         self.sock.listen(5)
         while True:
             client, address = self.sock.accept()
-            client.settimeout(60)
+            client.setTimeout(300000) #wait up to 5 minutes
             threading.Thread(target = self.listenToClient,args = (client,address)).start()
     
     #similar to main
@@ -297,6 +297,7 @@ class ThreadedServer(object):
             '''THIRD STEP: getting the evaluation from the Client
             '''
             #getting the evaluation 
+            
             eval = pickle.loads(client.recv(1024))
             
             
