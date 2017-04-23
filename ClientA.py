@@ -11,13 +11,13 @@ def main():
     article = "133"
     s.send(user)
    
-    data = s.recv(1024)
+    #data = s.recv(1024)
     #print "Received from server:" + str(data)
     s.send(article)
     
     #The servers runs the clustering algorithm and
     #returns the first associations that the user will evaluate
-    data = s.recv(1024)
+    #data = s.recv(1024)
     data_arr = pickle.loads(data)#deserialization
 
     c = 0

@@ -284,22 +284,23 @@ class ThreadedServer(object):
             data, ids = self.clustering(article, user)
             
             
-            string_assoc_to_evalueted = ""
+            string_assoc_to_evaluate = ""
             for i in data:
                 for j in i:
-                    string_assoc_to_evalueted = string_assoc_to_evalueted + ","  + j 
+                    string_assoc_to_evaluate = string_assoc_to_evaluate + ","  + j 
              
-                string_assoc_to_evalueted = string_assoc_to_evalueted + "."
+                string_assoc_to_evaluate = string_assoc_to_evaluate + "."
             #sending the associations to evaluate
-            assoc = pickle.dumps(string_assoc_to_evalueted)#serialization
+            assoc = pickle.dumps(string_assoc_to_evaluate)#serialization
             client.send(assoc)
             
-            '''THIRD STEP: getting the evaluation from the Client
+            '''THIRD STEP: getting the evaluations from the Client
             '''
             #getting the evaluation 
             
-            eval = pickle.loads(client.recv(1024))
-            
+            eval = client.recv(1024)
+            for item in eval:
+                print item
             
             ''' FOURTH STEP: executing online learning '''
             predictions, assoc_ids = self.learning(ids, np.asarray(eval), article, learner)
