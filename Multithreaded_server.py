@@ -299,15 +299,15 @@ class ThreadedServer(object):
         
         data= ', '.join(str(x) for x in sorted_associations[:10])
         
-        self.session[user + "learner"] =  learner # saving the learner
-        self.session[user + "id_score"] = id_score #saving the id_score for the second step
+        self.session[user + str(article) + "learner"] =  learner # saving the learner
+        self.session[user + str(article)  + "id_score"] = id_score #saving the id_score for the second step
         client.send(data)
     
             
     def second_step(self, client, article, user):
     
-        id_score = self.session[user + "id_score"]
-        learner = self.session[user + "learner"]
+        id_score = self.session[user + str(article) + "id_score"]
+        learner = self.session[user + str(article) + "learner"]
         entropies = self.entropy(id_score)         
         entropies = sorted(entropies.items(), key=lambda x: x[1], reverse=True)
         print entropies
@@ -363,8 +363,8 @@ class ThreadedServer(object):
         
         data= ', '.join(str(x) for x in sorted_associations[:10])
         
-        self.session[user + "learner"] =  learner # saving the learner
-        self.session[user + "id_score"] = id_score #saving the id_score for the second step
+        self.session[user + str(article) + "learner"] =  learner # saving the learner
+        self.session[user + str(article) + "id_score"] = id_score #saving the id_score for the second step
         client.send(data)
     
     

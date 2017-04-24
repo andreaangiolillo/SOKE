@@ -1,6 +1,9 @@
 var d3 = require("d3");
+var $ = require('jquery');
 
-var file = "130"
+var file = $("#flag").val();
+
+
 
 webvowl_1 = function(e) {
     function t(o) {

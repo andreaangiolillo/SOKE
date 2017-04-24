@@ -32,7 +32,8 @@ function createJSON_for_graph(top_assoc, article){
 			
 			associations = CSVToArray(response);
 			console.log(associations);
-			
+			console.log("TOPPPPPP");
+			console.log(top_assoc);
 			
 			var owl_class = [];
 			var owl_classAttribute = []
@@ -376,13 +377,13 @@ function main (article){
 
 
 	client.connect(PORT, HOST, function() {
-	 
+		
 	    console.log('CONNECTED TO: ' + HOST + ':' + PORT);
 	    
-	    var first_step = sessionStorage.getItem('first_step');
+	    var first_step = sessionStorage.getItem('first_step' + article);
 	    client.write(first_step);
 	    client.write("1");
-	    client.write("130");
+	    client.write($("#flag").val());
 	    
 	    var i = 0;
 	    client.on('data', function(data) {
@@ -397,7 +398,7 @@ function main (article){
 	        	}else if (i == 1){
 	        		createJSON_for_graph(data.toString(), article );
 	        		//
-	        		sessionStorage.setItem('first_step', 'false');
+	        		sessionStorage.setItem('first_step' + article, 'false');
 	        		location.reload();//loading the new KG
 	        	
 	        		
@@ -431,13 +432,13 @@ function main (article){
 
 
 
-function sendToServer(){
+function sendToServer(article){
 	
 	var valutations = "";
 	var name_html = 12;
 	var n = 0;
 	
-	if (sessionStorage.getItem('first_step') == true){
+	if (sessionStorage.getItem('first_step' + article) == true){
 		n = 6;
 	}else{
 		n = 2;

@@ -18,10 +18,10 @@
 			class="w3-closenav">Close Menu</a>
 			<a href="text.html" onclick="w3_close()">Articles</a>
 			<a href="article130.html" onclick="createJSON_for_graph(130)">Bernie Sanders Endorsment</a>
-			<a href="article133.html" onclick="w3_close()">Pushes for a Place at Europe’s Power Table</a>
-			<a href="article139.html" onclick="w3_close()">I will work with Hillary to stop Trump</a>
-			<a href="article143.html" onclick="w3_close()">Greece set to win €1.75bn from EU climate</a>
-			<a href="article145.html" onclick="w3_close()">Hundreds dead as boats sink off Libya</a>
+			<a href="article133.html" onclick="createJSON_for_graph(133)">Pushes for a Place at Europe’s Power Table</a>
+			<a href="article139.html" onclick="createJSON_for_graph(139)">I will work with Hillary to stop Trump</a>
+			<a href="article143.html" onclick="createJSON_for_graph(143)">Greece set to win €1.75bn from EU climate</a>
+			<a href="article145.html" onclick="createJSON_for_graph(145)">Hundreds dead as boats sink off Libya</a>
 			<a href="about.html" onclick="w3_close()">About</a>
 		</nav>
 		
@@ -50,7 +50,7 @@
 						      													I understand that many people here in this convention . . .</p>
 						    </div>
 					    </a>
-					    <a href ="article133.html">
+					    <a href ="article133.html" onclick="createJSON_for_graph(133)">
 					    	<div class="w3-third w3-hover" style="cursor:pointer">
 					     		<img src="images/matteo-renzi.jpg" alt="Steak" style="width:80%">
 					      		<h3 >Pushes for a Place at Europe’s Power Table</h3>
@@ -58,7 +58,7 @@
 					      										Prime Minister Matteo Renzi is . . .</p>
 					    	</div>
 					    </a>
-					    <a href="article139.html">
+					    <a href="article139.html" onclick="createJSON_for_graph(139)">
 					    	<div class="w3-third w3-hover" style="cursor:pointer">
 					     		<img src="images/hc.jpg" alt="Cherries" style="width:80%">
 					      		<h3 >I will work with Hillary to stop Trump</h3>
@@ -71,7 +71,7 @@
 			 
 			 <!-- Second Photo Grid-->
 			<div class="w3-row-padding w3-padding-16 w3-center">
-				<a href="article143.html">
+				<a href="article143.html" onclick="createJSON_for_graph(143)">
 			   		<div class="w3-third w3-hover" style="cursor:pointer">
 			     		<img src="images/gr.jpg" alt="Popsicle" style="width:80%">
 			     		<h3 >Greece set to win €1.75bn from EU climate</h3>
@@ -79,7 +79,7 @@
 			     														that could earmark up to €1.75bn (£1.56bn) in free carbon allowances for the building . . .</p>
 			   		</div>
 				</a>
-				<a href="article145.html">
+				<a href="article145.html" onclick="createJSON_for_graph(145)">
 					<div class="w3-third w3-hover" style="cursor:pointer">
 			     		<img src="images/libya.jpg" alt="Salmon" style="width:80%">
 			     		<h3 >Hundreds dead as boats sink off Libya</h3>
@@ -134,7 +134,11 @@
 		</div>
 		 
 		<script>
-    		sessionStorage.setItem('first_step', 'true');
+    		sessionStorage.setItem('first_step130', 'true');
+    		sessionStorage.setItem('first_step133', 'true');
+    		sessionStorage.setItem('first_step139', 'true');
+    		sessionStorage.setItem('first_step143', 'true');
+    		sessionStorage.setItem('first_step145', 'true');
 		</script>
 		<!-- End page content -->
 		
