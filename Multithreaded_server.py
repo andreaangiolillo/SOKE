@@ -11,8 +11,12 @@ from sklearn import metrics
 import math
 import os
 
+
+
+
 class ThreadedServer(object):
     
+    session = {};
     '''
     @attention: 
     This method takes in input a list of associations' id and finds in
@@ -223,6 +227,7 @@ class ThreadedServer(object):
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.sock.bind((self.host, self.port))
+        
     
     #listen to clients
     def listen(self):
@@ -232,6 +237,140 @@ class ThreadedServer(object):
             client.settimeout(300000) #wait up to 5 minutes
             threading.Thread(target = self.listenToClient,args = (client,address)).start()
     
+    
+    
+    
+    
+    
+    #fist loop (clustering)
+    def first_step(self,client, article, user):
+        learner = MultinomialNB()
+        
+        '''SECOND STEP: executing the cluster to find the associations to evaluate in the first loop'''
+        data, ids = self.clustering(article, user)
+        
+        print "data"
+        print data
+        string_assoc_to_evaluate = ""
+        for i in data:
+            for j in i:
+                string_assoc_to_evaluate = string_assoc_to_evaluate + ","  + j 
+         
+            string_assoc_to_evaluate = string_assoc_to_evaluate + "."
+        #sending the associations to evaluate
+        assoc = pickle.dumps(string_assoc_to_evaluate)#serialization
+        client.send(assoc)
+        
+        '''THIRD STEP: getting the evaluations from the Client
+        '''
+        #getting the evaluation 
+        
+        evaluate = client.recv(1024)
+        evaluate = eval("[" + evaluate + "]")
+        print evaluate
+        
+        
+        ''' FOURTH STEP: executing online learning '''
+        predictions, assoc_ids = self.learning(ids, np.asarray(evaluate), article, learner)
+        assoc_properties = self.find(assoc_ids, article, True)
+            
+        
+        ''' FIFTH STEP: find new associations to evaluate '''
+        assoc_measures_ids = self.find(assoc_ids, article, False) #get the measures for all assoc_ids (contains id and article_id)
+        #now remove ids and article_id from assoc_measures_ids
+        assoc_measures = []
+        for item in assoc_measures_ids:
+            assoc_measures.append(item[2:])
+        
+        prob = learner.predict_proba(assoc_measures)  
+        #name_assoc = assoc_ids[:,0]
+           
+        id_score = []
+        len_p = len(predictions)
+        if len_p == len(assoc_ids):
+            for i in range (0, len_p):
+                id_score.append((assoc_ids[i], prob[i]))
+        
+        print len_p, " == ", len(assoc_ids)
+         
+                 
+        sorted_associations = self.sort_prob(id_score)#first associations are those we will select
+        print sorted_associations[:10], "sdadsadsa"
+        
+        data= ', '.join(str(x) for x in sorted_associations[:10])
+        
+        self.session[user + "learner"] =  learner # saving the learner
+        self.session[user + "id_score"] = id_score #saving the id_score for the second step
+        client.send(data)
+    
+            
+    def second_step(self, client, article, user):
+    
+        id_score = self.session[user + "id_score"]
+        learner = self.session[user + "learner"]
+        entropies = self.entropy(id_score)         
+        entropies = sorted(entropies.items(), key=lambda x: x[1], reverse=True)
+        print entropies
+        to_be_evalueted = entropies[:2]
+        print to_be_evalueted, "to_be_evaluated"
+        ids = []
+        for item in to_be_evalueted:
+            ids.append(item[0])
+          
+        assoc_to_evaluate = self.find(ids, article, True)
+        print assoc_to_evaluate[0:2]
+        print "valutate"
+        string_assoc_to_evaluate = ""
+        for i in assoc_to_evaluate[0:2]:
+            for j in i:
+                string_assoc_to_evaluate = string_assoc_to_evaluate + ","  + j 
+         
+            string_assoc_to_evaluate = string_assoc_to_evaluate + "."
+        
+        serialized_data = pickle.dumps(string_assoc_to_evaluate)
+        client.send(serialized_data)#sending the 2 association to be evaluated
+        
+        evaluate = (client.recv(1024))
+        print evaluate
+        evaluate = eval("[" + evaluate + "]")
+        print evaluate
+        predictions, assoc_ids = self.learning(ids, np.asarray(evaluate), article, learner)
+        
+        assoc_properties = self.find(assoc_ids, article, True)
+            
+        
+        ''' FIFTH STEP: find new associations to evaluate '''
+        assoc_measures_ids = self.find(assoc_ids, article, False) #get the measures for all assoc_ids (contains id and article_id)
+        #now remove ids and article_id from assoc_measures_ids
+        assoc_measures = []
+        for item in assoc_measures_ids:
+            assoc_measures.append(item[2:])
+        
+        prob = learner.predict_proba(assoc_measures)  
+        #name_assoc = assoc_ids[:,0]
+           
+        id_score = []
+        len_p = len(predictions)
+        if len_p == len(assoc_ids):
+            for i in range (0, len_p):
+                id_score.append((assoc_ids[i], prob[i]))
+        
+        print len_p, " == ", len(assoc_ids)
+         
+                 
+        sorted_associations = self.sort_prob(id_score)#first associations are those we will select
+        print sorted_associations[:10], "sdadsadsa"
+        
+        data= ', '.join(str(x) for x in sorted_associations[:10])
+        
+        self.session[user + "learner"] =  learner # saving the learner
+        self.session[user + "id_score"] = id_score #saving the id_score for the second step
+        client.send(data)
+    
+    
+    
+    
+    
     #similar to main
     def listenToClient(self, client, address):
         #----------------------------------------------------------- size = 1024
@@ -239,7 +378,7 @@ class ThreadedServer(object):
             #-------------------------------------------------------------- try:
                 #-------------------------------------- data = client.recv(size)
                 #------------------------------------------------------ if data:
-                    #--------- # Set the response to echo back the recieved data
+                    #--------- # Set the response to echo back the received data
                     #------------------------------------------- response = data
                     #------------------------------------- client.send(response)
                 #--------------------------------------------------------- else:
@@ -265,6 +404,9 @@ class ThreadedServer(object):
         learner = MultinomialNB()
         while True:
             
+            #getting a flag to know if is the first iteration
+            clustering = (client.recv(1024))
+            
             ''' FIRST STEP: getting user and article from Client'''
             #get user
             user  = (client.recv(1024))
@@ -279,84 +421,21 @@ class ThreadedServer(object):
                 break
             print "From connected user: " + str(article)
             
-            '''SECOND STEP: executing the cluster to find the 
-            associations to evaluate in the first loop'''
-            data, ids = self.clustering(article, user)
-            
-            
-            string_assoc_to_evaluate = ""
-            for i in data:
-                for j in i:
-                    string_assoc_to_evaluate = string_assoc_to_evaluate + ","  + j 
-             
-                string_assoc_to_evaluate = string_assoc_to_evaluate + "."
-            #sending the associations to evaluate
-            assoc = pickle.dumps(string_assoc_to_evaluate)#serialization
-            client.send(assoc)
-            
-            '''THIRD STEP: getting the evaluations from the Client
-            '''
-            #getting the evaluation 
-            
-            eval = client.recv(1024)
-            for item in eval:
-                print item
-            
-            ''' FOURTH STEP: executing online learning '''
-            predictions, assoc_ids = self.learning(ids, np.asarray(eval), article, learner)
-            assoc_properties = self.find(assoc_ids, article, True)
-                        
-            data = pickle.dumps(predictions)
-            client.send(data)
-            data = pickle.dumps(assoc_properties)
-            client.send(data)
-            
-            ''' FIFTH STEP: find new associations to evaluate '''
-            assoc_measures_ids = self.find(assoc_ids, article, False) #get the measures for all assoc_ids (contains id and article_id)
-            #now remove ids and article_id from assoc_measures_ids
-            assoc_measures = []
-            for item in assoc_measures_ids:
-                assoc_measures.append(item[2:])
-            
-            prob = learner.predict_proba(assoc_measures)  
-            #name_assoc = assoc_ids[:,0]
-               
-            id_score = []
-            len_p = len(predictions)
-            if len_p == len(assoc_ids):
-                for i in range (0, len_p):
-                    #id_score.append((predictions[i], name_assoc[i], prob[i]))
-                    id_score.append((assoc_ids[i], prob[i]))
-            
-            print len_p, " == ", len(assoc_ids)
-             
-                     
-            sorted_associations = self.sort_prob(id_score)#first associations are those we will select
-            
-            entropies = self.entropy(id_score)  
-             
-            entropies = sorted(entropies.items(), key=lambda x: x[1], reverse=True)
-            
-            print entropies
-             
-            to_be_evalueted = entropies[:3]
-                 
-            print to_be_evalueted, "to_be_evaluated"
-            ids = []
-            ndcg_list = []
-            for item in to_be_evalueted:
-                ids.append(item[0])
-            
-            assoc_to_evaluate = self.find(ids, article, True)
-            print assoc_to_evaluate
-            serialized_data = pickle.dumps(assoc_to_evaluate)
-            client.send(serialized_data)
-
+            if clustering == "true":
+                self.first_step(client, article, user) 
+            else:
+                self.second_step(client, article,user)
             
 
+             
+
+
+            
+          
 if __name__ == "__main__":
     #port_num = input("Port? ")
     host = "127.0.0.1"
     port_num = 6000
+    
     ThreadedServer('',port_num).listen() #assigns a free port to client's thread
     

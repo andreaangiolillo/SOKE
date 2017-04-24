@@ -7,7 +7,7 @@ var fs = require('fs');
 // This will parse a delimited string into an array of
 // arrays. The default delimiter is the comma, but this
 // can be overriden in the second argument.
-function CSVToArray( strData){
+function CSVToArray(strData){
     // Check to see if the delimiter is defined. If not,
     // then default to comma.
     strDelimiter = (",");
@@ -94,7 +94,7 @@ function CSVToArray( strData){
 
 
 
-function createJSON_for_graph(){
+function createJSON_for_graph(article){
 	
 	$.ajax({
 		url: 'data/association_score.csv',
@@ -103,7 +103,7 @@ function createJSON_for_graph(){
 			
 			associations = CSVToArray(response);
 			console.log(associations);
-			var article = "130";
+//			var article = "130";
 			
 			var owl_class = [];
 			var owl_classAttribute = []

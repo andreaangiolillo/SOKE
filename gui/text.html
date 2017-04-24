@@ -17,7 +17,7 @@
 			<a href="javascript:void(0)" onclick="w3_close()"
 			class="w3-closenav">Close Menu</a>
 			<a href="text.html" onclick="w3_close()">Articles</a>
-			<a href="#130" onclick="w3_close()">Bernie Sanders Endorsment</a>
+			<a href="article130.html" onclick="createJSON_for_graph(130)">Bernie Sanders Endorsment</a>
 			<a href="article133.html" onclick="w3_close()">Pushes for a Place at Europe’s Power Table</a>
 			<a href="article139.html" onclick="w3_close()">I will work with Hillary to stop Trump</a>
 			<a href="article143.html" onclick="w3_close()">Greece set to win €1.75bn from EU climate</a>
@@ -30,7 +30,7 @@
 			<div class="w3-white w3-xlarge w3-padding-xlarge" style="margin:auto">
 			   <div class="w3-opennav w3-left w3-hover-text-grey" onclick="w3_open()">☰</div>
 			   <!-- <div class="w3-right">Mail</div> -->
-			   <div class="w3-center"  onclick="createJSON_for_graph()">DaCENA</div>
+			   <div class="w3-center"  >DaCENA</div>
 			</div>
 		</div>
 		  
@@ -42,7 +42,7 @@
 			<h2>Articles</h2>
 			 
 				<div >
-						<a href="article130.html">
+						<a href="article130.html" onclick="createJSON_for_graph(130)">
 						    <div class="w3-third w3-hover" style="cursor:pointer">
 						    	<img src="images/Bernie_Sanders.jpg" alt="Sandwich" style="width:80%">
 						      	<h3 >Bernie Sanders Endorsment</h3>
@@ -133,7 +133,9 @@
 		 
 		</div>
 		 
-		
+		<script>
+    		sessionStorage.setItem('first_step', 'true');
+		</script>
 		<!-- End page content -->
 		
 		<script>
