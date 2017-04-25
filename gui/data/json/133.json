@@ -11,7 +11,7 @@
 },"class":[
 {
  "id": "0",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "1",
@@ -47,115 +47,115 @@
 },
 {
  "id": "27",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "36",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "41",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "46",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "49",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "52",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "55",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "58",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "61",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "64",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "71",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "74",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "77",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "80",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "81",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "84",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "87",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "90",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "95",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "98",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "101",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "108",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "113",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "116",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "121",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "124",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "131",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "134",
- "type": "owl:Class"
+ "type": "owl:Thing"
 }
 ],"classAttribute": [
 {

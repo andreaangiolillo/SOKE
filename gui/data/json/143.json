@@ -11,155 +11,155 @@
 },"class":[
 {
  "id": "0",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "1",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "2",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "5",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "8",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "11",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "14",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "21",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "24",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "29",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "32",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "35",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "38",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "43",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "50",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "53",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "56",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "59",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "62",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "65",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "66",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "67",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "70",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "78",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "81",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "84",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "87",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "90",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "93",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "96",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "103",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "106",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "109",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "112",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "115",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "118",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "119",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "122",
- "type": "owl:Class"
+ "type": "owl:Thing"
 }
 ],"classAttribute": [
 {

@@ -11,255 +11,255 @@
 },"class":[
 {
  "id": "0",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "1",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "2",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "5",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "8",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "13",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "17",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "20",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "23",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "32",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "39",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "41",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "44",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "61",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "69",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "72",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "75",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "78",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "81",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "84",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "87",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "90",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "95",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "112",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "126",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "129",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "132",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "135",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "138",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "141",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "144",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "147",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "150",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "153",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "156",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "159",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "162",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "165",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "168",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "171",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "176",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "181",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "184",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "187",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "190",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "193",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "196",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "199",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "202",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "207",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "210",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "213",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "218",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "221",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "224",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "227",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "230",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "233",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "236",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "241",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "244",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "247",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "250",
- "type": "owl:Class"
+ "type": "owl:Thing"
 }
 ],"classAttribute": [
 {
@@ -415,7 +415,7 @@
 {
 "id" : "129",
  "label" : { 
- "undefined" : "Mark_E._Clayton"
+ "undefined" : "Mark_E_Clayton"
 }
 },
 {
@@ -505,7 +505,7 @@
 {
 "id" : "176",
  "label" : { 
- "undefined" : "George_W._Cate"
+ "undefined" : "George_W_Cate"
 }
 },
 {
@@ -517,19 +517,19 @@
 {
 "id" : "184",
  "label" : { 
- "undefined" : "John_F._Campbell"
+ "undefined" : "John_F_Campbell"
 }
 },
 {
 "id" : "187",
  "label" : { 
- "undefined" : "Origen_D._Richardson"
+ "undefined" : "Origen_D_Richardson"
 }
 },
 {
 "id" : "190",
  "label" : { 
- "undefined" : "Peter_W._Galbraith"
+ "undefined" : "Peter_W_Galbraith"
 }
 },
 {
@@ -547,13 +547,13 @@
 {
 "id" : "199",
  "label" : { 
- "undefined" : "Azariah_C._Flagg"
+ "undefined" : "Azariah_C_Flagg"
 }
 },
 {
 "id" : "202",
  "label" : { 
- "undefined" : "Jewett_W._Adams"
+ "undefined" : "Jewett_W_Adams"
 }
 },
 {
@@ -595,7 +595,7 @@
 {
 "id" : "227",
  "label" : { 
- "undefined" : "Joseph_H._Allen"
+ "undefined" : "Joseph_H_Allen"
 }
 },
 {

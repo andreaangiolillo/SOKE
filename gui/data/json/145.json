@@ -11,15 +11,15 @@
 },"class":[
 {
  "id": "0",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "1",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "2",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "7",
@@ -59,351 +59,351 @@
 },
 {
  "id": "36",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "39",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "42",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "45",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "48",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "51",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "52",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "57",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "60",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "63",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "68",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "71",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "74",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "77",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "80",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "83",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "86",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "89",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "92",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "97",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "100",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "103",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "108",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "111",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "114",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "117",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "120",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "123",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "126",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "129",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "132",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "135",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "138",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "141",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "144",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "147",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "150",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "153",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "156",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "161",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "164",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "167",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "170",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "175",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "180",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "183",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "190",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "193",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "196",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "199",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "202",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "205",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "210",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "213",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "216",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "219",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "222",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "225",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "228",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "231",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "234",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "237",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "240",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "243",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "248",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "251",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "254",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "257",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "260",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "265",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "272",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "275",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "278",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "281",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "284",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "287",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "290",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "293",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "296",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "299",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "302",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "305",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "308",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "311",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "314",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "317",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "322",
- "type": "owl:Class"
+ "type": "owl:Thing"
 }
 ],"classAttribute": [
 {
