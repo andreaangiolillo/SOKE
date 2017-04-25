@@ -1,0 +1,1282 @@
+{
+"metrics" : {
+"classCount" : 3,
+"datatypeCount" : 0,
+"objectPropertyCount" : 0,
+"datatypePropertyCount" : 0,
+"propertyCount" : 1,
+"nodeCount" : 53,
+"axiomCount" : 216,
+"individualCount" : 8
+},"class":[
+{
+ "id": "0",
+ "type": "owl:Thing"
+},
+{
+ "id": "1",
+ "type": "owl:Thing"
+},
+{
+ "id": "2",
+ "type": "owl:Thing"
+},
+{
+ "id": "5",
+ "type": "owl:Thing"
+},
+{
+ "id": "8",
+ "type": "owl:Thing"
+},
+{
+ "id": "11",
+ "type": "owl:Thing"
+},
+{
+ "id": "14",
+ "type": "owl:Thing"
+},
+{
+ "id": "21",
+ "type": "owl:Thing"
+},
+{
+ "id": "24",
+ "type": "owl:Thing"
+},
+{
+ "id": "29",
+ "type": "owl:Class"
+},
+{
+ "id": "32",
+ "type": "owl:Class"
+},
+{
+ "id": "35",
+ "type": "owl:Class"
+},
+{
+ "id": "38",
+ "type": "owl:Class"
+},
+{
+ "id": "43",
+ "type": "owl:Class"
+},
+{
+ "id": "50",
+ "type": "owl:Class"
+},
+{
+ "id": "53",
+ "type": "owl:Class"
+},
+{
+ "id": "56",
+ "type": "owl:Class"
+},
+{
+ "id": "59",
+ "type": "owl:Class"
+},
+{
+ "id": "62",
+ "type": "owl:Class"
+},
+{
+ "id": "65",
+ "type": "owl:Class"
+},
+{
+ "id": "66",
+ "type": "owl:Class"
+},
+{
+ "id": "67",
+ "type": "owl:Class"
+},
+{
+ "id": "70",
+ "type": "owl:Class"
+},
+{
+ "id": "78",
+ "type": "owl:Class"
+},
+{
+ "id": "81",
+ "type": "owl:Class"
+},
+{
+ "id": "84",
+ "type": "owl:Class"
+},
+{
+ "id": "87",
+ "type": "owl:Class"
+},
+{
+ "id": "90",
+ "type": "owl:Class"
+},
+{
+ "id": "93",
+ "type": "owl:Class"
+},
+{
+ "id": "96",
+ "type": "owl:Class"
+},
+{
+ "id": "103",
+ "type": "owl:Class"
+},
+{
+ "id": "106",
+ "type": "owl:Class"
+},
+{
+ "id": "109",
+ "type": "owl:Class"
+},
+{
+ "id": "112",
+ "type": "owl:Class"
+},
+{
+ "id": "115",
+ "type": "owl:Class"
+},
+{
+ "id": "118",
+ "type": "owl:Class"
+},
+{
+ "id": "119",
+ "type": "owl:Class"
+},
+{
+ "id": "122",
+ "type": "owl:Class"
+}
+],"classAttribute": [
+{
+"id" : "0",
+ "label" : { 
+ "undefined" : "Greece"
+}
+},
+{
+"id" : "1",
+ "label" : { 
+ "undefined" : "Euro"
+}
+},
+{
+"id" : "2",
+ "label" : { 
+ "undefined" : "European_Union"
+}
+},
+{
+"id" : "5",
+ "label" : { 
+ "undefined" : "Eastern_European_Time"
+}
+},
+{
+"id" : "8",
+ "label" : { 
+ "undefined" : "Spanish–Italian_Amphibious_Battlegroup"
+}
+},
+{
+"id" : "11",
+ "label" : { 
+ "undefined" : "European_Centre_for_the_Development_of_Vocational_Training"
+}
+},
+{
+"id" : "14",
+ "label" : { 
+ "undefined" : "European_Union_Agency_for_Network_and_Information_Security"
+}
+},
+{
+"id" : "21",
+ "label" : { 
+ "undefined" : "Balkan_Battlegroup"
+}
+},
+{
+"id" : "24",
+ "label" : { 
+ "undefined" : "Hellenic_Australian_Business_Council"
+}
+},
+{
+"id" : "29",
+ "label" : { 
+ "undefined" : "Netherlands"
+}
+},
+{
+"id" : "32",
+ "label" : { 
+ "undefined" : "Unitary_state"
+}
+},
+{
+"id" : "35",
+ "label" : { 
+ "undefined" : "Alcuin_Schulten"
+}
+},
+{
+"id" : "38",
+ "label" : { 
+ "undefined" : "Eurosport_2"
+}
+},
+{
+"id" : "43",
+ "label" : { 
+ "undefined" : "Nikos_Vertis"
+}
+},
+{
+"id" : "50",
+ "label" : { 
+ "undefined" : "Visa_Inc"
+}
+},
+{
+"id" : "53",
+ "label" : { 
+ "undefined" : "Trans-European_Division_of_Seventh-day_Adventists"
+}
+},
+{
+"id" : "56",
+ "label" : { 
+ "undefined" : "Trustpilot"
+}
+},
+{
+"id" : "59",
+ "label" : { 
+ "undefined" : "VimpelCom_Ltd"
+}
+},
+{
+"id" : "62",
+ "label" : { 
+ "undefined" : "Australian_diaspora"
+}
+},
+{
+"id" : "65",
+ "label" : { 
+ "undefined" : "Coal"
+}
+},
+{
+"id" : "66",
+ "label" : { 
+ "undefined" : "National_Company_of_Lignite_Oltenia"
+}
+},
+{
+"id" : "67",
+ "label" : { 
+ "undefined" : "Lignite"
+}
+},
+{
+"id" : "70",
+ "label" : { 
+ "undefined" : "RB_Kolubara"
+}
+},
+{
+"id" : "78",
+ "label" : { 
+ "undefined" : "ISO_4217"
+}
+},
+{
+"id" : "81",
+ "label" : { 
+ "undefined" : "Central_European_Time"
+}
+},
+{
+"id" : "84",
+ "label" : { 
+ "undefined" : "EUBG_2014_II"
+}
+},
+{
+"id" : "87",
+ "label" : { 
+ "undefined" : "Hans_Blom"
+}
+},
+{
+"id" : "90",
+ "label" : { 
+ "undefined" : "Europol"
+}
+},
+{
+"id" : "93",
+ "label" : { 
+ "undefined" : "EU_Secondary_Ticketing_Association"
+}
+},
+{
+"id" : "96",
+ "label" : { 
+ "undefined" : "Eurojust"
+}
+},
+{
+"id" : "103",
+ "label" : { 
+ "undefined" : "Kiwa_NV"
+}
+},
+{
+"id" : "106",
+ "label" : { 
+ "undefined" : "General_Logistics_Systems"
+}
+},
+{
+"id" : "109",
+ "label" : { 
+ "undefined" : "Bukharan_Jews"
+}
+},
+{
+"id" : "112",
+ "label" : { 
+ "undefined" : "Battlegroup_107"
+}
+},
+{
+"id" : "115",
+ "label" : { 
+ "undefined" : "UK–Dutch_Battlegroup"
+}
+},
+{
+"id" : "118",
+ "label" : { 
+ "undefined" : "Martin_Schulz"
+}
+},
+{
+"id" : "119",
+ "label" : { 
+ "undefined" : "European_Parliament"
+}
+},
+{
+"id" : "122",
+ "label" : { 
+ "undefined" : "MEPs_Against_Cancer"
+}
+}],"property": [
+{
+ "id": "3",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "4",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "6",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "7",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "9",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "10",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "12",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "13",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "15",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "16",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "17",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "19",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "22",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "23",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "25",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "26",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "27",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "31",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "33",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "34",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "36",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "37",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "39",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "40",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "42",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "44",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "45",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "46",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "51",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "52",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "54",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "55",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "57",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "58",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "60",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "61",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "63",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "64",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "68",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "69",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "71",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "72",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "73",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "75",
+ "type": "owl:objectProperty"
+}
+,
+{
+ "id": "79",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "80",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "82",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "83",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "85",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "86",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "88",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "89",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "91",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "92",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "94",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "95",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "97",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "98",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "100",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "102",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "104",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "105",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "107",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "108",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "110",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "111",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "113",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "114",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "116",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "117",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "120",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "121",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "123",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "124",
+ "type": "owl:objectProperty"
+}],"propertyAttribute": [
+{
+"id" : "3",
+"domain" : "1",
+"range" : "0",
+"label" : { 
+ "en" : "currency"
+}
+},
+{
+"id" : "4",
+"domain" : "1",
+"range" : "2",
+"label" : { 
+ "en" : "currency"
+}
+},
+{
+"id" : "6",
+"domain" : "5",
+"range" : "0",
+"label" : { 
+ "en" : "timeZone"
+}
+},
+{
+"id" : "7",
+"domain" : "5",
+"range" : "2",
+"label" : { 
+ "en" : "timeZone"
+}
+},
+{
+"id" : "9",
+"domain" : "0",
+"range" : "8",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "10",
+"domain" : "2",
+"range" : "8",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "12",
+"domain" : "0",
+"range" : "11",
+"label" : { 
+ "en" : "headquarter"
+}
+},
+{
+"id" : "13",
+"domain" : "2",
+"range" : "11",
+"label" : { 
+ "en" : "jurisdiction"
+}
+},
+{
+"id" : "15",
+"domain" : "0",
+"range" : "14",
+"label" : { 
+ "en" : "headquarter"
+}
+},
+{
+"id" : "16",
+"domain" : "2",
+"range" : "14",
+"label" : { 
+ "en" : "jurisdiction"
+}
+},
+{
+"id" : "17",
+"domain" : "0",
+"range" : "11",
+"label" : { 
+ "en" : "location"
+}
+},
+{
+"id" : "19",
+"domain" : "0",
+"range" : "14",
+"label" : { 
+ "en" : "location"
+}
+},
+{
+"id" : "22",
+"domain" : "0",
+"range" : "21",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "23",
+"domain" : "2",
+"range" : "21",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "25",
+"domain" : "0",
+"range" : "24",
+"label" : { 
+ "en" : "location"
+}
+},
+{
+"id" : "26",
+"domain" : "2",
+"range" : "24",
+"label" : { 
+ "en" : "regionServed"
+}
+},
+{
+"id" : "27",
+"domain" : "0",
+"range" : "24",
+"label" : { 
+ "en" : "regionServed"
+}
+},
+{
+"id" : "31",
+"domain" : "1",
+"range" : "29",
+"label" : { 
+ "en" : "currency"
+}
+},
+{
+"id" : "33",
+"domain" : "32",
+"range" : "0",
+"label" : { 
+ "en" : "governmentType"
+}
+},
+{
+"id" : "34",
+"domain" : "32",
+"range" : "29",
+"label" : { 
+ "en" : "governmentType"
+}
+},
+{
+"id" : "36",
+"domain" : "0",
+"range" : "35",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "37",
+"domain" : "29",
+"range" : "35",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "39",
+"domain" : "0",
+"range" : "38",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "40",
+"domain" : "29",
+"range" : "38",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "42",
+"domain" : "29",
+"range" : "38",
+"label" : { 
+ "en" : "locationCountry"
+}
+},
+{
+"id" : "44",
+"domain" : "0",
+"range" : "43",
+"label" : { 
+ "en" : "hometown"
+}
+},
+{
+"id" : "45",
+"domain" : "29",
+"range" : "43",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "46",
+"domain" : "0",
+"range" : "38",
+"label" : { 
+ "en" : "locationCountry"
+}
+},
+{
+"id" : "51",
+"domain" : "0",
+"range" : "50",
+"label" : { 
+ "en" : "regionServed"
+}
+},
+{
+"id" : "52",
+"domain" : "29",
+"range" : "50",
+"label" : { 
+ "en" : "regionServed"
+}
+},
+{
+"id" : "54",
+"domain" : "0",
+"range" : "53",
+"label" : { 
+ "en" : "regionServed"
+}
+},
+{
+"id" : "55",
+"domain" : "29",
+"range" : "53",
+"label" : { 
+ "en" : "regionServed"
+}
+},
+{
+"id" : "57",
+"domain" : "0",
+"range" : "56",
+"label" : { 
+ "en" : "regionServed"
+}
+},
+{
+"id" : "58",
+"domain" : "29",
+"range" : "56",
+"label" : { 
+ "en" : "regionServed"
+}
+},
+{
+"id" : "60",
+"domain" : "0",
+"range" : "59",
+"label" : { 
+ "en" : "regionServed"
+}
+},
+{
+"id" : "61",
+"domain" : "29",
+"range" : "59",
+"label" : { 
+ "en" : "locationCountry"
+}
+},
+{
+"id" : "63",
+"domain" : "0",
+"range" : "62",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "64",
+"domain" : "29",
+"range" : "62",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "68",
+"domain" : "65",
+"range" : "66",
+"label" : { 
+ "en" : "industry"
+}
+},
+{
+"id" : "69",
+"domain" : "67",
+"range" : "66",
+"label" : { 
+ "en" : "product"
+}
+},
+{
+"id" : "71",
+"domain" : "65",
+"range" : "70",
+"label" : { 
+ "en" : "industry"
+}
+},
+{
+"id" : "72",
+"domain" : "67",
+"range" : "70",
+"label" : { 
+ "en" : "product"
+}
+},
+{
+"id" : "73",
+"domain" : "65",
+"range" : "70",
+"label" : { 
+ "en" : "product"
+}
+},
+{
+"id" : "75",
+"domain" : "2",
+"range" : "29",
+"label" : { 
+ "en" : "ethnicGroup"
+}
+}
+,
+{
+"id" : "79",
+"domain" : "78",
+"range" : "2",
+"label" : { 
+ "en" : "currency"
+}
+},
+{
+"id" : "80",
+"domain" : "78",
+"range" : "29",
+"label" : { 
+ "en" : "currency"
+}
+},
+{
+"id" : "82",
+"domain" : "81",
+"range" : "2",
+"label" : { 
+ "en" : "timeZone"
+}
+},
+{
+"id" : "83",
+"domain" : "81",
+"range" : "29",
+"label" : { 
+ "en" : "timeZone"
+}
+},
+{
+"id" : "85",
+"domain" : "2",
+"range" : "84",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "86",
+"domain" : "29",
+"range" : "84",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "88",
+"domain" : "2",
+"range" : "87",
+"label" : { 
+ "en" : "nationality"
+}
+},
+{
+"id" : "89",
+"domain" : "29",
+"range" : "87",
+"label" : { 
+ "en" : "nationality"
+}
+},
+{
+"id" : "91",
+"domain" : "2",
+"range" : "90",
+"label" : { 
+ "en" : "jurisdiction"
+}
+},
+{
+"id" : "92",
+"domain" : "29",
+"range" : "90",
+"label" : { 
+ "en" : "headquarter"
+}
+},
+{
+"id" : "94",
+"domain" : "2",
+"range" : "93",
+"label" : { 
+ "en" : "regionServed"
+}
+},
+{
+"id" : "95",
+"domain" : "29",
+"range" : "93",
+"label" : { 
+ "en" : "headquarter"
+}
+},
+{
+"id" : "97",
+"domain" : "2",
+"range" : "96",
+"label" : { 
+ "en" : "jurisdiction"
+}
+},
+{
+"id" : "98",
+"domain" : "29",
+"range" : "96",
+"label" : { 
+ "en" : "headquarter"
+}
+},
+{
+"id" : "100",
+"domain" : "29",
+"range" : "90",
+"label" : { 
+ "en" : "location"
+}
+},
+{
+"id" : "102",
+"domain" : "29",
+"range" : "96",
+"label" : { 
+ "en" : "location"
+}
+},
+{
+"id" : "104",
+"domain" : "2",
+"range" : "103",
+"label" : { 
+ "en" : "location"
+}
+},
+{
+"id" : "105",
+"domain" : "29",
+"range" : "103",
+"label" : { 
+ "en" : "location"
+}
+},
+{
+"id" : "107",
+"domain" : "2",
+"range" : "106",
+"label" : { 
+ "en" : "regionServed"
+}
+},
+{
+"id" : "108",
+"domain" : "29",
+"range" : "106",
+"label" : { 
+ "en" : "locationCountry"
+}
+},
+{
+"id" : "110",
+"domain" : "2",
+"range" : "109",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "111",
+"domain" : "29",
+"range" : "109",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "113",
+"domain" : "2",
+"range" : "112",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "114",
+"domain" : "29",
+"range" : "112",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "116",
+"domain" : "2",
+"range" : "115",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "117",
+"domain" : "29",
+"range" : "115",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "120",
+"domain" : "118",
+"range" : "2",
+"label" : { 
+ "en" : "leader"
+}
+},
+{
+"id" : "121",
+"domain" : "118",
+"range" : "119",
+"label" : { 
+ "en" : "leader"
+}
+},
+{
+"id" : "123",
+"domain" : "2",
+"range" : "122",
+"label" : { 
+ "en" : "regionServed"
+}
+},
+{
+"id" : "124",
+"domain" : "119",
+"range" : "122",
+"label" : { 
+ "en" : "affiliation"
+}
+}]}

@@ -11,19 +11,19 @@
 },"class":[
 {
  "id": "0",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "1",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "2",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "5",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "8",
@@ -31,19 +31,19 @@
 },
 {
  "id": "13",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "17",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "20",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "23",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "32",

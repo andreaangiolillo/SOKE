@@ -1,0 +1,3450 @@
+{
+"metrics" : {
+"classCount" : 3,
+"datatypeCount" : 0,
+"objectPropertyCount" : 0,
+"datatypePropertyCount" : 0,
+"propertyCount" : 1,
+"nodeCount" : 53,
+"axiomCount" : 216,
+"individualCount" : 8
+},"class":[
+{
+ "id": "0",
+ "type": "owl:Class"
+},
+{
+ "id": "1",
+ "type": "owl:Class"
+},
+{
+ "id": "2",
+ "type": "owl:Class"
+},
+{
+ "id": "7",
+ "type": "owl:Class"
+},
+{
+ "id": "10",
+ "type": "owl:Class"
+},
+{
+ "id": "11",
+ "type": "owl:Class"
+},
+{
+ "id": "14",
+ "type": "owl:Class"
+},
+{
+ "id": "17",
+ "type": "owl:Class"
+},
+{
+ "id": "24",
+ "type": "owl:Class"
+},
+{
+ "id": "27",
+ "type": "owl:Class"
+},
+{
+ "id": "30",
+ "type": "owl:Class"
+},
+{
+ "id": "33",
+ "type": "owl:Class"
+},
+{
+ "id": "36",
+ "type": "owl:Class"
+},
+{
+ "id": "39",
+ "type": "owl:Class"
+},
+{
+ "id": "42",
+ "type": "owl:Class"
+},
+{
+ "id": "45",
+ "type": "owl:Class"
+},
+{
+ "id": "48",
+ "type": "owl:Class"
+},
+{
+ "id": "51",
+ "type": "owl:Class"
+},
+{
+ "id": "52",
+ "type": "owl:Class"
+},
+{
+ "id": "57",
+ "type": "owl:Class"
+},
+{
+ "id": "60",
+ "type": "owl:Class"
+},
+{
+ "id": "63",
+ "type": "owl:Class"
+},
+{
+ "id": "68",
+ "type": "owl:Class"
+},
+{
+ "id": "71",
+ "type": "owl:Class"
+},
+{
+ "id": "74",
+ "type": "owl:Class"
+},
+{
+ "id": "77",
+ "type": "owl:Class"
+},
+{
+ "id": "80",
+ "type": "owl:Class"
+},
+{
+ "id": "83",
+ "type": "owl:Class"
+},
+{
+ "id": "86",
+ "type": "owl:Class"
+},
+{
+ "id": "89",
+ "type": "owl:Class"
+},
+{
+ "id": "92",
+ "type": "owl:Class"
+},
+{
+ "id": "97",
+ "type": "owl:Class"
+},
+{
+ "id": "100",
+ "type": "owl:Class"
+},
+{
+ "id": "103",
+ "type": "owl:Class"
+},
+{
+ "id": "108",
+ "type": "owl:Class"
+},
+{
+ "id": "111",
+ "type": "owl:Class"
+},
+{
+ "id": "114",
+ "type": "owl:Class"
+},
+{
+ "id": "117",
+ "type": "owl:Class"
+},
+{
+ "id": "120",
+ "type": "owl:Class"
+},
+{
+ "id": "123",
+ "type": "owl:Class"
+},
+{
+ "id": "126",
+ "type": "owl:Class"
+},
+{
+ "id": "129",
+ "type": "owl:Class"
+},
+{
+ "id": "132",
+ "type": "owl:Class"
+},
+{
+ "id": "135",
+ "type": "owl:Class"
+},
+{
+ "id": "138",
+ "type": "owl:Class"
+},
+{
+ "id": "141",
+ "type": "owl:Class"
+},
+{
+ "id": "144",
+ "type": "owl:Class"
+},
+{
+ "id": "147",
+ "type": "owl:Class"
+},
+{
+ "id": "150",
+ "type": "owl:Class"
+},
+{
+ "id": "153",
+ "type": "owl:Class"
+},
+{
+ "id": "156",
+ "type": "owl:Class"
+},
+{
+ "id": "161",
+ "type": "owl:Class"
+},
+{
+ "id": "164",
+ "type": "owl:Class"
+},
+{
+ "id": "167",
+ "type": "owl:Class"
+},
+{
+ "id": "170",
+ "type": "owl:Class"
+},
+{
+ "id": "175",
+ "type": "owl:Class"
+},
+{
+ "id": "180",
+ "type": "owl:Class"
+},
+{
+ "id": "183",
+ "type": "owl:Class"
+},
+{
+ "id": "190",
+ "type": "owl:Class"
+},
+{
+ "id": "193",
+ "type": "owl:Class"
+},
+{
+ "id": "196",
+ "type": "owl:Class"
+},
+{
+ "id": "199",
+ "type": "owl:Class"
+},
+{
+ "id": "202",
+ "type": "owl:Class"
+},
+{
+ "id": "205",
+ "type": "owl:Class"
+},
+{
+ "id": "210",
+ "type": "owl:Class"
+},
+{
+ "id": "213",
+ "type": "owl:Class"
+},
+{
+ "id": "216",
+ "type": "owl:Class"
+},
+{
+ "id": "219",
+ "type": "owl:Class"
+},
+{
+ "id": "222",
+ "type": "owl:Class"
+},
+{
+ "id": "225",
+ "type": "owl:Class"
+},
+{
+ "id": "228",
+ "type": "owl:Class"
+},
+{
+ "id": "231",
+ "type": "owl:Class"
+},
+{
+ "id": "234",
+ "type": "owl:Class"
+},
+{
+ "id": "237",
+ "type": "owl:Class"
+},
+{
+ "id": "240",
+ "type": "owl:Class"
+},
+{
+ "id": "243",
+ "type": "owl:Class"
+},
+{
+ "id": "248",
+ "type": "owl:Class"
+},
+{
+ "id": "251",
+ "type": "owl:Class"
+},
+{
+ "id": "254",
+ "type": "owl:Class"
+},
+{
+ "id": "257",
+ "type": "owl:Class"
+},
+{
+ "id": "260",
+ "type": "owl:Class"
+},
+{
+ "id": "265",
+ "type": "owl:Class"
+},
+{
+ "id": "272",
+ "type": "owl:Class"
+},
+{
+ "id": "275",
+ "type": "owl:Class"
+},
+{
+ "id": "278",
+ "type": "owl:Class"
+},
+{
+ "id": "281",
+ "type": "owl:Class"
+},
+{
+ "id": "284",
+ "type": "owl:Class"
+},
+{
+ "id": "287",
+ "type": "owl:Class"
+},
+{
+ "id": "290",
+ "type": "owl:Class"
+},
+{
+ "id": "293",
+ "type": "owl:Class"
+},
+{
+ "id": "296",
+ "type": "owl:Class"
+},
+{
+ "id": "299",
+ "type": "owl:Class"
+},
+{
+ "id": "302",
+ "type": "owl:Class"
+},
+{
+ "id": "305",
+ "type": "owl:Class"
+},
+{
+ "id": "308",
+ "type": "owl:Class"
+},
+{
+ "id": "311",
+ "type": "owl:Class"
+},
+{
+ "id": "314",
+ "type": "owl:Class"
+},
+{
+ "id": "317",
+ "type": "owl:Class"
+},
+{
+ "id": "322",
+ "type": "owl:Class"
+}
+],"classAttribute": [
+{
+"id" : "0",
+ "label" : { 
+ "undefined" : "Mediterranean_Sea"
+}
+},
+{
+"id" : "1",
+ "label" : { 
+ "undefined" : "Tripoli"
+}
+},
+{
+"id" : "2",
+ "label" : { 
+ "undefined" : "Libya"
+}
+},
+{
+"id" : "7",
+ "label" : { 
+ "undefined" : "Operation_Unified_Protector"
+}
+},
+{
+"id" : "10",
+ "label" : { 
+ "undefined" : "İzmir"
+}
+},
+{
+"id" : "11",
+ "label" : { 
+ "undefined" : "Turkey"
+}
+},
+{
+"id" : "14",
+ "label" : { 
+ "undefined" : "Sea_of_Marmara"
+}
+},
+{
+"id" : "17",
+ "label" : { 
+ "undefined" : "Seyhan_River"
+}
+},
+{
+"id" : "24",
+ "label" : { 
+ "undefined" : "Göksu"
+}
+},
+{
+"id" : "27",
+ "label" : { 
+ "undefined" : "Aegean_Sea"
+}
+},
+{
+"id" : "30",
+ "label" : { 
+ "undefined" : "Kalkan"
+}
+},
+{
+"id" : "33",
+ "label" : { 
+ "undefined" : "Bozyazı"
+}
+},
+{
+"id" : "36",
+ "label" : { 
+ "undefined" : "Finike"
+}
+},
+{
+"id" : "39",
+ "label" : { 
+ "undefined" : "Korkuteli"
+}
+},
+{
+"id" : "42",
+ "label" : { 
+ "undefined" : "Kumluca"
+}
+},
+{
+"id" : "45",
+ "label" : { 
+ "undefined" : "Serik"
+}
+},
+{
+"id" : "48",
+ "label" : { 
+ "undefined" : "Gemiler_Island"
+}
+},
+{
+"id" : "51",
+ "label" : { 
+ "undefined" : "Athens"
+}
+},
+{
+"id" : "52",
+ "label" : { 
+ "undefined" : "Greece"
+}
+},
+{
+"id" : "57",
+ "label" : { 
+ "undefined" : "Greek_language"
+}
+},
+{
+"id" : "60",
+ "label" : { 
+ "undefined" : "Messenian_Gulf"
+}
+},
+{
+"id" : "63",
+ "label" : { 
+ "undefined" : "Battle_of_Cape_Matapan"
+}
+},
+{
+"id" : "68",
+ "label" : { 
+ "undefined" : "Ionian_Sea"
+}
+},
+{
+"id" : "71",
+ "label" : { 
+ "undefined" : "Pontikonisi"
+}
+},
+{
+"id" : "74",
+ "label" : { 
+ "undefined" : "Domari_language"
+}
+},
+{
+"id" : "77",
+ "label" : { 
+ "undefined" : "Spillover_of_the_Syrian_Civil_War"
+}
+},
+{
+"id" : "80",
+ "label" : { 
+ "undefined" : "Greek_Muslims"
+}
+},
+{
+"id" : "83",
+ "label" : { 
+ "undefined" : "Dom_people"
+}
+},
+{
+"id" : "86",
+ "label" : { 
+ "undefined" : "Mas'ud_Hai_Rakkah"
+}
+},
+{
+"id" : "89",
+ "label" : { 
+ "undefined" : "Saudis"
+}
+},
+{
+"id" : "92",
+ "label" : { 
+ "undefined" : "Khafaja"
+}
+},
+{
+"id" : "97",
+ "label" : { 
+ "undefined" : "Mediterranean_Lingua_Franca"
+}
+},
+{
+"id" : "100",
+ "label" : { 
+ "undefined" : "Egyptian_diaspora"
+}
+},
+{
+"id" : "103",
+ "label" : { 
+ "undefined" : "Turkish_language"
+}
+},
+{
+"id" : "108",
+ "label" : { 
+ "undefined" : "Unitary_state"
+}
+},
+{
+"id" : "111",
+ "label" : { 
+ "undefined" : "Eastern_European_Time"
+}
+},
+{
+"id" : "114",
+ "label" : { 
+ "undefined" : "Pavlos_Karolidis"
+}
+},
+{
+"id" : "117",
+ "label" : { 
+ "undefined" : "Çorlulu_Ali_Pasha"
+}
+},
+{
+"id" : "120",
+ "label" : { 
+ "undefined" : "Ayaşlı_Ismail_Pasha"
+}
+},
+{
+"id" : "123",
+ "label" : { 
+ "undefined" : "Cavit_Çağlar"
+}
+},
+{
+"id" : "126",
+ "label" : { 
+ "undefined" : "Alekos_Sofianidis"
+}
+},
+{
+"id" : "129",
+ "label" : { 
+ "undefined" : "Stavros_Xenidis"
+}
+},
+{
+"id" : "132",
+ "label" : { 
+ "undefined" : "Mehmet_Esat_Bülkat"
+}
+},
+{
+"id" : "135",
+ "label" : { 
+ "undefined" : "Zannino"
+}
+},
+{
+"id" : "138",
+ "label" : { 
+ "undefined" : "Andreas_Krystallis"
+}
+},
+{
+"id" : "141",
+ "label" : { 
+ "undefined" : "Andreas_Syngros"
+}
+},
+{
+"id" : "144",
+ "label" : { 
+ "undefined" : "Marika_Nezer"
+}
+},
+{
+"id" : "147",
+ "label" : { 
+ "undefined" : "Sofia_Vembo"
+}
+},
+{
+"id" : "150",
+ "label" : { 
+ "undefined" : "Kleanthis_Maropoulos"
+}
+},
+{
+"id" : "153",
+ "label" : { 
+ "undefined" : "Necati_Cumalı"
+}
+},
+{
+"id" : "156",
+ "label" : { 
+ "undefined" : "Athenagoras_I_of_Constantinople"
+}
+},
+{
+"id" : "161",
+ "label" : { 
+ "undefined" : "Lokma"
+}
+},
+{
+"id" : "164",
+ "label" : { 
+ "undefined" : "Animal_Planet_Europe"
+}
+},
+{
+"id" : "167",
+ "label" : { 
+ "undefined" : "Mediterranean_Basketball_Association"
+}
+},
+{
+"id" : "170",
+ "label" : { 
+ "undefined" : "Eurosport_2"
+}
+},
+{
+"id" : "175",
+ "label" : { 
+ "undefined" : "Aegean_Islands"
+}
+},
+{
+"id" : "180",
+ "label" : { 
+ "undefined" : "European_route_E90"
+}
+},
+{
+"id" : "183",
+ "label" : { 
+ "undefined" : "Pan-European_Corridor_IV"
+}
+},
+{
+"id" : "190",
+ "label" : { 
+ "undefined" : "87_Minutes_Project"
+}
+},
+{
+"id" : "193",
+ "label" : { 
+ "undefined" : "Dreamtone_&_Iris_Mavraki's_Neverland"
+}
+},
+{
+"id" : "196",
+ "label" : { 
+ "undefined" : "Bulgarians"
+}
+},
+{
+"id" : "199",
+ "label" : { 
+ "undefined" : "Yaprak_(food)"
+}
+},
+{
+"id" : "202",
+ "label" : { 
+ "undefined" : "Stuffed_sorrel"
+}
+},
+{
+"id" : "205",
+ "label" : { 
+ "undefined" : "Muhallebi"
+}
+},
+{
+"id" : "210",
+ "label" : { 
+ "undefined" : "Arda_(Maritsa)"
+}
+},
+{
+"id" : "213",
+ "label" : { 
+ "undefined" : "Maritsa"
+}
+},
+{
+"id" : "216",
+ "label" : { 
+ "undefined" : "Stuffed_mallow"
+}
+},
+{
+"id" : "219",
+ "label" : { 
+ "undefined" : "Pomaks"
+}
+},
+{
+"id" : "222",
+ "label" : { 
+ "undefined" : "Colocasia_with_lamb"
+}
+},
+{
+"id" : "225",
+ "label" : { 
+ "undefined" : "Evros_River_incident"
+}
+},
+{
+"id" : "228",
+ "label" : { 
+ "undefined" : "The_Pepsi_Bottling_Group"
+}
+},
+{
+"id" : "231",
+ "label" : { 
+ "undefined" : "Istanbul-Pythio_railway"
+}
+},
+{
+"id" : "234",
+ "label" : { 
+ "undefined" : "Cham_Albanians"
+}
+},
+{
+"id" : "237",
+ "label" : { 
+ "undefined" : "Pontic_Greeks"
+}
+},
+{
+"id" : "240",
+ "label" : { 
+ "undefined" : "Albanians"
+}
+},
+{
+"id" : "243",
+ "label" : { 
+ "undefined" : "Romani_people"
+}
+},
+{
+"id" : "248",
+ "label" : { 
+ "undefined" : "South_Slavs"
+}
+},
+{
+"id" : "251",
+ "label" : { 
+ "undefined" : "Mallow_with_lamb"
+}
+},
+{
+"id" : "254",
+ "label" : { 
+ "undefined" : "Discovery_Networks_CEEMEA"
+}
+},
+{
+"id" : "257",
+ "label" : { 
+ "undefined" : "Stuffed_artichoke"
+}
+},
+{
+"id" : "260",
+ "label" : { 
+ "undefined" : "Assia_Abdullah"
+}
+},
+{
+"id" : "265",
+ "label" : { 
+ "undefined" : "Blessed_thistle_with_lamb"
+}
+},
+{
+"id" : "272",
+ "label" : { 
+ "undefined" : "Savas_Dimopoulos"
+}
+},
+{
+"id" : "275",
+ "label" : { 
+ "undefined" : "Megleno-Romanians"
+}
+},
+{
+"id" : "278",
+ "label" : { 
+ "undefined" : "John_the_Russian"
+}
+},
+{
+"id" : "281",
+ "label" : { 
+ "undefined" : "West_Slavs"
+}
+},
+{
+"id" : "284",
+ "label" : { 
+ "undefined" : "Fennel_with_lamb"
+}
+},
+{
+"id" : "287",
+ "label" : { 
+ "undefined" : "Romaniote_Jews"
+}
+},
+{
+"id" : "290",
+ "label" : { 
+ "undefined" : "Corn_poppy_with_lamb"
+}
+},
+{
+"id" : "293",
+ "label" : { 
+ "undefined" : "Stuffed_squid"
+}
+},
+{
+"id" : "296",
+ "label" : { 
+ "undefined" : "Sogan-dolma"
+}
+},
+{
+"id" : "299",
+ "label" : { 
+ "undefined" : "Karamanli_Turkish"
+}
+},
+{
+"id" : "302",
+ "label" : { 
+ "undefined" : "Megleno-Romanian_language"
+}
+},
+{
+"id" : "305",
+ "label" : { 
+ "undefined" : "Balkan_Romani"
+}
+},
+{
+"id" : "308",
+ "label" : { 
+ "undefined" : "Judaeo-Spanish"
+}
+},
+{
+"id" : "311",
+ "label" : { 
+ "undefined" : "Yevanic_language"
+}
+},
+{
+"id" : "314",
+ "label" : { 
+ "undefined" : "Aromanian_language"
+}
+},
+{
+"id" : "317",
+ "label" : { 
+ "undefined" : "Bulgarian_language"
+}
+},
+{
+"id" : "322",
+ "label" : { 
+ "undefined" : "Balkan_Gagauz_Turkish"
+}
+}],"property": [
+{
+ "id": "3",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "4",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "6",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "8",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "9",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "12",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "13",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "15",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "16",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "18",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "19",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "21",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "23",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "25",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "26",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "28",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "29",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "31",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "32",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "34",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "35",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "37",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "38",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "40",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "41",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "43",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "44",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "46",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "47",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "49",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "50",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "53",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "54",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "56",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "58",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "59",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "61",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "62",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "64",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "65",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "67",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "69",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "70",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "72",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "73",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "75",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "76",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "78",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "79",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "81",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "82",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "84",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "85",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "87",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "88",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "90",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "91",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "93",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "94",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "96",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "98",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "99",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "101",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "102",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "104",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "105",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "106",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "109",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "110",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "112",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "113",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "115",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "116",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "118",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "119",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "121",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "122",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "124",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "125",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "127",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "128",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "130",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "131",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "133",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "134",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "136",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "137",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "139",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "140",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "142",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "143",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "145",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "146",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "148",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "149",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "151",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "152",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "154",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "155",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "157",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "158",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "160",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "162",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "163",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "165",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "166",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "168",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "169",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "171",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "172",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "173",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "176",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "177",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "181",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "182",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "184",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "185",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "187",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "191",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "192",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "194",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "195",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "197",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "198",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "200",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "201",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "203",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "204",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "206",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "207",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "208",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "211",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "212",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "214",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "215",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "217",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "218",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "220",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "221",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "223",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "224",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "226",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "227",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "229",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "230",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "232",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "233",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "235",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "236",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "238",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "239",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "241",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "242",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "244",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "245",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "249",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "250",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "252",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "253",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "255",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "256",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "258",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "259",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "261",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "262",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "264",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "266",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "267",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "268",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "273",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "274",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "276",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "277",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "279",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "280",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "282",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "283",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "285",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "286",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "288",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "289",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "291",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "292",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "294",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "295",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "297",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "298",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "300",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "301",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "303",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "304",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "306",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "307",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "309",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "310",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "312",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "313",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "315",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "316",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "318",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "319",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "320",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "323",
+ "type": "owl:objectProperty"
+},
+{
+ "id": "324",
+ "type": "owl:objectProperty"
+}],"propertyAttribute": [
+{
+"id" : "3",
+"domain" : "1",
+"range" : "0",
+"label" : { 
+ "en" : "nearestCity"
+}
+},
+{
+"id" : "4",
+"domain" : "2",
+"range" : "1",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "6",
+"domain" : "1",
+"range" : "2",
+"label" : { 
+ "en" : "capital"
+}
+},
+{
+"id" : "8",
+"domain" : "0",
+"range" : "7",
+"label" : { 
+ "en" : "place"
+}
+},
+{
+"id" : "9",
+"domain" : "2",
+"range" : "7",
+"label" : { 
+ "en" : "place"
+}
+},
+{
+"id" : "12",
+"domain" : "10",
+"range" : "0",
+"label" : { 
+ "en" : "nearestCity"
+}
+},
+{
+"id" : "13",
+"domain" : "11",
+"range" : "10",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "15",
+"domain" : "14",
+"range" : "0",
+"label" : { 
+ "en" : "inflow"
+}
+},
+{
+"id" : "16",
+"domain" : "11",
+"range" : "14",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "18",
+"domain" : "0",
+"range" : "17",
+"label" : { 
+ "en" : "riverMouth"
+}
+},
+{
+"id" : "19",
+"domain" : "11",
+"range" : "17",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "21",
+"domain" : "11",
+"range" : "17",
+"label" : { 
+ "en" : "mouthCountry"
+}
+},
+{
+"id" : "23",
+"domain" : "11",
+"range" : "17",
+"label" : { 
+ "en" : "sourceCountry"
+}
+},
+{
+"id" : "25",
+"domain" : "0",
+"range" : "24",
+"label" : { 
+ "en" : "riverMouth"
+}
+},
+{
+"id" : "26",
+"domain" : "11",
+"range" : "24",
+"label" : { 
+ "en" : "sourceCountry"
+}
+},
+{
+"id" : "28",
+"domain" : "0",
+"range" : "27",
+"label" : { 
+ "en" : "outflow"
+}
+},
+{
+"id" : "29",
+"domain" : "11",
+"range" : "27",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "31",
+"domain" : "0",
+"range" : "30",
+"label" : { 
+ "en" : "isPartOf"
+}
+},
+{
+"id" : "32",
+"domain" : "11",
+"range" : "30",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "34",
+"domain" : "0",
+"range" : "33",
+"label" : { 
+ "en" : "isPartOf"
+}
+},
+{
+"id" : "35",
+"domain" : "11",
+"range" : "33",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "37",
+"domain" : "0",
+"range" : "36",
+"label" : { 
+ "en" : "isPartOf"
+}
+},
+{
+"id" : "38",
+"domain" : "11",
+"range" : "36",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "40",
+"domain" : "0",
+"range" : "39",
+"label" : { 
+ "en" : "isPartOf"
+}
+},
+{
+"id" : "41",
+"domain" : "11",
+"range" : "39",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "43",
+"domain" : "0",
+"range" : "42",
+"label" : { 
+ "en" : "isPartOf"
+}
+},
+{
+"id" : "44",
+"domain" : "11",
+"range" : "42",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "46",
+"domain" : "0",
+"range" : "45",
+"label" : { 
+ "en" : "isPartOf"
+}
+},
+{
+"id" : "47",
+"domain" : "11",
+"range" : "45",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "49",
+"domain" : "0",
+"range" : "48",
+"label" : { 
+ "en" : "location"
+}
+},
+{
+"id" : "50",
+"domain" : "11",
+"range" : "48",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "53",
+"domain" : "51",
+"range" : "0",
+"label" : { 
+ "en" : "nearestCity"
+}
+},
+{
+"id" : "54",
+"domain" : "52",
+"range" : "51",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "56",
+"domain" : "51",
+"range" : "52",
+"label" : { 
+ "en" : "capital"
+}
+},
+{
+"id" : "58",
+"domain" : "0",
+"range" : "57",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "59",
+"domain" : "57",
+"range" : "52",
+"label" : { 
+ "en" : "language"
+}
+},
+{
+"id" : "61",
+"domain" : "0",
+"range" : "60",
+"label" : { 
+ "en" : "inflow"
+}
+},
+{
+"id" : "62",
+"domain" : "52",
+"range" : "60",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "64",
+"domain" : "0",
+"range" : "63",
+"label" : { 
+ "en" : "place"
+}
+},
+{
+"id" : "65",
+"domain" : "52",
+"range" : "63",
+"label" : { 
+ "en" : "place"
+}
+},
+{
+"id" : "67",
+"domain" : "52",
+"range" : "27",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "69",
+"domain" : "0",
+"range" : "68",
+"label" : { 
+ "en" : "outflow"
+}
+},
+{
+"id" : "70",
+"domain" : "52",
+"range" : "68",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "72",
+"domain" : "0",
+"range" : "71",
+"label" : { 
+ "en" : "location"
+}
+},
+{
+"id" : "73",
+"domain" : "52",
+"range" : "71",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "75",
+"domain" : "2",
+"range" : "74",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "76",
+"domain" : "11",
+"range" : "74",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "78",
+"domain" : "2",
+"range" : "77",
+"label" : { 
+ "en" : "place"
+}
+},
+{
+"id" : "79",
+"domain" : "11",
+"range" : "77",
+"label" : { 
+ "en" : "place"
+}
+},
+{
+"id" : "81",
+"domain" : "2",
+"range" : "80",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "82",
+"domain" : "11",
+"range" : "80",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "84",
+"domain" : "2",
+"range" : "83",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "85",
+"domain" : "11",
+"range" : "83",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "87",
+"domain" : "2",
+"range" : "86",
+"label" : { 
+ "en" : "deathPlace"
+}
+},
+{
+"id" : "88",
+"domain" : "11",
+"range" : "86",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "90",
+"domain" : "2",
+"range" : "89",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "91",
+"domain" : "11",
+"range" : "89",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "93",
+"domain" : "2",
+"range" : "92",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "94",
+"domain" : "11",
+"range" : "92",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "96",
+"domain" : "52",
+"range" : "80",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "98",
+"domain" : "2",
+"range" : "97",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "99",
+"domain" : "52",
+"range" : "97",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "101",
+"domain" : "2",
+"range" : "100",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "102",
+"domain" : "52",
+"range" : "100",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "104",
+"domain" : "103",
+"range" : "11",
+"label" : { 
+ "en" : "language"
+}
+},
+{
+"id" : "105",
+"domain" : "52",
+"range" : "103",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "106",
+"domain" : "103",
+"range" : "11",
+"label" : { 
+ "en" : "officialLanguage"
+}
+},
+{
+"id" : "109",
+"domain" : "108",
+"range" : "11",
+"label" : { 
+ "en" : "governmentType"
+}
+},
+{
+"id" : "110",
+"domain" : "108",
+"range" : "52",
+"label" : { 
+ "en" : "governmentType"
+}
+},
+{
+"id" : "112",
+"domain" : "111",
+"range" : "11",
+"label" : { 
+ "en" : "timeZone"
+}
+},
+{
+"id" : "113",
+"domain" : "111",
+"range" : "52",
+"label" : { 
+ "en" : "timeZone"
+}
+},
+{
+"id" : "115",
+"domain" : "11",
+"range" : "114",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "116",
+"domain" : "52",
+"range" : "114",
+"label" : { 
+ "en" : "deathPlace"
+}
+},
+{
+"id" : "118",
+"domain" : "11",
+"range" : "117",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "119",
+"domain" : "52",
+"range" : "117",
+"label" : { 
+ "en" : "deathPlace"
+}
+},
+{
+"id" : "121",
+"domain" : "11",
+"range" : "120",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "122",
+"domain" : "52",
+"range" : "120",
+"label" : { 
+ "en" : "deathPlace"
+}
+},
+{
+"id" : "124",
+"domain" : "11",
+"range" : "123",
+"label" : { 
+ "en" : "nationality"
+}
+},
+{
+"id" : "125",
+"domain" : "52",
+"range" : "123",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "127",
+"domain" : "11",
+"range" : "126",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "128",
+"domain" : "52",
+"range" : "126",
+"label" : { 
+ "en" : "deathPlace"
+}
+},
+{
+"id" : "130",
+"domain" : "11",
+"range" : "129",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "131",
+"domain" : "52",
+"range" : "129",
+"label" : { 
+ "en" : "deathPlace"
+}
+},
+{
+"id" : "133",
+"domain" : "11",
+"range" : "132",
+"label" : { 
+ "en" : "deathPlace"
+}
+},
+{
+"id" : "134",
+"domain" : "52",
+"range" : "132",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "136",
+"domain" : "11",
+"range" : "135",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "137",
+"domain" : "52",
+"range" : "135",
+"label" : { 
+ "en" : "deathPlace"
+}
+},
+{
+"id" : "139",
+"domain" : "11",
+"range" : "138",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "140",
+"domain" : "52",
+"range" : "138",
+"label" : { 
+ "en" : "deathPlace"
+}
+},
+{
+"id" : "142",
+"domain" : "11",
+"range" : "141",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "143",
+"domain" : "52",
+"range" : "141",
+"label" : { 
+ "en" : "deathPlace"
+}
+},
+{
+"id" : "145",
+"domain" : "11",
+"range" : "144",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "146",
+"domain" : "52",
+"range" : "144",
+"label" : { 
+ "en" : "deathPlace"
+}
+},
+{
+"id" : "148",
+"domain" : "11",
+"range" : "147",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "149",
+"domain" : "52",
+"range" : "147",
+"label" : { 
+ "en" : "deathPlace"
+}
+},
+{
+"id" : "151",
+"domain" : "11",
+"range" : "150",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "152",
+"domain" : "52",
+"range" : "150",
+"label" : { 
+ "en" : "deathPlace"
+}
+},
+{
+"id" : "154",
+"domain" : "11",
+"range" : "153",
+"label" : { 
+ "en" : "deathPlace"
+}
+},
+{
+"id" : "155",
+"domain" : "52",
+"range" : "153",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "157",
+"domain" : "11",
+"range" : "156",
+"label" : { 
+ "en" : "deathPlace"
+}
+},
+{
+"id" : "158",
+"domain" : "52",
+"range" : "156",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "160",
+"domain" : "52",
+"range" : "147",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "162",
+"domain" : "11",
+"range" : "161",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "163",
+"domain" : "52",
+"range" : "161",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "165",
+"domain" : "11",
+"range" : "164",
+"label" : { 
+ "en" : "broadcastArea"
+}
+},
+{
+"id" : "166",
+"domain" : "52",
+"range" : "164",
+"label" : { 
+ "en" : "broadcastArea"
+}
+},
+{
+"id" : "168",
+"domain" : "11",
+"range" : "167",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "169",
+"domain" : "52",
+"range" : "167",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "171",
+"domain" : "11",
+"range" : "170",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "172",
+"domain" : "52",
+"range" : "170",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "173",
+"domain" : "11",
+"range" : "170",
+"label" : { 
+ "en" : "locationCountry"
+}
+},
+{
+"id" : "176",
+"domain" : "11",
+"range" : "175",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "177",
+"domain" : "52",
+"range" : "175",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "181",
+"domain" : "11",
+"range" : "180",
+"label" : { 
+ "en" : "county"
+}
+},
+{
+"id" : "182",
+"domain" : "52",
+"range" : "180",
+"label" : { 
+ "en" : "county"
+}
+},
+{
+"id" : "184",
+"domain" : "11",
+"range" : "183",
+"label" : { 
+ "en" : "county"
+}
+},
+{
+"id" : "185",
+"domain" : "52",
+"range" : "183",
+"label" : { 
+ "en" : "county"
+}
+},
+{
+"id" : "187",
+"domain" : "52",
+"range" : "170",
+"label" : { 
+ "en" : "locationCountry"
+}
+},
+{
+"id" : "191",
+"domain" : "11",
+"range" : "190",
+"label" : { 
+ "en" : "location"
+}
+},
+{
+"id" : "192",
+"domain" : "52",
+"range" : "190",
+"label" : { 
+ "en" : "location"
+}
+},
+{
+"id" : "194",
+"domain" : "11",
+"range" : "193",
+"label" : { 
+ "en" : "hometown"
+}
+},
+{
+"id" : "195",
+"domain" : "52",
+"range" : "193",
+"label" : { 
+ "en" : "hometown"
+}
+},
+{
+"id" : "197",
+"domain" : "11",
+"range" : "196",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "198",
+"domain" : "52",
+"range" : "196",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "200",
+"domain" : "11",
+"range" : "199",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "201",
+"domain" : "52",
+"range" : "199",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "203",
+"domain" : "11",
+"range" : "202",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "204",
+"domain" : "52",
+"range" : "202",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "206",
+"domain" : "11",
+"range" : "205",
+"label" : { 
+ "en" : "country"
+}
+},
+{
+"id" : "207",
+"domain" : "52",
+"range" : "205",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "208",
+"domain" : "11",
+"range" : "205",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "211",
+"domain" : "11",
+"range" : "210",
+"label" : { 
+ "en" : "sourceCountry"
+}
+},
+{
+"id" : "212",
+"domain" : "52",
+"range" : "210",
+"label" : { 
+ "en" : "sourceCountry"
+}
+},
+{
+"id" : "214",
+"domain" : "11",
+"range" : "213",
+"label" : { 
+ "en" : "sourceCountry"
+}
+},
+{
+"id" : "215",
+"domain" : "52",
+"range" : "213",
+"label" : { 
+ "en" : "sourceCountry"
+}
+},
+{
+"id" : "217",
+"domain" : "11",
+"range" : "216",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "218",
+"domain" : "52",
+"range" : "216",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "220",
+"domain" : "11",
+"range" : "219",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "221",
+"domain" : "52",
+"range" : "219",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "223",
+"domain" : "11",
+"range" : "222",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "224",
+"domain" : "52",
+"range" : "222",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "226",
+"domain" : "11",
+"range" : "225",
+"label" : { 
+ "en" : "place"
+}
+},
+{
+"id" : "227",
+"domain" : "52",
+"range" : "225",
+"label" : { 
+ "en" : "place"
+}
+},
+{
+"id" : "229",
+"domain" : "11",
+"range" : "228",
+"label" : { 
+ "en" : "regionServed"
+}
+},
+{
+"id" : "230",
+"domain" : "52",
+"range" : "228",
+"label" : { 
+ "en" : "regionServed"
+}
+},
+{
+"id" : "232",
+"domain" : "11",
+"range" : "231",
+"label" : { 
+ "en" : "routeStart"
+}
+},
+{
+"id" : "233",
+"domain" : "52",
+"range" : "231",
+"label" : { 
+ "en" : "routeEnd"
+}
+},
+{
+"id" : "235",
+"domain" : "11",
+"range" : "234",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "236",
+"domain" : "52",
+"range" : "234",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "238",
+"domain" : "11",
+"range" : "237",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "239",
+"domain" : "52",
+"range" : "237",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "241",
+"domain" : "11",
+"range" : "240",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "242",
+"domain" : "52",
+"range" : "240",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "244",
+"domain" : "11",
+"range" : "243",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "245",
+"domain" : "52",
+"range" : "243",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "249",
+"domain" : "11",
+"range" : "248",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "250",
+"domain" : "52",
+"range" : "248",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "252",
+"domain" : "11",
+"range" : "251",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "253",
+"domain" : "52",
+"range" : "251",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "255",
+"domain" : "11",
+"range" : "254",
+"label" : { 
+ "en" : "regionServed"
+}
+},
+{
+"id" : "256",
+"domain" : "52",
+"range" : "254",
+"label" : { 
+ "en" : "regionServed"
+}
+},
+{
+"id" : "258",
+"domain" : "11",
+"range" : "257",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "259",
+"domain" : "52",
+"range" : "257",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "261",
+"domain" : "11",
+"range" : "260",
+"label" : { 
+ "en" : "nationality"
+}
+},
+{
+"id" : "262",
+"domain" : "52",
+"range" : "260",
+"label" : { 
+ "en" : "nationality"
+}
+},
+{
+"id" : "264",
+"domain" : "52",
+"range" : "260",
+"label" : { 
+ "en" : "stateOfOrigin"
+}
+},
+{
+"id" : "266",
+"domain" : "11",
+"range" : "265",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "267",
+"domain" : "52",
+"range" : "265",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "268",
+"domain" : "11",
+"range" : "260",
+"label" : { 
+ "en" : "stateOfOrigin"
+}
+},
+{
+"id" : "273",
+"domain" : "11",
+"range" : "272",
+"label" : { 
+ "en" : "birthPlace"
+}
+},
+{
+"id" : "274",
+"domain" : "52",
+"range" : "272",
+"label" : { 
+ "en" : "nationality"
+}
+},
+{
+"id" : "276",
+"domain" : "11",
+"range" : "275",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "277",
+"domain" : "52",
+"range" : "275",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "279",
+"domain" : "11",
+"range" : "278",
+"label" : { 
+ "en" : "deathPlace"
+}
+},
+{
+"id" : "280",
+"domain" : "52",
+"range" : "278",
+"label" : { 
+ "en" : "majorShrine"
+}
+},
+{
+"id" : "282",
+"domain" : "11",
+"range" : "281",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "283",
+"domain" : "52",
+"range" : "281",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "285",
+"domain" : "11",
+"range" : "284",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "286",
+"domain" : "52",
+"range" : "284",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "288",
+"domain" : "11",
+"range" : "287",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "289",
+"domain" : "52",
+"range" : "287",
+"label" : { 
+ "en" : "populationPlace"
+}
+},
+{
+"id" : "291",
+"domain" : "11",
+"range" : "290",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "292",
+"domain" : "52",
+"range" : "290",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "294",
+"domain" : "11",
+"range" : "293",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "295",
+"domain" : "52",
+"range" : "293",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "297",
+"domain" : "11",
+"range" : "296",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "298",
+"domain" : "52",
+"range" : "296",
+"label" : { 
+ "en" : "region"
+}
+},
+{
+"id" : "300",
+"domain" : "11",
+"range" : "299",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "301",
+"domain" : "52",
+"range" : "299",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "303",
+"domain" : "11",
+"range" : "302",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "304",
+"domain" : "52",
+"range" : "302",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "306",
+"domain" : "11",
+"range" : "305",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "307",
+"domain" : "52",
+"range" : "305",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "309",
+"domain" : "11",
+"range" : "308",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "310",
+"domain" : "52",
+"range" : "308",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "312",
+"domain" : "11",
+"range" : "311",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "313",
+"domain" : "52",
+"range" : "311",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "315",
+"domain" : "11",
+"range" : "314",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "316",
+"domain" : "52",
+"range" : "314",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "318",
+"domain" : "11",
+"range" : "317",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "319",
+"domain" : "52",
+"range" : "317",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "320",
+"domain" : "11",
+"range" : "103",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "323",
+"domain" : "11",
+"range" : "322",
+"label" : { 
+ "en" : "spokenIn"
+}
+},
+{
+"id" : "324",
+"domain" : "52",
+"range" : "322",
+"label" : { 
+ "en" : "spokenIn"
+}
+}]}
