@@ -34,7 +34,6 @@ class ThreadedServer(object):
         all_score = Preprocessing.extract_association_score(article,flag)
         for i in list:
             for j in all_score:
-                #print j, "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjj"
                 if int(i) == int(j[0]):
                     output.append(j)
     
@@ -87,14 +86,6 @@ class ThreadedServer(object):
                 sort_list_5.append((name, max))
             elif cl == 5:
                 sort_list_6.append((name, max))
-            
-    #     print sort_list_1, "1 ", len(sort_list_1)
-    #     print sort_list_2, "2 ", len(sort_list_2)
-    #     print sort_list_3, "3 ", len(sort_list_3)
-    #     print sort_list_4, "4 ", len(sort_list_4)
-    #     print sort_list_5, "5 ", len(sort_list_5)
-    #     print sort_list_6, "6 ", len(sort_list_6)
-    #     print len(prob)
         
     
         sort_list_1 = sorted(sort_list_1, key=self.getKey,  reverse=True)
@@ -103,12 +94,9 @@ class ThreadedServer(object):
         sort_list_4 = sorted(sort_list_4, key=self.getKey,  reverse=True)
         sort_list_5 = sorted(sort_list_5, key=self.getKey,  reverse=True)
         sort_list_6 = sorted(sort_list_6, key=self.getKey,  reverse=True)
-        #print prob, "prob"
-        #print sort_list_6,"lista 6"
-        #print sort_list_1,"lista 1"
+
         
         sort = sort_list_6 + sort_list_5 + sort_list_4 + sort_list_3 + sort_list_2 + sort_list_1 
-        #print sort, "print sort"
         sort = np.array(sort)[:,:1]
         
         
@@ -121,22 +109,19 @@ class ThreadedServer(object):
 
     def entropy(self, x):
         entropy_list = {}
-        #print x, "x"
+
          
         for row in x:
             id = row[0]
             prob = row[1]
             entropy = 0
-            #print "id: ", id ,"prob:",prob 
             for i in range(0, len(prob)):
                 if prob[i] != 0:
-                    #print prob[i], "prob"
                     entropy += -prob[i] * np.log2(prob[i])
-                    #print entropy, " entropy ", "prob[i]", prob[i] , " log ",  np.log2(prob[i])
+          
             
-    #         if entropy > 1:
-    #             print prob, "id ", id    
-    #                 
+  
+                 
             entropy_list[id] = entropy
              
         return entropy_list
@@ -290,12 +275,10 @@ class ThreadedServer(object):
         if len_p == len(assoc_ids):
             for i in range (0, len_p):
                 id_score.append((assoc_ids[i], prob[i]))
-        
-        print len_p, " == ", len(assoc_ids)
          
                  
         sorted_associations = self.sort_prob(id_score)#first associations are those we will select
-        print sorted_associations[:10], "sdadsadsa"
+  
         
         data= ', '.join(str(x) for x in sorted_associations[:10])
         
@@ -331,7 +314,6 @@ class ThreadedServer(object):
         client.send(serialized_data)#sending the 2 association to be evaluated
         
         evaluate = (client.recv(1024))
-        print evaluate
         evaluate = eval("[" + evaluate + "]")
         print evaluate
         predictions, assoc_ids = self.learning(ids, np.asarray(evaluate), article, learner)
@@ -359,7 +341,6 @@ class ThreadedServer(object):
          
                  
         sorted_associations = self.sort_prob(id_score)#first associations are those we will select
-        print sorted_associations[:10], "sdadsadsa"
         
         data= ', '.join(str(x) for x in sorted_associations[:10])
         

@@ -127,7 +127,7 @@ function createJSON_for_graph(article){
 						if (dict[associations[i][2]] == undefined) {
 							
 							//class
-							str ='\n{\n "id": "'+id_class+'",\n "type": "owl:Class"\n}'
+							str ='\n{\n "id": "'+id_class+'",\n "type": "owl:Thing"\n}'
 							owl_class.push(str);
 							
 							str = '\n{\n"id" : "'+id_class+'",\n "label" : { \n "undefined" : "'+associations[i][2]+'"\n}\n}';
@@ -143,7 +143,7 @@ function createJSON_for_graph(article){
 						if (dict[associations[i][7]] == undefined) {
 							
 							//class
-							str ='\n{\n "id": "'+id_class+'",\n "type": "owl:Class"\n}'
+							str ='\n{\n "id": "'+id_class+'",\n "type": "owl:Thing"\n}'
 							owl_class.push(str);
 							
 							str = '\n{\n"id" : "'+id_class+'",\n "label" : { \n "undefined" : "'+associations[i][7]+'"\n}\n}';
@@ -202,7 +202,7 @@ function createJSON_for_graph(article){
 						if (dict[associations[i][2]] == undefined) {
 							
 							//class
-							str ='\n{\n "id": "'+id_class+'",\n "type": "owl:Class"\n}'
+							str ='\n{\n "id": "'+id_class+'",\n "type": "owl:Thing"\n}'
 							owl_class.push(str);
 							
 							str = '\n{\n"id" : "'+id_class+'",\n "label" : { \n "undefined" : "'+associations[i][2]+'"\n}\n}';
@@ -216,7 +216,7 @@ function createJSON_for_graph(article){
 						if (dict[associations[i][4]] == undefined) {
 							
 							//class
-							str ='\n{\n "id": "'+id_class+'",\n "type": "owl:Class"\n}'
+							str ='\n{\n "id": "'+id_class+'",\n "type": "owl:Thing"\n}'
 							owl_class.push(str);
 							
 							str = '\n{\n"id" : "'+id_class+'",\n "label" : { \n "undefined" : "'+associations[i][4]+'"\n}\n}';
@@ -232,7 +232,7 @@ function createJSON_for_graph(article){
 						if (dict[associations[i][7]] == undefined) {
 							
 							//class
-							str ='\n{\n "id": "'+id_class+'",\n "type": "owl:Class"\n}'
+							str ='\n{\n "id": "'+id_class+'",\n "type": "owl:Thing"\n}'
 							owl_class.push(str);
 							
 							str = '\n{\n"id" : "'+id_class+'",\n "label" : { \n "undefined" : "'+associations[i][7]+'"\n}\n}';

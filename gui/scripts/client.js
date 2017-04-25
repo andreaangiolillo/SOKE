@@ -78,7 +78,7 @@ function createJSON_for_graph(top_assoc, article){
 						if (dict[associations[i][7]] == undefined) {
 							
 							//class
-							if (top_assoc.search(associations[i][0]) != -1){
+							if (top_assoc.search(associations[i][0]) == -1){
 								str ='\n{\n "id": "'+id_class+'",\n "type": "owl:Thing"\n}'
 								owl_class.push(str);
 							}else{
@@ -143,7 +143,7 @@ function createJSON_for_graph(top_assoc, article){
 							
 							//class
 						
-							if (top_assoc.search(associations[i][0]) != -1){
+							if (top_assoc.search(associations[i][0]) == -1){
 								str ='\n{\n "id": "'+id_class+'",\n "type": "owl:Thing"\n}'
 								owl_class.push(str);
 								
@@ -165,7 +165,7 @@ function createJSON_for_graph(top_assoc, article){
 						if (dict[associations[i][4]] == undefined) {
 							
 							//class
-							if (top_assoc.search(associations[i][0]) != -1){
+							if (top_assoc.search(associations[i][0]) == -1){
 								str ='\n{\n "id": "'+id_class+'",\n "type": "owl:Thing"\n}'
 								owl_class.push(str);
 							}else{
@@ -186,7 +186,7 @@ function createJSON_for_graph(top_assoc, article){
 						if (dict[associations[i][7]] == undefined) {
 							
 							//class
-							if (top_assoc.search(associations[i][0]) != -1){
+							if (top_assoc.search(associations[i][0]) == -1){
 								str ='\n{\n "id": "'+id_class+'",\n "type": "owl:Thing"\n}'
 								owl_class.push(str);
 							}else{
@@ -397,7 +397,7 @@ function main (article){
 	            	
 	        	}else if (i == 1){
 	        		createJSON_for_graph(data.toString(), article );
-	        		//
+	        		
 	        		sessionStorage.setItem('first_step' + article, 'false');
 	        		location.reload();//loading the new KG
 	        	
@@ -446,7 +446,7 @@ function sendToServer(article){
 	
 	
 	for (var i = 0; i < n; i++){
-		//console.log($("#tg-" + (name_html - 1).toString()).html());
+		
 
 		if(($("#tg-" + (name_html - 1).toString()).html()) != undefined){
 			valutations = valutations + ($("#s" + name_html).val()) + ",";

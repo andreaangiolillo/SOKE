@@ -11,19 +11,19 @@
 },"class":[
 {
  "id": "0",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "1",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "2",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "5",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "8",
@@ -47,111 +47,111 @@
 },
 {
  "id": "32",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "39",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "47",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "50",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "53",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "56",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "59",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "62",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "65",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "68",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "73",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "101",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "104",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "107",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "110",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "113",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "116",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "119",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "122",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "125",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "128",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "131",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "134",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "137",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "140",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "143",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "146",
- "type": "owl:Class"
+ "type": "owl:Thing"
 }
 ],"classAttribute": [
 {
@@ -283,7 +283,7 @@
 {
 "id" : "104",
  "label" : { 
- "undefined" : "Mark_E._Clayton"
+ "undefined" : "Mark_E_Clayton"
 }
 },
 {
