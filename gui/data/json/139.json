@@ -11,15 +11,15 @@
 },"class":[
 {
  "id": "0",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "1",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "2",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "5",
@@ -31,19 +31,19 @@
 },
 {
  "id": "13",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "17",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "20",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "23",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "32",
@@ -59,7 +59,7 @@
 },
 {
  "id": "44",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "61",
@@ -103,7 +103,7 @@
 },
 {
  "id": "112",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "126",
@@ -111,7 +111,7 @@
 },
 {
  "id": "129",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "132",
@@ -127,7 +127,7 @@
 },
 {
  "id": "141",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "144",
