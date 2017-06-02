@@ -13,7 +13,7 @@ from sklearn import mixture
 class DirichletClustering():
 
     def __init__(self):
-        self.location =  "../../Data/clustering_files/"
+        self.location =  "../../clustering_files/"
 
     def dirichlet(self, df, user, article):
         df_scaled = pd.DataFrame(StandardScaler().fit_transform(df), columns=df.columns, index=df.index)
