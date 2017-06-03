@@ -31,19 +31,19 @@
 },
 {
  "id": "13",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "17",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "20",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "23",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "32",
@@ -95,23 +95,23 @@
 },
 {
  "id": "104",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "107",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "110",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "113",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "116",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "119",
@@ -119,15 +119,15 @@
 },
 {
  "id": "122",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "125",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "128",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "131",

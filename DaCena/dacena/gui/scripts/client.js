@@ -458,8 +458,6 @@ function sendToServer(article){
 	
 	console.log(valutations)
 	client.write(valutations);
-	
-	 
- 
+
 }
 

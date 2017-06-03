@@ -35,7 +35,7 @@
 },
 {
  "id": "14",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "21",
@@ -43,7 +43,7 @@
 },
 {
  "id": "24",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "29",
@@ -55,15 +55,15 @@
 },
 {
  "id": "35",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "38",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "43",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "50",
@@ -143,11 +143,11 @@
 },
 {
  "id": "112",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "115",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "118",
