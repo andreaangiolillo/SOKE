@@ -11,15 +11,15 @@
 },"class":[
 {
  "id": "0",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "1",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "2",
- "type": "owl:Thing"
+ "type": "owl:Class"
 },
 {
  "id": "7",
@@ -51,11 +51,11 @@
 },
 {
  "id": "30",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "33",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "36",
