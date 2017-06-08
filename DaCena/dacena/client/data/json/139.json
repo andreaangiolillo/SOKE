@@ -11,39 +11,39 @@
 },"class":[
 {
  "id": "0",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "1",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "2",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "5",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "8",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "13",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "17",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "20",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "23",
- "type": "owl:Class"
+ "type": "owl:Thing"
 },
 {
  "id": "32",
